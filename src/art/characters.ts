@@ -16,7 +16,7 @@
  * shading, and a soft tinted outline holding the silhouette together.
  */
 
-import { alpha, glow, shade, shift } from './palette';
+import { alpha, glow, mix, shade, shift } from './palette';
 import {
   fillBlob,
   fillCircle,
@@ -234,17 +234,32 @@ function drawWings(ctx: Ctx2D, spec: CharacterSpec, flap: number): void {
 /** Legs. `swing` is the walk phase in radians; `walking` false stands still. */
 function drawLegs(ctx: Ctx2D, spec: CharacterSpec, swing: number, walking: boolean): void {
   const p = spec.palette;
-  const bare = spec.outfit === 'miko' || spec.outfit === 'kimono';
-  const legColor = bare ? p.skin : shift(p.main, -0.42);
-  const shoe = shift(p.trim, -0.3);
+  // Bare legs read far better at this size than dark tights — a leg the colour
+  // of the skirt just disappears and leaves two shoes floating.
+  const covered = spec.outfit === 'robe';
+  const legColor = covered ? shift(p.main, -0.3) : p.skin;
+  // Always a dark shoe. Deriving it from a pale trim colour gives a mid-grey
+  // lump that reads as another segment of leg rather than as footwear.
+  const shoe = mix(p.trim, '#2b2028', 0.6);
 
   for (const side of [-1, 1] as const) {
     const lift = walking ? Math.sin(swing + (side > 0 ? 0 : Math.PI)) : 0;
-    withTransform(ctx, side * 10 + lift * 5, HIP_Y + 4 + Math.max(0, lift) * -6, () => {
-      fillEllipse(ctx, 0, 10, 7.5, 13, legColor);
+    withTransform(ctx, side * 9 + lift * 4, HIP_Y + 3 + Math.max(0, lift) * -6, () => {
+      // Mirror the whole foot rather than negating individual x's: flipping
+      // only some points turns the shoe outline into a self-crossing bowtie.
+      ctx.scale(side, 1);
+      ctx.rotate(lift * 0.1 * side);
+      // One tapering leg meeting one shoe. Any extra band in this ~14px of
+      // screen — a sock, a highlight — stacks into what looks like a spring.
+      fillBlob(ctx, [[-5.6, -3], [5.6, -3], [4.4, 17], [-4.4, 17]], legColor, 0.22);
       ink(ctx, inkOf(legColor), 1.6);
-      fillEllipse(ctx, side * 1.5, 22, 9.5, 6, shoe);
-      ink(ctx, inkOf(shoe), 1.6);
+      fillBlob(
+        ctx,
+        [[-4.6, 14.5], [4.6, 14.5], [7, 19.5], [6, 23.5], [-4.6, 23]],
+        shoe,
+        0.4,
+      );
+      ink(ctx, inkOf(shoe), 1.4);
     });
   }
 }
@@ -253,6 +268,15 @@ function drawBody(ctx: Ctx2D, spec: CharacterSpec): void {
   const p = spec.palette;
   const main = p.main;
   const outline = inkOf(main);
+
+  // Neck first, so the collar below covers where it meets the shoulders and it
+  // never reads as a pale ball balanced between head and body.
+  fillPolygon(ctx, [-7, CHIN_Y - 4, 7, CHIN_Y - 4, 7.6, SHOULDER_Y + 2, -7.6, SHOULDER_Y + 2], p.skin);
+  ink(ctx, inkOf(p.skin), 1.8);
+  withState(ctx, () => {
+    ctx.globalAlpha = 0.3;
+    fillEllipse(ctx, 0, CHIN_Y - 1, 7.4, 4.5, skinShade(p));
+  });
 
   const torso = ctx.createLinearGradient(-26, SHOULDER_Y, 26, HIP_Y);
   torso.addColorStop(0, shift(main, 0.16));
@@ -265,13 +289,13 @@ function drawBody(ctx: Ctx2D, spec: CharacterSpec): void {
       ctx,
       [
         [0, SHOULDER_Y - 5],
-        [20, SHOULDER_Y + 9],
-        [23, -46],
+        [22, SHOULDER_Y + 9],
+        [24, -46],
         [spread, HIP_Y + hem],
         [0, HIP_Y + hem + 5],
         [-spread, HIP_Y + hem],
-        [-23, -46],
-        [-20, SHOULDER_Y + 9],
+        [-24, -46],
+        [-22, SHOULDER_Y + 9],
       ],
       torso,
     );
@@ -297,9 +321,9 @@ function drawBody(ctx: Ctx2D, spec: CharacterSpec): void {
         [
           [-20, -48],
           [20, -48],
-          [33, HIP_Y + 8],
-          [0, HIP_Y + 13],
-          [-33, HIP_Y + 8],
+          [29, HIP_Y + 1],
+          [0, HIP_Y + 6],
+          [-29, HIP_Y + 1],
         ],
         torso,
       );
@@ -307,7 +331,7 @@ function drawBody(ctx: Ctx2D, spec: CharacterSpec): void {
       break;
     }
     case 'witch': {
-      skirt(34, 8);
+      skirt(30, 1);
       fillBlob(
         ctx,
         [
@@ -322,7 +346,7 @@ function drawBody(ctx: Ctx2D, spec: CharacterSpec): void {
       break;
     }
     case 'kimono': {
-      skirt(27, 6);
+      skirt(25, 1);
       fillPolygon(ctx, [0, SHOULDER_Y - 3, 14, -42, 0, -38, -14, -42], shift(p.accent, 0.1));
       ink(ctx, inkOf(p.accent), 1.6);
       fillPolygon(ctx, [-25, -42, 25, -42, 26, -31, -26, -31], p.trim);
@@ -331,7 +355,7 @@ function drawBody(ctx: Ctx2D, spec: CharacterSpec): void {
     }
     case 'dress':
     case 'robe': {
-      skirt(35, 9);
+      skirt(31, 2);
       // Hem trim: a stroked arc following the hem, not a filled shape — a
       // filled band here reads as a bowl the figure is standing in.
       withState(ctx, () => {
@@ -339,8 +363,8 @@ function drawBody(ctx: Ctx2D, spec: CharacterSpec): void {
         ctx.lineWidth = 4.5;
         ctx.lineCap = 'round';
         ctx.beginPath();
-        ctx.moveTo(-33, HIP_Y + 7);
-        ctx.quadraticCurveTo(0, HIP_Y + 15, 33, HIP_Y + 7);
+        ctx.moveTo(-29, HIP_Y);
+        ctx.quadraticCurveTo(0, HIP_Y + 8, 29, HIP_Y);
         ctx.stroke();
       });
       withState(ctx, () => {
@@ -350,14 +374,14 @@ function drawBody(ctx: Ctx2D, spec: CharacterSpec): void {
         for (const fx of [-12, 12]) {
           ctx.beginPath();
           ctx.moveTo(fx * 0.6, -44);
-          ctx.lineTo(fx, HIP_Y + 7);
+          ctx.lineTo(fx, HIP_Y);
           ctx.stroke();
         }
       });
       break;
     }
     default: {
-      skirt(26, 7);
+      skirt(24, 1);
       if (spec.outfit === 'vest' || spec.outfit === 'apron') {
         fillBlob(
           ctx,
@@ -383,14 +407,15 @@ function drawBody(ctx: Ctx2D, spec: CharacterSpec): void {
       [
         [7, SHOULDER_Y - 3],
         [22, SHOULDER_Y + 10],
-        [30, HIP_Y + 6],
-        [6, HIP_Y + 10],
+        [27, HIP_Y],
+        [6, HIP_Y + 4],
       ],
       '#241428',
     );
   });
 
-  fillEllipse(ctx, 0, SHOULDER_Y - 1, 13, 5.5, shift(p.trim, 0.14));
+  // Collar, sitting on the shoulder line.
+  fillEllipse(ctx, 0, SHOULDER_Y + 1, 11, 4.6, shift(p.trim, 0.14));
   ink(ctx, inkOf(p.trim), 1.6);
 }
 
@@ -407,16 +432,31 @@ function drawArms(
 
   for (const side of [-1, 1] as const) {
     // Carrying raises both arms forward; walking swings them out of phase.
-    const base = carrying ? -1.05 : -0.42;
+    // The resting splay is deliberately small — arms held out wide read as a
+    // scarecrow rather than a girl standing still.
+    const base = carrying ? -1.02 : -0.26;
     const swingAmt = walking ? Math.sin(swing + (side > 0 ? Math.PI : 0)) * 0.34 : 0;
-    withTransform(ctx, side * 20, SHOULDER_Y + 5, () => {
+    withTransform(ctx, side * 18, SHOULDER_Y + 6, () => {
       ctx.rotate(side * base + swingAmt);
-      fillEllipse(ctx, 0, 12, 7.5, 14, sleeve);
+      // One tapering sleeve with a cuff drawn on it, rather than two stacked
+      // pieces — stacking gives the limb a doll-joint seam at the elbow.
+      fillBlob(ctx, [[-6.8, -2], [6.8, -2], [4.6, 29], [-4.6, 29]], sleeve, 0.28);
       ink(ctx, outline, 1.8);
-      fillEllipse(ctx, side * 1.5, 25, 5.5, 11, shift(sleeve, -0.1));
-      ink(ctx, outline, 1.6);
-      fillCircle(ctx, side * 2.5, 34, 5, p.skin);
-      ink(ctx, inkOf(p.skin), 1.6);
+      withState(ctx, () => {
+        ctx.globalAlpha = 0.22;
+        fillBlob(ctx, [[-4.9, 18], [4.9, 18], [4.6, 29], [-4.6, 29]], inkOf(sleeve), 0.2);
+      });
+      withState(ctx, () => {
+        ctx.strokeStyle = outline;
+        ctx.lineWidth = 1.4;
+        ctx.globalAlpha = 0.7;
+        ctx.beginPath();
+        ctx.moveTo(-4.8, 27);
+        ctx.lineTo(4.8, 27);
+        ctx.stroke();
+      });
+      fillEllipse(ctx, side * 1.2, 31.5, 4.4, 4.6, p.skin);
+      ink(ctx, inkOf(p.skin), 1.5);
     });
   }
 }
@@ -491,17 +531,40 @@ function drawHairBack(ctx: Ctx2D, spec: CharacterSpec, sway: number): void {
 
   switch (spec.hair) {
     case 'long':
-    case 'wavy':
+    case 'wavy': {
+      // A curtain that narrows toward the tips rather than an egg: the outer
+      // edge bows out at the shoulder and comes back in to a point.
+      const wave = spec.hair === 'wavy' ? 6 : 0;
       mass([
         [0, HEAD_CY - HEAD_RY - 6],
-        [HEAD_RX + 13, HEAD_CY - 8],
-        [HEAD_RX + 9 + sway, -38],
-        [15, -20],
-        [-15, -20],
-        [-HEAD_RX - 9 + sway, -38],
-        [-HEAD_RX - 13, HEAD_CY - 8],
+        [HEAD_RX + 12, HEAD_CY - 10],
+        [HEAD_RX + 8 + wave, -56],
+        [HEAD_RX - 2 + sway, -26],
+        [16, -16],
+        [0, -22],
+        [-16, -16],
+        [-HEAD_RX + 2 + sway, -26],
+        [-HEAD_RX - 8 - wave, -56],
+        [-HEAD_RX - 12, HEAD_CY - 10],
       ]);
+      // Two inner locks catching the light, so the mass is not one flat field.
+      withState(ctx, () => {
+        ctx.globalAlpha = 0.24;
+        for (const side of [-1, 1] as const) {
+          fillBlob(
+            ctx,
+            [
+              [side * (HEAD_RX - 4), HEAD_CY - 4],
+              [side * (HEAD_RX + 1), -52],
+              [side * (HEAD_RX - 9), -30],
+            ],
+            hairLight(p),
+            0.4,
+          );
+        }
+      });
       break;
+    }
     case 'twin':
       mass([
         [0, HEAD_CY - HEAD_RY - 3],
@@ -553,11 +616,15 @@ function drawHairBack(ctx: Ctx2D, spec: CharacterSpec, sway: number): void {
       ]);
       break;
     default:
+      // Short and bob: the mass stops at the jaw and flicks out, rather than
+      // bulging past the chin into a helmet.
       mass([
         [0, HEAD_CY - HEAD_RY - 2],
-        [HEAD_RX + 6, HEAD_CY - 5],
-        [0, HEAD_CY + HEAD_RY + 2],
-        [-HEAD_RX - 6, HEAD_CY - 5],
+        [HEAD_RX + 6, HEAD_CY - 8],
+        [HEAD_RX + 8, HEAD_CY + HEAD_RY * 0.5],
+        [0, HEAD_CY + HEAD_RY * 0.82],
+        [-HEAD_RX - 8, HEAD_CY + HEAD_RY * 0.5],
+        [-HEAD_RX - 6, HEAD_CY - 8],
       ]);
       break;
   }
@@ -595,11 +662,7 @@ function drawHead(ctx: Ctx2D, spec: CharacterSpec): void {
     );
   });
 
-  fillEllipse(ctx, 0, CHIN_Y + 5, 8.5, 7, skinShade(p));
-  withState(ctx, () => {
-    ctx.globalAlpha = 0.28;
-    fillEllipse(ctx, 0, CHIN_Y + 2, 8.5, 4, '#6a3a44');
-  });
+  // The neck is drawn with the body, under the collar — see drawBody.
 }
 
 /**
