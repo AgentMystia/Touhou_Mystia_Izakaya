@@ -52,7 +52,7 @@ export class GalleryScene implements Scene {
     drawText(g, t('gallery.title'), 40, 54, {
       size: 40, font: SERIF, weight: 800, color: UI.gold, baseline: 'middle',
     });
-    drawText(g, t('gallery.subtitle', { count: this.specs.length }), 190, 56, {
+    drawText(g, t('gallery.subtitle', { count: this.specs.length }), 44, 92, {
       size: 20, font: GOTHIC, color: alpha(UI.paperDim, 0.7), baseline: 'middle',
     });
 

@@ -91,27 +91,35 @@ async function main() {
     await page.evaluate(() => window.__mystia.step(8));
     await page.screenshot({ path: path.join(OUT, '02-title-hover.png') });
 
-    // Night service: let a few guests arrive, then open the cook panel.
+    // Prep: the menu, drink list and cookware loadout for the night.
+    await page.goto(`${BASE}?e2e=1&scene=prep`, { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => window.__mystia?.ready === true, null, { timeout: 20_000 });
+    await page.evaluate(() => window.__mystia.step(40));
+    await page.screenshot({ path: path.join(OUT, '04-prep.png') });
+
+    // Night service: let a few guests arrive on the walkable floor.
     await page.goto(`${BASE}?e2e=1&scene=service`, { waitUntil: 'domcontentloaded' });
     await page.waitForFunction(() => window.__mystia?.ready === true, null, { timeout: 20_000 });
     await page.evaluate(() => window.__mystia.step(60 * 22));
-    await page.screenshot({ path: path.join(OUT, '04-service.png') });
+    await page.screenshot({ path: path.join(OUT, '05-service.png') });
 
-    // Open the cook panel. The station bar sits at the bottom of the virtual
-    // 1920x1080 canvas, letterboxed into this 1600x900 viewport.
-    const stationPoint = await page.evaluate(() => {
-      const c = document.querySelector('canvas');
-      const rect = c.getBoundingClientRect();
-      const scale = Math.min(rect.width / 1920, rect.height / 1080);
-      const ox = rect.left + (rect.width - 1920 * scale) / 2;
-      const oy = rect.top + (rect.height - 1080 * scale) / 2;
-      // First station: centred group of 168-wide tiles, 26px off the bottom.
-      return { x: ox + (960 - 176 + 84) * scale, y: oy + (1080 - 96 - 26 + 48) * scale };
+    // WASD really moves her: hold A for half a second and check she slid left.
+    const walked = await page.evaluate(() => window.__mystia.mystia());
+    await page.keyboard.down('KeyA');
+    await page.evaluate(() => window.__mystia.step(30));
+    await page.keyboard.up('KeyA');
+    const after = await page.evaluate(() => window.__mystia.mystia());
+    console.log(`walk: x ${walked.x.toFixed(0)} -> ${after.x.toFixed(0)}`);
+    if (!(after.x < walked.x - 40)) throw new Error('holding A did not move Mystia left');
+    await page.screenshot({ path: path.join(OUT, '06-walking.png') });
+
+    // Walk to the first station and open the cook panel with E.
+    await page.evaluate(() => {
+      const a = window.__mystia.approach('station', 0);
+      window.__mystia.walkTo(a.x, a.y);
+      window.__mystia.step(2);
     });
-    await page.mouse.move(stationPoint.x, stationPoint.y);
-    await page.evaluate(() => window.__mystia.step(3));
-    await page.mouse.down();
-    await page.mouse.up();
+    await page.keyboard.press('KeyE');
     await page.evaluate(() => window.__mystia.step(4));
 
     // Pick the first recipe and add an ingredient, so the screenshot shows the
@@ -147,7 +155,7 @@ async function main() {
       (await panelPoint(panelX + 666, panelY + 107)).y,
     );
     await page.evaluate(() => window.__mystia.step(3));
-    await page.screenshot({ path: path.join(OUT, '05-cook.png') });
+    await page.screenshot({ path: path.join(OUT, '07-cook.png') });
     await page.keyboard.press('Escape');
     await page.evaluate(() => window.__mystia.step(4));
 
@@ -158,13 +166,16 @@ async function main() {
       if (!night) return { error: 'no night simulation' };
 
       const before = d.state().money;
-      const guest = night.seated.find((g) => g.state === 'waiting');
-      if (!guest) return { error: 'no guest waiting' };
-
       // Cook what a common guest actually ordered, so the rating is not black.
-      const dish = guest.order.dish ?? night.state.menu.dishes[0];
+      const guest = night.seated.find(
+        (g) => g.state === 'waiting' && night.servable(g.order.dish ?? ''),
+      );
+      if (!guest) return { error: 'no guest waiting with a cookable order' };
+
+      const dish = guest.order.dish;
       const drink = guest.order.drink ?? night.state.menu.drinks[0];
-      const station = night.stations.findIndex((s) => !s.job && !s.ready);
+      const station = night.freeStationFor(dish);
+      if (station < 0) return { error: 'no free station for the order' };
       const error = night.startCooking(station, dish, []);
       if (error) return { error };
 
@@ -185,9 +196,56 @@ async function main() {
       };
     });
     console.log('scripted round:', JSON.stringify(round));
-    await page.screenshot({ path: path.join(OUT, '06-served.png') });
+    await page.screenshot({ path: path.join(OUT, '08-served.png') });
     if (round.error) throw new Error(`scripted round failed: ${round.error}`);
     if (!(round.earned > 0)) throw new Error(`serving earned nothing (${round.earned})`);
+
+    // Throw-serving: cook a second plate, then send it across the room with K.
+    const thrown = await page.evaluate(() => {
+      const d = window.__mystia;
+      const night = d.night();
+      // The plate has to be one this loadout can actually cook, or the throw
+      // never happens; a black rating would also pay nothing.
+      const guest = night.seated.find(
+        (g) => g.state === 'waiting' && night.servable(g.order.dish ?? ''),
+      );
+      if (!guest) return { error: "no guest whose order tonight's stations can cook" };
+      const dish = guest.order.dish;
+      const drink = guest.order.drink ?? night.state.menu.drinks[0];
+      const station = night.freeStationFor(dish);
+      if (station < 0) return { error: 'no free station for the order' };
+      const error = night.startCooking(station, dish, []);
+      if (error) return { error };
+      d.step(60 * 12);
+      night.collect(station);
+      night.pour(drink);
+      // Stand well away, so the plate has a real distance to travel.
+      const away = d.approach('seat', guest.seat);
+      d.walkTo(Math.max(60, away.x - 520), away.y);
+      d.step(2);
+      return { before: d.state().money, seat: guest.seat, guest: guest.shortName };
+    });
+    if (thrown.error) throw new Error(`throw setup failed: ${thrown.error}`);
+
+    // Park the pointer away from the tables so Q, not the mouse, picks the seat.
+    await page.mouse.move(6, 6);
+    for (let i = 0; i < 8; i++) {
+      if ((await page.evaluate(() => window.__mystia.aim())) === thrown.seat) break;
+      await page.keyboard.press('KeyQ');
+      await page.evaluate(() => window.__mystia.step(1));
+    }
+    const aimed = await page.evaluate(() => window.__mystia.aim());
+    if (aimed !== thrown.seat) throw new Error(`could not aim at seat ${thrown.seat} (got ${aimed})`);
+
+    // The render loop keeps running between round trips, so shoot the frame
+    // straight after the throw or the plate has already landed.
+    await page.keyboard.press('KeyK');
+    await page.screenshot({ path: path.join(OUT, '09-throw.png') });
+    await page.evaluate(() => window.__mystia.step(60));
+    const landed = await page.evaluate(() => window.__mystia.state().money);
+    console.log(`thrown plate to ${thrown.guest}: ${landed - thrown.before}¥`);
+    if (!(landed > thrown.before)) throw new Error('the thrown plate never paid out');
+    await page.screenshot({ path: path.join(OUT, '10-thrown.png') });
 
     // The cast gallery: one screenshot that validates every character spec.
     await page.goto(`${BASE}?e2e=1&scene=gallery`, { waitUntil: 'domcontentloaded' });
@@ -199,7 +257,7 @@ async function main() {
     await page.goto(`${BASE}?e2e=1&scene=results`, { waitUntil: 'domcontentloaded' });
     await page.waitForFunction(() => window.__mystia?.ready === true, null, { timeout: 20_000 });
     await page.evaluate(() => window.__mystia.step(70));
-    await page.screenshot({ path: path.join(OUT, '07-results.png') });
+    await page.screenshot({ path: path.join(OUT, '11-results.png') });
 
     const scene = await page.evaluate(() => window.__mystia.scene());
     console.log(`\nscene: ${scene}`);

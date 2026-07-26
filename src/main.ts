@@ -10,6 +10,7 @@ import { Renderer } from './gfx/renderer';
 import { loadFonts } from './gfx/text';
 import { loadTextures } from './gfx/textures';
 import { GalleryScene } from './scenes/gallery';
+import { PrepScene } from './scenes/prep';
 import { ResultsScene } from './scenes/results';
 import { ServiceScene } from './scenes/service';
 import { TitleScene } from './scenes/title';
@@ -51,16 +52,21 @@ async function boot(): Promise<void> {
     );
   };
 
+  /** Every night starts at the prep bench, where the menu is decided. */
+  const openPrep = (): void => {
+    manager.replace(new PrepScene(state, startNight));
+  };
+
   const makeTitle = (): TitleScene =>
     new TitleScene((action) => {
       switch (action) {
         case 'new':
           state = newGame(E2E ? 1337 : undefined);
-          startNight();
+          openPrep();
           break;
         case 'continue':
           state = loadGame() ?? state;
-          startNight();
+          openPrep();
           break;
         default:
           // The album and settings arrive with the later milestones.
@@ -74,14 +80,16 @@ async function boot(): Promise<void> {
       ? new GalleryScene('all', params.get('big') === '1')
       : scene === 'service'
         ? new ServiceScene(new NightService(state), () => manager.replace(makeTitle()))
-        : scene === 'results'
-          ? (() => {
-              // A short scripted night, so the ledger has something in it.
-              const night = new NightService(state);
-              night.timeLeft = 0;
-              return new ResultsScene(night, state, () => manager.replace(makeTitle()));
-            })()
-          : makeTitle(),
+        : scene === 'prep'
+          ? new PrepScene(state, startNight)
+          : scene === 'results'
+            ? (() => {
+                // A short scripted night, so the ledger has something in it.
+                const night = new NightService(state);
+                night.timeLeft = 0;
+                return new ResultsScene(night, state, () => manager.replace(makeTitle()));
+              })()
+            : makeTitle(),
   );
 
   const loop = new GameLoop(
@@ -120,6 +128,27 @@ async function boot(): Promise<void> {
         night: () => {
           const current = manager.current;
           return current instanceof ServiceScene ? current.simulation : null;
+        },
+        /** Teleports Mystia, so the harness need not drive her with key events. */
+        walkTo: (x: number, y: number) => {
+          const current = manager.current;
+          if (current instanceof ServiceScene) current.walkTo(x, y);
+        },
+        flights: () => {
+          const current = manager.current;
+          return current instanceof ServiceScene ? current.inFlight : 0;
+        },
+        aim: () => {
+          const current = manager.current;
+          return current instanceof ServiceScene ? current.aimedAt : -1;
+        },
+        mystia: () => {
+          const current = manager.current;
+          return current instanceof ServiceScene ? current.where : null;
+        },
+        approach: (what: 'station' | 'seat' | 'shelf', index = 0) => {
+          const current = manager.current;
+          return current instanceof ServiceScene ? current.approachOf(what, index) : null;
         },
         state: () => state,
         ready: true,

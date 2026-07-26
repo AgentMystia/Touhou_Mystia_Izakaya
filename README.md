@@ -1,9 +1,11 @@
 # 东方夜雀食堂 — Touhou Mystia's Izakaya
 
 A browser recreation of the izakaya-management sim *Touhou Mystia's Izakaya*
-(东方夜雀食堂). Mystia runs a lantern-lit food stall on a Gensokyo trail: read
-what each guest wants, cook it on the right station, season it to hit the tags
-they like, pour a drink, and serve before their patience runs out.
+(东方夜雀食堂). Mystia runs a lantern-lit izakaya on a Gensokyo trail. You set
+the night's menu and cookware, then work the floor on foot: read what each guest
+wants, cook it on the right station, season it to hit the tags they like, pour a
+drink at the shelf, and get it to the table before their patience runs out —
+carried by hand, or thrown across the room.
 
 **Play it: <https://agentmystia.github.io/Touhou_Mystia_Izakaya/>**
 
@@ -15,6 +17,22 @@ the default branch redeploys the site from CI.
 npm install
 npm run dev        # http://127.0.0.1:5173
 ```
+
+## Controls
+
+| | |
+| --- | --- |
+| `WASD` / arrows | walk the floor |
+| `E` / `Space` | context action — cook, take the dish, pour, serve |
+| right mouse / `K` | throw the plate at the aimed guest |
+| mouse / `Q` / wheel | pick the throw target |
+| `Esc` | close a panel |
+
+Everything happens where Mystia is standing. Stations line the back wall, the
+drink shelf is at the right-hand end, and guests take the tables in front; the
+dashed rings on the boards mark the spots you have to stand on. Throwing is much
+faster than walking, but the plate is committed the moment it leaves her hands —
+if the guest gives up mid-flight it hits the floor.
 
 | | |
 | --- | --- |
@@ -78,19 +96,36 @@ not translations.
 
 ## Art and audio
 
-All art is drawn in code — there are no sprite sheets. `src/art/scenery.ts`
-builds the stall as a value structure (hazy sky, mid-value ridges, dark
-exterior, bright interior, near-black foreground bamboo), and the renderer
-paints colour and emissive into separate buffers so the lanterns bloom properly.
+All art is drawn in code — there are no sprite sheets. `src/art/interior.ts`
+builds the shop room (timber wall, lantern string, noren doorway, floorboards
+converging on a vanishing point) and every piece of furniture is anchored to the
+front edge of its own collision box in `src/sim/floor.ts`, so the art and the
+physics can never drift apart. Each station draws the cookware that defines it,
+so a grill reads as a grill from across the room. The renderer paints colour,
+emissive and interface into separate buffers, so the lanterns bloom without
+washing out the text.
+
 Characters come from one parametric chibi rig, so all 51 named guests are data —
 a palette plus hair, headwear, wings, ears and outfit. `?scene=gallery` renders
 the whole cast in one screenshot.
 
-## What is not built yet
+## A night, end to end
 
-The night loop is complete and playable. Still to come: the day phase (map
-travel, gathering, merchants, quests), partners and izakaya upgrades, reward and
-punishment spell cards, the Sparrow Tune rhythm minigame, and the album.
+**备菜 (prep)** sets the night up. The menu, the drink list and the cookware
+loadout are each capped by the izakaya's level, so the screen is a coverage
+problem: bring the wrong cookware and half the menu is dead weight, and the
+panel says so before you open the doors. It also totals the tags you will be
+able to put in front of a guest, which is what named guests actually order by.
+
+**Night service** is played on the floor, three-quarter view. Guests take the
+tables, orders float above them, and dishes cook in real time on whichever
+station matches the recipe. Nothing is clicked at a distance — you walk to it.
+
+**打烊 (results)** rolls the night up: takings, tips, best combo, walkouts.
+
+Still to come: the day phase (map travel, gathering, merchants, quests),
+partners and izakaya upgrades, reward and punishment spell cards, the Sparrow
+Tune rhythm minigame, and the album.
 
 ## Credits and licensing
 

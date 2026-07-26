@@ -18,6 +18,8 @@ export class Input {
   pressed = false;
   /** True only on the frame the button came up. */
   released = false;
+  /** True only on the frame the secondary button went down. */
+  rightPressed = false;
   /** Accumulated wheel delta since the last frame. */
   wheel = 0;
 
@@ -32,12 +34,18 @@ export class Input {
     this.listen(target, 'pointermove', (e) => this.movePointer(e as PointerEvent));
     this.listen(target, 'pointerdown', (e) => {
       const event = e as PointerEvent;
-      if (event.button !== 0) return;
       this.movePointer(event);
+      if (event.button === 2) {
+        this.rightPressed = true;
+        return;
+      }
+      if (event.button !== 0) return;
       this.down = true;
       this.pressed = true;
       target.setPointerCapture?.(event.pointerId);
     });
+    // The right button is a game action, not a place to open the browser menu.
+    this.listen(target, 'contextmenu', (e) => e.preventDefault());
     this.listen(window, 'pointerup', (e) => {
       const event = e as PointerEvent;
       if (event.button !== 0) return;
@@ -104,6 +112,7 @@ export class Input {
   endFrame(): void {
     this.pressed = false;
     this.released = false;
+    this.rightPressed = false;
     this.wheel = 0;
     this.keysPressed.clear();
   }

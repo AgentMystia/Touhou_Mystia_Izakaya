@@ -36,7 +36,7 @@ import {
 } from '../rules';
 import { type Rand, mulberry32, hashSeed, pick, randInt } from '../core/rng';
 import { specFor } from '../art/cast';
-import { beverageName, customerName, dishName, t, tagName } from '../i18n';
+import { beverageName, customerName, dishName, kitchenwareName, t, tagName } from '../i18n';
 import type { CharacterSpec } from '../art/characters';
 import {
   type GameState,
@@ -159,6 +159,27 @@ export class NightService {
     return this.guests.find((g) => g.seat === seat && g.state !== 'gone');
   }
 
+  /** True when some station in tonight's loadout can make this dish. */
+  cookableHere(cuisineName: string): boolean {
+    const ware = CUISINES[cuisineName]?.kitchenware;
+    if (!ware) return false;
+    return ware === 'Any' || this.stations.some((s) => s.kind === ware);
+  }
+
+  /** Cookable tonight *and* the pantry has the ingredients. */
+  servable(cuisineName: string): boolean {
+    return this.cookableHere(cuisineName) && canCook(this.state, cuisineName);
+  }
+
+  /** An idle station that could start this dish now, or -1. */
+  freeStationFor(cuisineName: string): number {
+    const ware = CUISINES[cuisineName]?.kitchenware;
+    if (!ware) return -1;
+    return this.stations.findIndex(
+      (s) => !s.job && !s.ready && (ware === 'Any' || s.kind === ware),
+    );
+  }
+
   // ----------------------------------------------------------- simulation
 
   update(dt: number): void {
@@ -220,8 +241,12 @@ export class NightService {
   private spawnCommon(seat: number): Guest | null {
     const customer = pick(this.rand, this.commonPool);
     if (!customer) return null;
-    const dish = pick(this.rand, this.state.menu.dishes.filter((d) => canCook(this.state, d)))
-      ?? pick(this.rand, this.state.menu.dishes);
+    // Never order something the night's loadout physically cannot produce —
+    // an unfillable order is a guaranteed walkout the player cannot prevent.
+    const dish =
+      pick(this.rand, this.state.menu.dishes.filter((d) => this.servable(d))) ??
+      pick(this.rand, this.state.menu.dishes.filter((d) => this.cookableHere(d))) ??
+      pick(this.rand, this.state.menu.dishes);
     const drink = pick(this.rand, this.state.menu.drinks);
     if (!dish || !drink) return null;
 
@@ -290,7 +315,7 @@ export class NightService {
     const cuisine = CUISINES[cuisineName];
     if (!cuisine) return t('msg.nothingToServe');
     if (cuisine.kitchenware !== 'Any' && cuisine.kitchenware !== station.kind) {
-      return t('cook.needsStation', { station: cuisine.kitchenware });
+      return t('cook.needsStation', { station: kitchenwareName(cuisine.kitchenware) });
     }
     if (!canCook(this.state, cuisineName)) return t('cook.outOfStock');
 
@@ -325,12 +350,37 @@ export class NightService {
     return true;
   }
 
-  /** Serves the carried dish and drink to a seated guest. */
+  /**
+   * Lifts the finished plate out of Mystia's hands. Throwing needs the plate to
+   * leave her hands the moment it is launched but only settle up when it lands,
+   * so the two halves of serving are kept separate.
+   */
+  takePlate(): Plate | null {
+    if (!this.carrying || !this.pouring) return null;
+    const plate: Plate = { dish: this.carrying, drink: this.pouring };
+    this.carrying = null;
+    this.pouring = null;
+    return plate;
+  }
+
+  /** Serves the carried dish and drink to a seated guest by hand. */
   serve(seat: number): NightEvent | null {
+    const plate = this.takePlate();
+    if (!plate) return null;
+    const event = this.deliver(seat, plate);
+    if (!event) {
+      // Nobody took it — the plate goes back in her hands.
+      this.carrying = plate.dish;
+      this.pouring = plate.drink;
+    }
+    return event;
+  }
+
+  /** Settles a plate against whoever is in `seat`, however it got there. */
+  deliver(seat: number, plate: Plate): NightEvent | null {
     const guest = this.guestAt(seat);
-    const dish = this.carrying;
-    const drink = this.pouring;
-    if (!guest || guest.state !== 'waiting' || !dish || !drink) return null;
+    const { dish, drink } = plate;
+    if (!guest || guest.state !== 'waiting') return null;
 
     const rating = this.judge(guest, dish, drink);
     const bill = computeBill(dish, drink);
@@ -364,9 +414,6 @@ export class NightService {
     guest.verdict = { rating, paid: payment.paid, tip, note };
     guest.state = 'leaving';
     guest.reactionLeft = 2.4;
-
-    this.carrying = null;
-    this.pouring = null;
 
     const event: NightEvent = {
       kind: 'served',

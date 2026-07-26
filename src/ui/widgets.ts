@@ -249,11 +249,11 @@ export function ratingCard(ctx: Ctx2D, x: number, y: number, rating: Rating, not
 }
 
 const RATING_LABEL: Record<Rating, string> = {
-  black: '激怒  Furious',
-  purple: '不満  Dissatisfied',
-  green: '普通  Fair',
-  orange: '満足  Satisfied',
-  pink: '絶品  Perfect',
+  black: '激怒',
+  purple: '不满',
+  green: '普通',
+  orange: '满意',
+  pink: '绝品',
 };
 
 /** Small counter used across the HUD: an icon glyph plus a value. */
