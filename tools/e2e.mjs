@@ -195,6 +195,12 @@ async function main() {
     await page.evaluate(() => window.__mystia.step(40));
     await page.screenshot({ path: path.join(OUT, '03-cast.png'), fullPage: false });
 
+    // Closing time.
+    await page.goto(`${BASE}?e2e=1&scene=results`, { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => window.__mystia?.ready === true, null, { timeout: 20_000 });
+    await page.evaluate(() => window.__mystia.step(70));
+    await page.screenshot({ path: path.join(OUT, '07-results.png') });
+
     const scene = await page.evaluate(() => window.__mystia.scene());
     console.log(`\nscene: ${scene}`);
     console.log(`screenshots written to ${path.relative(ROOT, OUT)}/`);

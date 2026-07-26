@@ -9,6 +9,7 @@ import { SceneManager, type SceneContext } from './core/scene';
 import { Renderer } from './gfx/renderer';
 import { loadFonts } from './gfx/text';
 import { GalleryScene } from './scenes/gallery';
+import { ResultsScene } from './scenes/results';
 import { ServiceScene } from './scenes/service';
 import { TitleScene } from './scenes/title';
 import { NightService } from './sim/night';
@@ -38,9 +39,13 @@ async function boot(): Promise<void> {
     const night = new NightService(state);
     manager.replace(
       new ServiceScene(night, () => {
-        saveGame(state);
-        state.day++;
-        manager.replace(makeTitle());
+        manager.replace(
+          new ResultsScene(night, state, () => {
+            state.day++;
+            saveGame(state);
+            manager.replace(makeTitle());
+          }),
+        );
       }),
     );
   };
@@ -68,7 +73,14 @@ async function boot(): Promise<void> {
       ? new GalleryScene('all')
       : scene === 'service'
         ? new ServiceScene(new NightService(state), () => manager.replace(makeTitle()))
-        : makeTitle(),
+        : scene === 'results'
+          ? (() => {
+              // A short scripted night, so the ledger has something in it.
+              const night = new NightService(state);
+              night.timeLeft = 0;
+              return new ResultsScene(night, state, () => manager.replace(makeTitle()));
+            })()
+          : makeTitle(),
   );
 
   const loop = new GameLoop(
