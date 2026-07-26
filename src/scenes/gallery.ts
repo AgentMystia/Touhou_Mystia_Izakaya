@@ -9,6 +9,7 @@ import { UI, alpha } from '../art/palette';
 import { drawCharacter, characterRim, type CharacterSpec } from '../art/characters';
 import { RARE_CUSTOMERS } from '../data';
 import { GOTHIC, SERIF, drawText } from '../gfx/text';
+import { customerName, t } from '../i18n';
 import { withState } from '../gfx/vector';
 import type { Scene, SceneContext } from '../core/scene';
 
@@ -45,10 +46,10 @@ export class GalleryScene implements Scene {
     g.fillStyle = '#171226';
     g.fillRect(0, 0, width, height);
 
-    drawText(g, 'Cast', 40, 54, {
+    drawText(g, t('gallery.title'), 40, 54, {
       size: 40, font: SERIF, weight: 800, color: UI.gold, baseline: 'middle',
     });
-    drawText(g, `${this.specs.length} characters from one rig`, 150, 56, {
+    drawText(g, t('gallery.subtitle', { count: this.specs.length }), 190, 56, {
       size: 20, font: GOTHIC, color: alpha(UI.paperDim, 0.7), baseline: 'middle',
     });
 
@@ -69,7 +70,7 @@ export class GalleryScene implements Scene {
       drawCharacter(g, spec, cx, cy, { time: this.elapsed, height: 104, mood: 0.8 });
       characterRim(light, spec, cx, cy, { time: this.elapsed, height: 104 });
 
-      drawText(g, spec.short, cx, cy + 18, {
+      drawText(g, customerName(spec.name), cx, cy + 18, {
         size: 14, font: GOTHIC, weight: 500,
         color: alpha(UI.paper, 0.8), align: 'center', baseline: 'middle',
       });

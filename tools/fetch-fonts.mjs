@@ -2,97 +2,121 @@
  * Vendors the two webfonts the game uses into public/fonts/.
  *
  * Both are SIL Open Font License, so they can be redistributed with the game.
- * Rather than pull Google's full Japanese fonts (8 MB+ each, split across a
- * hundred unicode-range chunks), this requests a `text=` subset containing only
- * the glyphs the UI actually draws, which comes back as one small woff2.
+ * The upstream families are 8-9 MB each because they cover the full CJK range,
+ * so each weight is subset locally with fonttools down to exactly the glyphs
+ * this game can draw — harvested from the generated name table and the locale
+ * file, so a new dish or UI string can never ship without its characters.
  *
- * Re-run with `node tools/fetch-fonts.mjs` after adding new Japanese UI text.
+ * Requires `pip install fonttools brotli`. Re-run with
+ * `node tools/fetch-fonts.mjs` after adding Chinese text to the UI.
  */
 
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 
-const OUT = path.join(process.cwd(), 'public', 'fonts');
+const ROOT = process.cwd();
+const OUT = path.join(ROOT, 'public', 'fonts');
 
-/**
- * Every non-ASCII glyph the interface can draw. Kept explicit so the subset
- * stays tiny and so a missing glyph is a visible, fixable omission.
- */
-const GLYPHS = [
-  // Title, signage and lanterns
-  '東方夜雀食堂営業中',
-  // Menu and navigation
-  '開店再献立帖設定続行戻閉始終了保存記録図鑑',
-  // Day / night, time, money
-  '昼夜朝晩時分日目当店主客数金銭円貫文値段',
-  // Cooking
-  '料理飲物調味酒肴焼煮蒸揚切鍋網皿箸盛付味',
-  // Ratings and reactions
-  '最高上出来普通不満怒喜楽美味不味絶品',
-  // Places
-  '妖怪道人里博麗神社紅魔館迷竹林白玉楼魔法森山旧地獄命蓮寺神霊廟太陽畑輝針城月都界',
-  // Misc UI
-  '評価順位合計収入支出利益達成条件報酬素材在庫買売',
-  // Kana
-  'あいうえおかきくけこさしすせそたちつてとなにぬねの',
-  'はひふへほまみむめもやゆよらりるれろわをん',
-  'アイウエオカキクケコサシスセソタチツテトナニヌネノ',
-  'ハヒフヘホマミムメモヤユヨラリルレロワヲン',
-  'がぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽ',
-  'ガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ',
-  'ゃゅょっーゞ々ャュョッ',
-  // Punctuation and symbols
-  '、。「」『』・！？〜（）：￥※★☆〇◎△▲▽▼',
-].join('');
-
-const ASCII = Array.from({ length: 95 }, (_, i) => String.fromCharCode(32 + i)).join('');
-const SUBSET = [...new Set([...ASCII, ...GLYPHS])].join('');
+const GOOGLE_FONTS = 'https://raw.githubusercontent.com/google/fonts/main/ofl';
 
 const FAMILIES = [
-  { css: 'Shippori+Mincho:wght@500;700;800', file: 'shippori-mincho', label: 'Shippori Mincho' },
-  { css: 'Zen+Maru+Gothic:wght@400;500;700', file: 'zen-maru-gothic', label: 'Zen Maru Gothic' },
+  {
+    label: 'Shippori Mincho',
+    file: 'shippori-mincho',
+    weights: {
+      500: `${GOOGLE_FONTS}/shipporimincho/ShipporiMincho-Medium.ttf`,
+      700: `${GOOGLE_FONTS}/shipporimincho/ShipporiMincho-Bold.ttf`,
+      800: `${GOOGLE_FONTS}/shipporimincho/ShipporiMincho-ExtraBold.ttf`,
+    },
+  },
+  {
+    label: 'Zen Maru Gothic',
+    file: 'zen-maru-gothic',
+    weights: {
+      400: `${GOOGLE_FONTS}/zenmarugothic/ZenMaruGothic-Regular.ttf`,
+      500: `${GOOGLE_FONTS}/zenmarugothic/ZenMaruGothic-Medium.ttf`,
+      700: `${GOOGLE_FONTS}/zenmarugothic/ZenMaruGothic-Bold.ttf`,
+    },
+  },
 ];
 
-// Google serves woff2 only to user agents it believes support it.
-const UA =
-  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
+/** Glyphs the interface draws that are not in the generated data. */
+const EXTRA_GLYPHS = [
+  '東方夜雀食堂営業中', // signage and lantern faces, kept in Japanese forms
+  '刻钱连时评判盆调理烹饪',
+  '、。「」『』・！？～（）：￥¥·—…※★☆〇◎△▲▽▼✕⚠',
+  '０１２３４５６７８９',
+].join('');
 
-const get = async (url, asText = true) => {
-  const res = await fetch(url, { headers: { 'User-Agent': UA } });
+function harvest() {
+  const chars = new Set();
+  const eat = (text) => {
+    for (const ch of String(text)) chars.add(ch);
+  };
+
+  const names = JSON.parse(readFileSync(path.join(ROOT, 'src/data/zh-names.json'), 'utf8'));
+  for (const table of Object.values(names)) {
+    for (const [key, value] of Object.entries(table)) {
+      eat(key);
+      eat(value);
+    }
+  }
+  // The locale file is TypeScript, so take every quoted run out of the source.
+  const locale = readFileSync(path.join(ROOT, 'src/i18n/zh.ts'), 'utf8');
+  for (const m of locale.matchAll(/'([^']*)'/g)) eat(m[1]);
+
+  const ascii = Array.from({ length: 95 }, (_, i) => String.fromCharCode(32 + i));
+  for (const ch of [...ascii, ...EXTRA_GLYPHS]) chars.add(ch);
+
+  chars.delete('\n');
+  chars.delete('\r');
+  chars.delete('\\');
+  return [...chars].sort().join('');
+}
+
+async function download(url, to) {
+  const res = await fetch(url);
   if (!res.ok) throw new Error(`${res.status} ${res.statusText} for ${url}`);
-  return asText ? res.text() : Buffer.from(await res.arrayBuffer());
-};
+  writeFileSync(to, Buffer.from(await res.arrayBuffer()));
+}
 
 async function main() {
   mkdirSync(OUT, { recursive: true });
+  const work = path.join(os.tmpdir(), 'mystia-fonts');
+  mkdirSync(work, { recursive: true });
+
+  const subset = harvest();
+  const textFile = path.join(work, 'subset.txt');
+  writeFileSync(textFile, subset, 'utf8');
+  console.log(`subsetting to ${subset.length} glyphs\n`);
+
   const faces = [];
-
   for (const family of FAMILIES) {
-    const cssUrl =
-      `https://fonts.googleapis.com/css2?family=${family.css}` +
-      `&text=${encodeURIComponent(SUBSET)}&display=swap`;
-    const css = await get(cssUrl);
-
-    // Each @font-face block carries its own weight and source URL.
-    const blocks = css.split('@font-face').slice(1);
-    let index = 0;
-    for (const block of blocks) {
-      const weight = /font-weight:\s*(\d+)/.exec(block)?.[1] ?? '400';
-      // Subset URLs are of the form /l/font?kit=… with no file extension.
-      const src = /url\((https:\/\/[^)]+)\)/.exec(block)?.[1];
-      if (!src) continue;
+    for (const [weight, url] of Object.entries(family.weights)) {
+      const source = path.join(work, `${family.file}-${weight}.ttf`);
+      await download(url, source);
 
       const name = `${family.file}-${weight}.woff2`;
-      const bytes = await get(src, false);
-      writeFileSync(path.join(OUT, name), bytes);
-      faces.push({ family: family.label, weight, file: name, bytes: bytes.length });
-      console.log(`  ${name.padEnd(30)} ${(bytes.length / 1024).toFixed(1)} KB`);
-      index++;
+      const target = path.join(OUT, name);
+      execFileSync('python3', [
+        '-m', 'fontTools.subset', source,
+        `--text-file=${textFile}`,
+        '--flavor=woff2',
+        `--output-file=${target}`,
+        '--layout-features=*',
+        '--no-hinting',
+        '--desubroutinize',
+        '--drop-tables+=DSIG',
+      ]);
+
+      const bytes = readFileSync(target).length;
+      faces.push({ family: family.label, weight, file: name, bytes });
+      console.log(`  ${name.padEnd(30)} ${(bytes / 1024).toFixed(1)} KB`);
     }
-    if (index === 0) throw new Error(`no @font-face blocks parsed for ${family.label}`);
   }
 
-  // A stylesheet the page can link locally, with no network dependency.
   const stylesheet = faces
     .map(
       (f) => `@font-face {
@@ -118,12 +142,12 @@ bundling and redistribution with this project.
 | Shippori Mincho | FONTDASU | [OFL 1.1](https://openfontlicense.org/) |
 | Zen Maru Gothic | Yoshimichi Ohira | [OFL 1.1](https://openfontlicense.org/) |
 
-The files here are glyph subsets covering only the characters the interface
-draws, generated by \`tools/fetch-fonts.mjs\`. Regenerate them after adding new
-Japanese text to the UI.
+These files are glyph subsets covering only the characters the interface can
+draw. Regenerate with \`node tools/fetch-fonts.mjs\` after adding new text.
 `,
   );
 
+  rmSync(work, { recursive: true, force: true });
   const total = faces.reduce((sum, f) => sum + f.bytes, 0);
   console.log(`\n${faces.length} faces, ${(total / 1024).toFixed(1)} KB total`);
 }

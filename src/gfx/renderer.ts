@@ -50,10 +50,16 @@ export class Renderer {
   readonly ctx: Ctx2D;
   /** Emissive layer — draw glows here; it is blurred and added on top. */
   readonly light: Ctx2D;
+  /**
+   * Interface layer. Composited after bloom and grading, so panels stay
+   * readable instead of having the scene's lantern glow bleed through them.
+   */
+  readonly ui: Ctx2D;
 
   private readonly display: Ctx2D;
   private readonly sceneCanvas: HTMLCanvasElement;
   private readonly lightCanvas: HTMLCanvasElement;
+  private readonly uiCanvas: HTMLCanvasElement;
   private readonly bloomA: HTMLCanvasElement;
   private readonly bloomB: HTMLCanvasElement;
   private readonly bloomCtxA: Ctx2D;
@@ -83,6 +89,9 @@ export class Renderer {
 
     this.lightCanvas = makeCanvas(this.width, this.height);
     this.light = context2d(this.lightCanvas, true);
+
+    this.uiCanvas = makeCanvas(this.width, this.height);
+    this.ui = context2d(this.uiCanvas, true);
 
     const bw = Math.ceil(this.width / BLOOM_DIVISOR);
     const bh = Math.ceil(this.height / BLOOM_DIVISOR);
@@ -129,12 +138,21 @@ export class Renderer {
 
     this.light.setTransform(1, 0, 0, 1, 0, 0);
     this.light.clearRect(0, 0, this.width, this.height);
+
+    this.ui.setTransform(1, 0, 0, 1, 0, 0);
+    this.ui.clearRect(0, 0, this.width, this.height);
   }
 
   /** Runs the post chain and blits to the visible canvas. */
   present(): void {
     if (!this.lowQuality) this.compositeBloom();
     this.grade();
+
+    // The interface goes on last, untouched by bloom, grade or vignette.
+    this.ctx.save();
+    this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+    this.ctx.drawImage(this.uiCanvas, 0, 0);
+    this.ctx.restore();
 
     const d = this.display;
     d.setTransform(1, 0, 0, 1, 0, 0);
@@ -245,7 +263,8 @@ export class Renderer {
   /** Full-screen black veil, used for scene transitions. */
   veil(alpha: number): void {
     if (alpha <= 0) return;
-    const ctx = this.ctx;
+    // On the UI layer, so a transition also covers any open panel.
+    const ctx = this.ui;
     ctx.save();
     ctx.globalAlpha = Math.min(1, alpha);
     ctx.fillStyle = '#05040a';

@@ -5,7 +5,8 @@
   "type": "module",
   "description": "A browser recreation of the izakaya-management sim Touhou Mystia's Izakaya (東方夜雀食堂).",
   "scripts": {
-    "build:data": "node tools/build-data.mjs",
+    "build:data": "node tools/build-data.mjs && node tools/build-i18n.mjs",
+    "build:i18n": "node tools/build-i18n.mjs",
     "dev": "vite",
     "build": "npm run build:data && tsc --noEmit && vite build",
     "preview": "vite preview --port 4173",

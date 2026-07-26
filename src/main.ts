@@ -9,7 +9,10 @@ import { SceneManager, type SceneContext } from './core/scene';
 import { Renderer } from './gfx/renderer';
 import { loadFonts } from './gfx/text';
 import { GalleryScene } from './scenes/gallery';
+import { ServiceScene } from './scenes/service';
 import { TitleScene } from './scenes/title';
+import { NightService } from './sim/night';
+import { loadGame, newGame, saveGame, type GameState } from './sim/state';
 
 const params = new URLSearchParams(location.search);
 /** `?e2e=1` makes the render deterministic for screenshot tests. */
@@ -29,14 +32,43 @@ async function boot(): Promise<void> {
     (): SceneContext => ({ renderer, input, time, manager }),
   );
 
-  // `?scene=gallery` renders the whole cast for art review.
-  manager.boot(
-    params.get('scene') === 'gallery'
-      ? new GalleryScene('all')
-      : new TitleScene((action) => {
-          // Later milestones route these into the day map and album.
+  let state: GameState = loadGame() ?? newGame(E2E ? 1337 : undefined);
+
+  const startNight = (): void => {
+    const night = new NightService(state);
+    manager.replace(
+      new ServiceScene(night, () => {
+        saveGame(state);
+        state.day++;
+        manager.replace(makeTitle());
+      }),
+    );
+  };
+
+  const makeTitle = (): TitleScene =>
+    new TitleScene((action) => {
+      switch (action) {
+        case 'new':
+          state = newGame(E2E ? 1337 : undefined);
+          startNight();
+          break;
+        case 'continue':
+          state = loadGame() ?? state;
+          startNight();
+          break;
+        default:
+          // The album and settings arrive with the later milestones.
           console.info(`[title] ${action}`);
-        }),
+      }
+    });
+
+  const scene = params.get('scene');
+  manager.boot(
+    scene === 'gallery'
+      ? new GalleryScene('all')
+      : scene === 'service'
+        ? new ServiceScene(new NightService(state), () => manager.replace(makeTitle()))
+        : makeTitle(),
   );
 
   const loop = new GameLoop(
@@ -71,6 +103,12 @@ async function boot(): Promise<void> {
           renderer.present();
         },
         scene: () => manager.current?.name ?? null,
+        /** The live night simulation, when the service scene is on top. */
+        night: () => {
+          const current = manager.current;
+          return current instanceof ServiceScene ? current.simulation : null;
+        },
+        state: () => state,
         ready: true,
       },
     });

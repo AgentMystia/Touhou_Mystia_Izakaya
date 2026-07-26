@@ -621,13 +621,16 @@ function drawCounter(ctx: Ctx2D, layout: SceneLayout): void {
     ctx.stroke();
   });
 
-  // Deep shadow under the counter — this is what makes it sit above the trail.
+  // Deep shadow under the counter. Fully opaque: guests are drawn behind the
+  // counter so they can be cropped at the chest, and a translucent fill here
+  // would let their legs ghost through the woodwork.
   withState(ctx, () => {
-    ctx.fillStyle = linearPaint(ctx, 0, counterY + 46, 0, groundY, [
-      { at: 0, color: alpha('#000000', 0.7) },
-      { at: 1, color: alpha('#000000', 0.2) },
+    ctx.fillStyle = linearPaint(ctx, 0, counterY + 46, 0, groundY + 4, [
+      { at: 0, color: '#0a0710' },
+      { at: 0.6, color: '#120c18' },
+      { at: 1, color: '#1a1322' },
     ]);
-    ctx.fillRect(outL, counterY + 46, outR - outL, groundY - counterY - 46);
+    ctx.fillRect(outL, counterY + 46, outR - outL, groundY - counterY - 42);
   });
 
   // Stools.
@@ -816,7 +819,11 @@ function drawForeground(ctx: Ctx2D, layout: SceneLayout, time: number): void {
 
 // ------------------------------------------------------------ public API
 
-export function drawNightScene(ctx: Ctx2D, layout: SceneLayout, time: number): void {
+/**
+ * Everything behind the counter. Split out from the front so guests and Mystia
+ * can be drawn between the two and be correctly occluded by the counter slab.
+ */
+export function drawNightBack(ctx: Ctx2D, layout: SceneLayout, time: number): void {
   drawSky(ctx, layout, time);
   drawBackdrop(ctx, layout);
 
@@ -835,6 +842,10 @@ export function drawNightScene(ctx: Ctx2D, layout: SceneLayout, time: number): v
   });
 
   drawInterior(ctx, layout, time);
+}
+
+/** The counter and everything in front of or above it. */
+export function drawNightFront(ctx: Ctx2D, layout: SceneLayout, time: number): void {
   drawCounter(ctx, layout);
   drawGrill(ctx, layout, time);
   drawRoof(ctx, layout);
@@ -852,6 +863,24 @@ export function drawNightScene(ctx: Ctx2D, layout: SceneLayout, time: number): v
       Math.sin(time * 0.6 + i * 1.3) * 0.03,
     );
   });
+}
+
+/** Convenience for scenes that draw nothing between the two halves. */
+export function drawNightScene(ctx: Ctx2D, layout: SceneLayout, time: number): void {
+  drawNightBack(ctx, layout, time);
+  drawNightFront(ctx, layout, time);
+}
+
+/** Seat positions along the counter, matching the stools. */
+export function seatPositions(layout: SceneLayout, count: number): Array<{ x: number; y: number }> {
+  const { stallLeft: l, stallRight: r, counterY } = layout;
+  // Offset from the left so the grill end stays clear for Mystia.
+  const span = r - l - 400;
+  return Array.from({ length: count }, (_, i) => ({
+    x: l + 300 + (count === 1 ? span / 2 : (span * i) / (count - 1)),
+    // Feet sit below the counter lip so the slab crops them at the chest.
+    y: counterY + 92,
+  }));
 }
 
 /** Drawn after the characters, so the frame sits in front of everything. */

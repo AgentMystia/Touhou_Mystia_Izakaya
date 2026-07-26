@@ -17,21 +17,21 @@ import {
 import { EMITTERS, ParticleSystem } from '../gfx/particles';
 import { GOTHIC, SERIF, drawText } from '../gfx/text';
 import { fillRoundRect, strokeRoundRect, withState } from '../gfx/vector';
+import { t } from '../i18n';
 import { hitTest } from '../core/input';
 import { easeOutCubic, clamp01 } from '../core/tween';
 import type { Scene, SceneContext } from '../core/scene';
 
 export interface TitleAction {
   id: string;
-  label: string;
-  sub: string;
+  key: 'title.start' | 'title.continue' | 'title.album' | 'title.settings';
 }
 
-const ACTIONS: TitleAction[] = [
-  { id: 'new', label: '開店', sub: 'Open for business' },
-  { id: 'continue', label: '再開', sub: 'Continue' },
-  { id: 'album', label: '献立帖', sub: 'Album' },
-  { id: 'settings', label: '設定', sub: 'Settings' },
+const ACTIONS: Array<{ id: string; key: TitleAction['key'] }> = [
+  { id: 'new', key: 'title.start' },
+  { id: 'continue', key: 'title.continue' },
+  { id: 'album', key: 'title.album' },
+  { id: 'settings', key: 'title.settings' },
 ];
 
 const BUTTON_W = 330;
@@ -128,9 +128,10 @@ export class TitleScene implements Scene {
     characterRim(light, MYSTIA, mx, my, { time: t, height: 260 });
     this.particles.render(light, true);
 
-    this.renderTitle(g);
-    this.renderMenu(g);
-    this.renderFooter(g);
+    const u = renderer.ui;
+    this.renderTitle(u);
+    this.renderMenu(u);
+    this.renderFooter(u);
   }
 
   private renderTitle(g: CanvasRenderingContext2D): void {
@@ -204,21 +205,14 @@ export class TitleScene implements Scene {
           });
         }
 
-        drawText(g, action.label, r.x + 34, r.y + r.h / 2 - 2, {
-          size: 34,
+        drawText(g, t(action.key), r.x + r.w / 2, r.y + r.h / 2, {
+          size: 30,
           font: SERIF,
           weight: 700,
           color: active ? '#ffeccb' : UI.paper,
+          align: 'center',
           baseline: 'middle',
           letterSpacing: 6,
-        });
-        drawText(g, action.sub, r.x + r.w - 26, r.y + r.h / 2 + 1, {
-          size: 18,
-          font: GOTHIC,
-          weight: 500,
-          color: alpha(active ? UI.goldBright : UI.paperDim, 0.78),
-          align: 'right',
-          baseline: 'middle',
         });
       });
     });
@@ -227,7 +221,7 @@ export class TitleScene implements Scene {
   private renderFooter(g: CanvasRenderingContext2D): void {
     drawText(
       g,
-      'A fan recreation · original art · not affiliated with the original developers',
+      t('title.disclaimer'),
       this.layout.width * 0.5,
       this.layout.height - 34,
       {
