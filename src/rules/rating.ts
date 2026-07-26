@@ -53,7 +53,9 @@ export function rateCommon(
 
   const liked = new Set<string>(customer.prefCuisine);
   // Only tags that survived the priority strikes still count.
-  const matchedAddedTags = [...dish.addedTags].filter((t) => dish.tags.has(t) && liked.has(t));
+  const matchedAddedTags = [...dish.addedTags].filter(
+    (t) => dish.tags.has(t) && (customer.likesAnyTag || liked.has(t)),
+  );
 
   return {
     rating: matchedAddedTags.length > 0 ? 'orange' : 'green',
@@ -144,10 +146,11 @@ export function rateRare(
   const likes = new Set<string>(customer.prefCuisine);
   const dislikes = new Set<string>(customer.dislikeCuisine);
   const drinkLikes = new Set<string>(customer.prefBeverage);
+  const any = customer.likesAnyTag;
 
-  const liked = [...dish.tags].filter((t) => likes.has(t));
+  const liked = [...dish.tags].filter((t) => (any || likes.has(t)) && !dislikes.has(t));
   const disliked = [...dish.tags].filter((t) => dislikes.has(t));
-  const likedDrink = drink.props.filter((t) => drinkLikes.has(t));
+  const likedDrink = drink.props.filter((t) => any || drinkLikes.has(t));
 
   let points = liked.length + likedDrink.length - disliked.length;
   if (dish.darkMatter && !context.ignoreDarkMatter) points -= 2;

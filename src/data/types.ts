@@ -139,6 +139,8 @@ export interface CommonCustomer {
   locations: string[];
   prefCuisine: CuisineTag[];
   prefBeverage: BeverageTag[];
+  /** Pleased by any tag at all — the wiki records this guest as liking everything. */
+  likesAnyTag: boolean;
   description: string;
   release: Release;
 }
@@ -147,11 +149,15 @@ export interface RareCustomer {
   name: string;
   kind: 'rare' | 'special';
   shortName: string;
-  budget: { min: number; max: number };
+  /** The unknown flag marks a purse the wiki has not documented; a default is used. */
+  budget: { min: number; max: number; unknown: boolean };
   locations: string[];
   prefCuisine: CuisineTag[];
   dislikeCuisine: CuisineTag[];
   prefBeverage: BeverageTag[];
+  likesAnyTag: boolean;
+  /** Still a stub upstream — kept for the album, excluded from spawn pools. */
+  incomplete: boolean;
   release: Release;
 }
 

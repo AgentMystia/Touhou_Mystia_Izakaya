@@ -59,6 +59,57 @@ const canonicalTags = (tags) => (tags ?? []).map(canonicalTag);
 const LOCATION_FIXUPS = { 'Youkai Trial': 'Youkai Trail', 'Myouren Temple}': 'Myouren Temple' };
 const LOCATION_PLACEHOLDERS = new Set(['?????', 'Unknown', '-', '']);
 
+/**
+ * The locations module lists three of the shrine's residents surname-first,
+ * while their definitions are keyed given-name-first.
+ */
+const CUSTOMER_NAME_FIXUPS = {
+  'Hakurei Reimu': 'Reimu Hakurei',
+  'Ibuki Suika': 'Suika Ibuki',
+  'Hinanawi Tenshi': 'Tenshi Hinanawi',
+};
+
+/** Typos in customer preference tags. */
+const PREF_TAG_FIXUPS = { Beet: 'Beer', 'Trend-Popular': 'Trend - Popular' };
+
+/**
+ * Sentinels the wiki uses for "no data yet" or "not applicable". They must be
+ * stripped rather than kept, or a guest ends up asking for a tag that no dish
+ * can ever carry.
+ */
+const TAG_SENTINELS = new Set(['None', '?????', '??', '-', '']);
+
+/** A guest whose preferences are the literal string "All Tags" likes everything. */
+const ALL_TAGS = 'All Tags';
+
+/**
+ * Cleans a preference list, reporting what it did so the caller can flag
+ * entries that are still incomplete upstream.
+ */
+function cleanPrefs(tags, known) {
+  const out = [];
+  let likesAny = false;
+  let incomplete = false;
+  for (const raw of tags ?? []) {
+    const tag = PREF_TAG_FIXUPS[raw] ?? canonicalTag(raw);
+    if (tag === ALL_TAGS) {
+      likesAny = true;
+      continue;
+    }
+    if (TAG_SENTINELS.has(tag)) {
+      // "?????" means the wiki has not filled this guest in yet.
+      if (raw === '?????' || raw === '??') incomplete = true;
+      continue;
+    }
+    if (!known.has(tag)) {
+      incomplete = true;
+      continue;
+    }
+    out.push(tag);
+  }
+  return { tags: [...new Set(out)], likesAny, incomplete };
+}
+
 const canonicalLocations = (locations) =>
   [...new Set((locations ?? []).map((l) => LOCATION_FIXUPS[l] ?? l))].filter(
     (l) => !LOCATION_PLACEHOLDERS.has(l),
@@ -199,10 +250,13 @@ function buildBeverages() {
 
 const parseBudget = (text) => {
   const m = /(\d+)\s*-\s*(\d+)/.exec(String(text ?? ''));
-  return m ? { min: Number(m[1]), max: Number(m[2]) } : { min: 0, max: Number.MAX_SAFE_INTEGER };
+  // "??" means the wiki has no figure yet; give a workable range and flag it.
+  return m
+    ? { min: Number(m[1]), max: Number(m[2]), unknown: false }
+    : { min: 200, max: 600, unknown: true };
 };
 
-function buildCustomers() {
+function buildCustomers(knownCuisineTags, knownBeverageTags) {
   const raw = readModule('Module_Customer_data.json');
 
   const normalRaw = raw['Normal Customers'] ?? {};
@@ -210,7 +264,20 @@ function buildCustomers() {
   const specialRaw = raw['Special Guests'] ?? {};
 
   const normalRelease = releaseIndex(normalRaw);
-  const rareRelease = releaseIndex(rareRaw);
+
+  /**
+   * Rare customers are grouped by release indirectly: each release lists the
+   * *locations* it adds, and each location key lists the three residents. So a
+   * guest's release is the release of the area they live in.
+   */
+  const rareRelease = new Map();
+  for (const release of RELEASES) {
+    for (const locationName of rareRaw[release] ?? []) {
+      for (const character of rareRaw[locationName] ?? []) {
+        rareRelease.set(CUSTOMER_NAME_FIXUPS[character] ?? character, release);
+      }
+    }
+  }
 
   const normal = {};
   for (const [name, value] of Object.entries(normalRaw)) {
@@ -218,28 +285,45 @@ function buildCustomers() {
     if (typeof value !== 'object' || value === null || Array.isArray(value)) continue;
     if (!('pref_cuisine' in value)) continue;
 
+    const cui = cleanPrefs(value.pref_cuisine, knownCuisineTags);
+    const bev = cleanPrefs(value.pref_beverage, knownBeverageTags);
     normal[name] = {
       name,
       kind: 'common',
       locations: canonicalLocations(value.locations),
-      prefCuisine: canonicalTags(value.pref_cuisine),
-      prefBeverage: value.pref_beverage ?? [],
+      prefCuisine: cui.tags,
+      prefBeverage: bev.tags,
+      // A guest marked "All Tags" is pleased by any seasoning at all.
+      likesAnyTag: cui.likesAny || bev.likesAny,
       description: value.description ?? '',
       release: normalRelease.get(name) ?? 'BaseGame',
     };
   }
 
-  const toRare = (name, value, kind, release) => ({
-    name,
-    kind,
-    shortName: value.short_name ?? name,
-    budget: parseBudget(value.budget),
-    locations: canonicalLocations(value.locations),
-    prefCuisine: canonicalTags(value.pref_cuisine),
-    dislikeCuisine: canonicalTags(value.x_cuisine),
-    prefBeverage: value.pref_beverage ?? [],
-    release,
-  });
+  const toRare = (name, value, kind, release) => {
+    const cui = cleanPrefs(value.pref_cuisine, knownCuisineTags);
+    const dis = cleanPrefs(value.x_cuisine, knownCuisineTags);
+    const bev = cleanPrefs(value.pref_beverage, knownBeverageTags);
+    const budget = parseBudget(value.budget);
+    return {
+      name,
+      kind,
+      shortName: value.short_name ?? name,
+      budget,
+      locations: canonicalLocations(value.locations),
+      prefCuisine: cui.tags,
+      dislikeCuisine: dis.tags,
+      prefBeverage: bev.tags,
+      likesAnyTag: cui.likesAny,
+      /**
+       * Set when the wiki has not finished documenting this guest. They are
+       * kept in the database for the album but excluded from spawn pools.
+       */
+      incomplete:
+        cui.incomplete || bev.incomplete || budget.unknown || cui.tags.length === 0,
+      release,
+    };
+  };
 
   const rare = {};
   for (const [name, value] of Object.entries(rareRaw)) {
@@ -276,7 +360,7 @@ function buildLocations({ customers, merchants }) {
     byName.set(entry.name, {
       name: entry.name,
       release: entry.game ?? 'BaseGame',
-      rares: entry.characters ?? [],
+      rares: (entry.characters ?? []).map((c) => CUSTOMER_NAME_FIXUPS[c] ?? c),
     });
   }
 
@@ -424,6 +508,8 @@ export interface CommonCustomer {
   locations: string[];
   prefCuisine: CuisineTag[];
   prefBeverage: BeverageTag[];
+  /** Pleased by any tag at all — the wiki records this guest as liking everything. */
+  likesAnyTag: boolean;
   description: string;
   release: Release;
 }
@@ -432,11 +518,15 @@ export interface RareCustomer {
   name: string;
   kind: 'rare' | 'special';
   shortName: string;
-  budget: { min: number; max: number };
+  /** The unknown flag marks a purse the wiki has not documented; a default is used. */
+  budget: { min: number; max: number; unknown: boolean };
   locations: string[];
   prefCuisine: CuisineTag[];
   dislikeCuisine: CuisineTag[];
   prefBeverage: BeverageTag[];
+  likesAnyTag: boolean;
+  /** Still a stub upstream — kept for the album, excluded from spawn pools. */
+  incomplete: boolean;
   release: Release;
 }
 
@@ -495,10 +585,12 @@ function main() {
   fs.mkdirSync(OUT, { recursive: true });
 
   const tags = buildTags();
+  const knownCuisineTags = new Set(tags.cuisine.map((t) => t.name));
+  const knownBeverageTags = new Set(tags.beverage.map((t) => t.name));
   const cuisines = buildCuisines();
   const ingredients = buildIngredients();
   const beverages = buildBeverages();
-  const customers = buildCustomers();
+  const customers = buildCustomers(knownCuisineTags, knownBeverageTags);
   const merchants = buildMerchants();
   const partners = buildPartners();
   const locations = buildLocations({ customers, merchants });
@@ -525,8 +617,6 @@ function main() {
   // --- integrity checks -------------------------------------------------
 
   const problems = [];
-  const knownCuisineTags = new Set(tags.cuisine.map((t) => t.name));
-  const knownBeverageTags = new Set(tags.beverage.map((t) => t.name));
 
   for (const dish of Object.values(cuisines)) {
     for (const tag of [...dish.props, ...dish.xprops]) {
@@ -544,6 +634,56 @@ function main() {
   for (const drink of Object.values(beverages)) {
     for (const tag of drink.props) {
       if (!knownBeverageTags.has(tag)) problems.push(`${drink.name}: unknown beverage tag "${tag}"`);
+    }
+  }
+
+  // A dish can only be ruined by an *added* tag, which relies on no recipe
+  // listing the same tag as both innate and forbidden.
+  for (const dish of Object.values(cuisines)) {
+    for (const tag of dish.props) {
+      if (dish.xprops.includes(tag)) {
+        problems.push(`${dish.name}: "${tag}" is both innate and forbidden`);
+      }
+    }
+  }
+
+  // Every preference a guest can express must be satisfiable by some item,
+  // otherwise that guest is impossible to please.
+  const allCustomers = [
+    ...Object.values(customers.normal),
+    ...Object.values(customers.rare),
+    ...Object.values(customers.special),
+  ];
+  for (const c of allCustomers) {
+    for (const tag of [...c.prefCuisine, ...(c.dislikeCuisine ?? [])]) {
+      if (!knownCuisineTags.has(tag)) problems.push(`${c.name}: unknown cuisine tag "${tag}"`);
+    }
+    for (const tag of c.prefBeverage) {
+      if (!knownBeverageTags.has(tag)) problems.push(`${c.name}: unknown beverage tag "${tag}"`);
+    }
+    for (const loc of c.locations) {
+      if (!locations.some((l) => l.name === loc)) {
+        problems.push(`${c.name}: unknown location "${loc}"`);
+      }
+    }
+  }
+
+  // Every rare listed as a location's resident must have a definition.
+  const rareNames = new Set([
+    ...Object.keys(customers.rare),
+    ...Object.keys(customers.special),
+  ]);
+  for (const loc of locations) {
+    for (const name of loc.rares) {
+      if (!rareNames.has(name)) problems.push(`${loc.name}: unknown resident "${name}"`);
+    }
+  }
+
+  for (const merchant of Object.values(merchants)) {
+    for (const item of merchant.itemOrder) {
+      if (!ingredients[item] && !beverages[item] && !cuisines[item]) {
+        problems.push(`${merchant.name}: sells unknown item "${item}"`);
+      }
     }
   }
 

@@ -25,11 +25,13 @@ const purse = (max: number): RareCustomer =>
     name: 'Test Rare',
     kind: 'rare',
     shortName: 'Test',
-    budget: { min: 0, max },
+    budget: { min: 0, max, unknown: false },
     locations: [],
     prefCuisine: [],
     dislikeCuisine: [],
     prefBeverage: [],
+    likesAnyTag: false,
+    incomplete: false,
     release: 'BaseGame',
   }) as RareCustomer;
 

@@ -6,15 +6,17 @@ import { breaksCombo, rateCommon, rateRare, satisfactionDelta } from '../../src/
 import { resolveDishTags } from '../../src/rules/tags';
 
 /** A common customer built to want exactly the tags a test needs. */
-const common = (prefCuisine: string[]): CommonCustomer =>
+const common = (prefCuisine: string[], over: Partial<CommonCustomer> = {}): CommonCustomer =>
   ({
     name: 'Test Common',
     kind: 'common',
     locations: ['Youkai Trail'],
     prefCuisine,
     prefBeverage: [],
+    likesAnyTag: false,
     description: '',
     release: 'BaseGame',
+    ...over,
   }) as CommonCustomer;
 
 const rare = (over: Partial<RareCustomer> = {}): RareCustomer =>
@@ -22,11 +24,13 @@ const rare = (over: Partial<RareCustomer> = {}): RareCustomer =>
     name: 'Test Rare',
     kind: 'rare',
     shortName: 'Test',
-    budget: { min: 100, max: 100_000 },
+    budget: { min: 100, max: 100_000, unknown: false },
     locations: ['Youkai Trail'],
     prefCuisine: [],
     dislikeCuisine: [],
     prefBeverage: [],
+    likesAnyTag: false,
+    incomplete: false,
     release: 'BaseGame',
     ...over,
   }) as RareCustomer;
