@@ -1,0 +1,3327 @@
+{
+  "normal": {
+    "Youkai Rabbit": {
+      "name": "Youkai Rabbit",
+      "kind": "common",
+      "locations": [
+        "Youkai Trail",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Palace of the Earth Spirits"
+      ],
+      "prefCuisine": [
+        "Refreshing",
+        "Fruity",
+        "Homecooking",
+        "Salty",
+        "Fresh",
+        "Signature",
+        "Strength-Boosting",
+        "Sweet"
+      ],
+      "prefBeverage": [
+        "No Alcohol"
+      ],
+      "description": "Even as a youkai, they still like fresh and sweet food. How cute! Of course, it's impossible for a youkai to have a meal without meat. Oh well, at least they're still cute, even when eating meat~",
+      "release": "BaseGame"
+    },
+    "Youkai Cat": {
+      "name": "Youkai Cat",
+      "kind": "common",
+      "locations": [
+        "Youkai Trail",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Palace of the Earth Spirits"
+      ],
+      "prefCuisine": [
+        "Chinese",
+        "Refreshing",
+        "Meat",
+        "Sea Delicacy",
+        "Signature"
+      ],
+      "prefBeverage": [
+        "Beet",
+        "Bitter",
+        "Chillable"
+      ],
+      "description": "A youkai cat. Hard to misidentify them because they have two tails. Supposedly, stronger nekomata have tails further apart. They look cute, but they're actually mean, fierce, and aggressive! In Gensokyo, even wild cats are picky eaters.",
+      "release": "BaseGame"
+    },
+    "Youkai Tanuki": {
+      "name": "Youkai Tanuki",
+      "kind": "common",
+      "locations": [
+        "Youkai Trail",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Youkai Mountain",
+        "Forest of Magic"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Greasy",
+        "Meat",
+        "Mountain Delicacy",
+        "Salty",
+        "Signature"
+      ],
+      "prefBeverage": [
+        "Dry",
+        "Sweet"
+      ],
+      "description": "A short-tempered youkai who always acts as if they are better than everyone else. In reality, they're not strong enough to back up their stance. However, tanukis are very good at tricks and disguises. Beware, they may pay their bill with leaves!",
+      "release": "BaseGame"
+    },
+    "Youkai Fox": {
+      "name": "Youkai Fox",
+      "kind": "common",
+      "locations": [
+        "Youkai Trail",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Youkai Mountain",
+        "Former Hell"
+      ],
+      "prefCuisine": [
+        "Chinese",
+        "Japanese",
+        "Meat",
+        "Signature",
+        "Small Portion"
+      ],
+      "prefBeverage": [
+        "Neat"
+      ],
+      "description": "They often talk as if they know everything. Feels like they're just bragging about their old age and ego. That said, sometimes their advice is actually pretty useful. Maybe they really did learn a thing or two given their long life span.",
+      "release": "BaseGame"
+    },
+    "Youkai Snake": {
+      "name": "Youkai Snake",
+      "kind": "common",
+      "locations": [
+        "Youkai Trail",
+        "Youkai Mountain",
+        "Former Hell"
+      ],
+      "prefCuisine": [
+        "Good w/ Alcohol",
+        "Meat",
+        "Mountain Delicacy",
+        "Strength-Boosting"
+      ],
+      "prefBeverage": [
+        "Sake",
+        "Shochu"
+      ],
+      "description": "Supposedly an ancient monster... Well, the key word is \"ancient\". They are no longer the fearsome monsters now. Just be careful about them dining and dashing...",
+      "release": "BaseGame"
+    },
+    "Human Child": {
+      "name": "Human Child",
+      "kind": "common",
+      "locations": [
+        "Human Village"
+      ],
+      "prefCuisine": [
+        "Chinese",
+        "Refreshing",
+        "Filling",
+        "Homecooking",
+        "Meat",
+        "Salty",
+        "Signature",
+        "Sweet"
+      ],
+      "prefBeverage": [
+        "No Alcohol"
+      ],
+      "description": "Noisy tiny human brats. Creatures like this used to be my... well, after spending some time with them, they're actually not as bad as I first thought. Their smiles can easily erase my fatigue, it's almost magical.",
+      "release": "BaseGame"
+    },
+    "Human Male": {
+      "name": "Human Male",
+      "kind": "common",
+      "locations": [
+        "Human Village"
+      ],
+      "prefCuisine": [
+        "Cultural Heritage",
+        "Good w/ Alcohol",
+        "Hot",
+        "Japanese",
+        "Meat",
+        "Salty",
+        "Fresh"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "Shochu"
+      ],
+      "description": "There's nothing extraordinary about him. He's always talking to himself, and complains a lot when he's drunk. Nevertheless, I heard that human males are usually the strongest in their species and are often relied on by others.",
+      "release": "BaseGame"
+    },
+    "Human Female": {
+      "name": "Human Female",
+      "kind": "common",
+      "locations": [
+        "Human Village",
+        "Hakurei Shrine"
+      ],
+      "prefCuisine": [
+        "Aquatic",
+        "Refreshing",
+        "Premium",
+        "Salty",
+        "Fresh",
+        "Signature"
+      ],
+      "prefBeverage": [
+        "Chillable"
+      ],
+      "description": "If they are in a group, then they will go on and on and on, chatting about their trivial daily life or complimenting each other on dresses, and jewels. However, occasionally they share cooking techniques or new recipes. I'm not going to complain about that, of course.",
+      "release": "BaseGame"
+    },
+    "Human Elder": {
+      "name": "Human Elder",
+      "kind": "common",
+      "locations": [
+        "Human Village",
+        "Hakurei Shrine"
+      ],
+      "prefCuisine": [
+        "Hot",
+        "Photogenic",
+        "Premium",
+        "Signature"
+      ],
+      "prefBeverage": [
+        "Low Alcohol"
+      ],
+      "description": "A human senior who has merely lived for a few decades, a fraction of a normal youkai's life span. However, I can sense a faint sage aura coming from some of them... Might not be a bad idea to follow their suggestions once in a while.",
+      "release": "BaseGame"
+    },
+    "Saemon": {
+      "name": "Saemon",
+      "kind": "common",
+      "locations": [
+        "Human Village",
+        "Hakurei Shrine"
+      ],
+      "prefCuisine": [
+        "Premium",
+        "Raw",
+        "Peculiar",
+        "Strength-Boosting"
+      ],
+      "prefBeverage": [
+        "High Alcohol"
+      ],
+      "description": "They are supposedly famous food critics among humans. They would even travel far and wide in search of great food... It's tough for humans to stay alive already. Oh well, I'll satisfy their stomach~",
+      "release": "BaseGame"
+    },
+    "Zashiki-warashi": {
+      "name": "Zashiki-warashi",
+      "kind": "common",
+      "locations": [
+        "Hakurei Shrine"
+      ],
+      "prefCuisine": [
+        "Refreshing",
+        "Japanese",
+        "Mountain Delicacy",
+        "Raw",
+        "Signature",
+        "Sweet"
+      ],
+      "prefBeverage": [
+        "Low Alcohol",
+        "No Alcohol"
+      ],
+      "description": "I previously thought that zashiki-warashi were earthbound and unable to go elsewhere, but that's actually a mistaken belief. It seems that they can attach themselves to an object and travel anywhere. Oh, there's also a rumor saying that this youkai can make the host lucky. At least I hope its's true.",
+      "release": "BaseGame"
+    },
+    "Kappa": {
+      "name": "Kappa",
+      "kind": "common",
+      "locations": [
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Youkai Mountain",
+        "Forest of Magic"
+      ],
+      "prefCuisine": [
+        "Hot",
+        "Large Portion",
+        "Premium",
+        "Sea Delicacy",
+        "Signature",
+        "Small Portion",
+        "Peculiar"
+      ],
+      "prefBeverage": [
+        "Sweet"
+      ],
+      "description": "Kappa in legends are just good swimmers. However, in Gensokyo, they're also excellent businessmen. I should ask one to be my mentor. You can frequently see them thinking and writing and completely ignoring their surrounding environment... It's quite charming and interesting, actually",
+      "release": "BaseGame"
+    },
+    "Goblin": {
+      "name": "Goblin",
+      "kind": "common",
+      "locations": [],
+      "prefCuisine": [
+        "Refreshing",
+        "Greasy",
+        "Hot",
+        "Mountain Delicacy",
+        "Premium",
+        "Strength-Boosting"
+      ],
+      "prefBeverage": [
+        "Sake",
+        "Western"
+      ],
+      "description": "These customers give me a little bit of a headache. They're cautious but kind of ugly, and sometimes frighten human guests. It makes no sense to me as humans get along pretty well with other youkai dining here...",
+      "release": "BaseGame"
+    },
+    "Tengu": {
+      "name": "Tengu",
+      "kind": "common",
+      "locations": [
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Fungus",
+        "Photogenic",
+        "Premium",
+        "Signature"
+      ],
+      "prefBeverage": [
+        "Sake",
+        "Shochu"
+      ],
+      "description": "They're polite, but pretty persistent. Well, at least those tengu that visit my izakaya. I have a hard time dealing with them, but they're my customers in the end. I'll do my best to make them happy!",
+      "release": "BaseGame"
+    },
+    "Fairy": {
+      "name": "Fairy",
+      "kind": "common",
+      "locations": [
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic"
+      ],
+      "prefCuisine": [
+        "Dreamy",
+        "Fruity",
+        "Fungus",
+        "Photogenic",
+        "Fresh",
+        "Specialty",
+        "Sweet"
+      ],
+      "prefBeverage": [
+        "Fruity",
+        "Neat",
+        "Soda",
+        "Sweet"
+      ],
+      "description": "Actually, fairies don't have to eat. They're simply imitating others. They love anything fun and play pranks on others. Beware of their traps!",
+      "release": "BaseGame"
+    },
+    "White Wolf Tengu": {
+      "name": "White Wolf Tengu",
+      "kind": "common",
+      "locations": [
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Greasy",
+        "Meat",
+        "Mountain Delicacy",
+        "Raw",
+        "Salty",
+        "Fresh",
+        "Signature",
+        "Specialty"
+      ],
+      "prefBeverage": [
+        "High Alcohol",
+        "Mid Alcohol",
+        "Sake",
+        "Shochu"
+      ],
+      "description": "Tengu society has a strict hierarchy with the whtie wolf tengu acting as the mountain guards. It's probably because of their duties that most of them have a strict personality. However, sometimes they drink too much and end up a little too chatty.",
+      "release": "DLC1"
+    },
+    "Yamanba": {
+      "name": "Yamanba",
+      "kind": "common",
+      "locations": [
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Homecooking",
+        "Meat",
+        "Premium",
+        "Fresh",
+        "Peculiar",
+        "Strength-Boosting"
+      ],
+      "prefBeverage": [
+        "High Alcohol",
+        "Neat",
+        "Shochu",
+        "Vintage"
+      ],
+      "description": "A solitary youkai race that live in the Youkai Mountain but barely communicate even among themselves. Rumor says they capture wandering children lost in the mountains... but that's a misunderstanding. While they may speak harshly, it's just because they aren't good with words. In fact, they are very straightforward and kind.",
+      "release": "DLC1"
+    },
+    "Yamawaro": {
+      "name": "Yamawaro",
+      "kind": "common",
+      "locations": [
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Hot",
+        "Large Portion",
+        "Mountain Delicacy",
+        "Premium",
+        "Signature",
+        "Small Portion",
+        "Peculiar"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "Mid Alcohol"
+      ],
+      "description": "A kappa who abandoned the river in favor of the peak of Youkai Mountain. They establish base camps and are experts on the mountain. Their research in economics is particularly advanced. I have no idea what they mean by private equity, merger and acquisition, or capital market... that's beyond me...",
+      "release": "DLC1"
+    },
+    "Magician": {
+      "name": "Magician",
+      "kind": "common",
+      "locations": [
+        "Forest of Magic"
+      ],
+      "prefCuisine": [
+        "Refreshing",
+        "Homecooking",
+        "Legendary",
+        "Mild",
+        "Photogenic",
+        "Premium",
+        "Fresh",
+        "Vegetarian",
+        "Western"
+      ],
+      "prefBeverage": [
+        "Cocktail",
+        "Heatable",
+        "Stimulating",
+        "Western"
+      ],
+      "description": "The mushrooms in the Forest of Magic can help to concentrate magical power, so many magicians live there. Most of them live alone like hermits. I guess magic itself is a lonely thing~",
+      "release": "DLC1"
+    },
+    "Forest Fairy": {
+      "name": "Forest Fairy",
+      "kind": "common",
+      "locations": [
+        "Forest of Magic"
+      ],
+      "prefCuisine": [
+        "Chinese",
+        "Refreshing",
+        "Dreamy",
+        "Homecooking",
+        "Japanese",
+        "Fresh",
+        "Signature",
+        "Small Portion",
+        "Sweet"
+      ],
+      "prefBeverage": [
+        "Fruity",
+        "Low Alcohol",
+        "No Alcohol",
+        "Sake",
+        "Sweet"
+      ],
+      "description": "The more fairies there are, the more natural an environment is. The Forest of Magic is rich in all kinds of resources partially thanks to all the fairies living there. It is said that every tree is home to a fairy. Some fairies like to play pranks, so be careful around trees.",
+      "release": "DLC1"
+    },
+    "Lost Doll": {
+      "name": "Lost Doll",
+      "kind": "common",
+      "locations": [
+        "Forest of Magic"
+      ],
+      "prefCuisine": [
+        "Dreamy",
+        "Fungus",
+        "Homecooking",
+        "Photogenic",
+        "Raw",
+        "Salty",
+        "Small Portion",
+        "Peculiar"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "Fruity",
+        "Soda",
+        "Stimulating"
+      ],
+      "description": "A doll of unknown origin. As of yet, I'm not sure if she's a tsukumogami. After all, there is a magician living in the forest who can manipulate dolls... but she doesn't really look like she's being manipulated. I guess she must be a tsukumogami, right?",
+      "release": "DLC1"
+    },
+    "Tsuchigumo": {
+      "name": "Tsuchigumo",
+      "kind": "common",
+      "locations": [
+        "Former Hell"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Greasy",
+        "Large Portion",
+        "Meat",
+        "Mountain Delicacy",
+        "Raw",
+        "Fresh",
+        "Peculiar",
+        "Sweet"
+      ],
+      "prefBeverage": [
+        "Mid Alcohol",
+        "Chillable",
+        "Liquor",
+        "Neat",
+        "Sweet",
+        "Bitter",
+        "Modern"
+      ],
+      "description": "Tsuchigumo are spiders lurking in the Dark Blowhole. They're a bit of a peculiar bunch, but they're very passionate about architecture. They even frequently discuss problems related to architecture among each other. Maybe I can learn something too.",
+      "release": "DLC2"
+    },
+    "Oni": {
+      "name": "Oni",
+      "kind": "common",
+      "locations": [
+        "Former Hell"
+      ],
+      "prefCuisine": [
+        "Aura-Bursting",
+        "Good w/ Alcohol",
+        "Legendary",
+        "Meat",
+        "Premium",
+        "Fresh",
+        "Specialty",
+        "Strength-Boosting"
+      ],
+      "prefBeverage": [
+        "High Alcohol",
+        "Mid Alcohol",
+        "Neat",
+        "Shochu"
+      ],
+      "description": "A legendary race of youkai said to have existed long before ancient times! It's said that they're the strongest race in Gensokyo, but in reality they've left a long time ago. I never imagined they'd be living in the Underworld. Most oni are pretty straightforward, but they're also really fierce, so absolutely never lie in front of them!",
+      "release": "DLC2"
+    },
+    "Hone-onna": {
+      "name": "Hone-onna",
+      "kind": "common",
+      "locations": [
+        "Former Hell"
+      ],
+      "prefCuisine": [
+        "Refreshing",
+        "Fungus",
+        "Mild",
+        "Raw",
+        "Fresh",
+        "Sour",
+        "Peculiar",
+        "Vegetarian"
+      ],
+      "prefBeverage": [
+        "Beer",
+        "Bitter",
+        "Fruity",
+        "Heatable",
+        "Low Alcohol"
+      ],
+      "description": "They're all really pretty! These ladies handle themselves in a gentle and mature way, carrying a lantern decorate with peonies wherever they go. They can supposedly charm passing humans, though every time I ran into one at the cave they'd help illuminate the path ahead for me.",
+      "release": "DLC2"
+    },
+    "Hell Raven": {
+      "name": "Hell Raven",
+      "kind": "common",
+      "locations": [
+        "Palace of the Earth Spirits"
+      ],
+      "prefCuisine": [
+        "Aura-Bursting",
+        "Homecooking",
+        "Meat",
+        "Mountain Delicacy",
+        "Salty",
+        "Sea Delicacy",
+        "Small Portion",
+        "Sour"
+      ],
+      "prefBeverage": [
+        "Beer",
+        "Bitter",
+        "Dry",
+        "Heatable",
+        "Mid Alcohol"
+      ],
+      "description": "Hell ravens reside in the lowest level of hell. While most youkai in Former Hell moved there due to their original homes becoming defunct, hell ravens have always been living in hell, making them the earliest residents here.",
+      "release": "DLC2"
+    },
+    "Ubume": {
+      "name": "Ubume",
+      "kind": "common",
+      "locations": [
+        "Palace of the Earth Spirits"
+      ],
+      "prefCuisine": [
+        "Aquatic",
+        "Cultural Heritage",
+        "Homecooking",
+        "Mild",
+        "Fresh",
+        "Sour",
+        "Peculiar"
+      ],
+      "prefBeverage": [
+        "Low Alcohol",
+        "Shochu",
+        "Bitter",
+        "Heatable"
+      ],
+      "description": "Legends say ubume become birds when wearing their feathers, and become young girls when not. They can read people's fortune by collecting their fingernails, so most of them work as fortune tellers. They always speak in riddles, probably because they want to maintaintheir mystique.",
+      "release": "DLC2"
+    },
+    "Youkai Leopard": {
+      "name": "Youkai Leopard",
+      "kind": "common",
+      "locations": [
+        "Palace of the Earth Spirits"
+      ],
+      "prefCuisine": [
+        "Greasy",
+        "Hot",
+        "Meat",
+        "Mountain Delicacy",
+        "Premium",
+        "Raw",
+        "Sea Delicacy",
+        "Specialty"
+      ],
+      "prefBeverage": [
+        "Dry",
+        "High Alcohol",
+        "Mid Alcohol",
+        "Neat"
+      ],
+      "description": "Fierce and ferocious. Stubborn yet candid. Due to my natural instincts, I'm a tiny bit afraid of them... although, while leopards are powerful by nature, there aren't many that manage to become youkai.",
+      "release": "DLC2"
+    },
+    "Monk": {
+      "name": "Monk",
+      "kind": "common",
+      "locations": [
+        "Myouren Temple"
+      ],
+      "prefCuisine": [
+        "Good w/ Alcohol",
+        "Homecooking",
+        "Meat",
+        "Mountain Delicacy",
+        "Strength-Boosting"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "High Alcohol",
+        "Mid Alcohol",
+        "Shochu",
+        "Vintage"
+      ],
+      "description": "Humans might not understand, but I know... the monks training at Myouren Temple are mostly youkai. They do engage in some Buddhist training like the six perfections, but no one has observed any results. A lot of youkai still do whatever they want outside of training.",
+      "release": "DLC3"
+    },
+    "Youkai Mouse": {
+      "name": "Youkai Mouse",
+      "kind": "common",
+      "locations": [
+        "Myouren Temple"
+      ],
+      "prefCuisine": [
+        "Dreamy",
+        "Fruity",
+        "Homecooking",
+        "Large Portion",
+        "Premium"
+      ],
+      "prefBeverage": [
+        "Cocktail",
+        "Fruity",
+        "Liquor",
+        "Modern",
+        "Sweet"
+      ],
+      "description": "The treasure hunters you'll find everywhere in Gensokyo. Befriend them and you'll never have to worry about losing anything again. Though if you ask them to find food, they might eat it all before they even return it to you.",
+      "release": "DLC3"
+    },
+    "Hachishaku-sama": {
+      "name": "Hachishaku-sama",
+      "kind": "common",
+      "locations": [
+        "Myouren Temple"
+      ],
+      "prefCuisine": [
+        "Refreshing",
+        "Japanese",
+        "Photogenic",
+        "Fresh",
+        "Western"
+      ],
+      "prefBeverage": [
+        "Chillable",
+        "Cocktail",
+        "Liquor",
+        "Low Alcohol",
+        "Western"
+      ],
+      "description": "An eight-feet tall monster. Their skin is very pale due to wearing a sombrero all the time. They used to love wearing a white one-piece dress too, resulting in them becoming unnoticed during the day and their entire race had to starve, which is why they're as thin as a rake. Now, some of the more progressive ones are looking for more eye-catching attire.",
+      "release": "DLC3"
+    },
+    "Taoist": {
+      "name": "Taoist",
+      "kind": "common",
+      "locations": [
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Homecooking",
+        "Mild",
+        "Mountain Delicacy",
+        "Signature",
+        "Small Portion",
+        "Specialty"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "Low Alcohol",
+        "Modern",
+        "Stimulating"
+      ],
+      "description": "Many in the Divine Spirit Mausoleum worship Miko as their teacher, hoping to learn hermit arts. They seem to only be used for miscellaneous tasks though. They all look determined and full of ambition... so maybe doing miscellaneous tasks is also an interesting job?",
+      "release": "DLC3"
+    },
+    "Jiangshi": {
+      "name": "Jiangshi",
+      "kind": "common",
+      "locations": [
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "All Tags"
+      ],
+      "prefBeverage": [
+        "All Tags"
+      ],
+      "description": "Undead controlled by a wicked hermit. They're corpses, but they won't decompose, being stronger than they were while alive. Their brains are no-good, so communicating with them is very hard. At least they aren't picky about food. Apparently humans temporarily turn into them if they get bitten by one, which I think is pretty interesting. It's kind of like a Jiangshi demo?",
+      "release": "DLC3"
+    },
+    "Hermit": {
+      "name": "Hermit",
+      "kind": "common",
+      "locations": [
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Dreamy",
+        "Fruity",
+        "Mild",
+        "Premium",
+        "Small Portion",
+        "Vegetarian"
+      ],
+      "prefBeverage": [
+        "Fruity",
+        "Low Alcohol",
+        "Sake",
+        "Soda",
+        "Sweet",
+        "Vintage"
+      ],
+      "description": "Humans who, through years of training, gained abilities surpassing that of a normal human. A delicacy for many youkai, their life could be said to be one of peril. Their harsh life is probably why all of them have weird personalities...",
+      "release": "DLC3"
+    },
+    "Inchling": {
+      "name": "Inchling",
+      "kind": "common",
+      "locations": [
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Japanese",
+        "Small Portion",
+        "Strength-Boosting",
+        "Legendary",
+        "Aura-Bursting",
+        "Dreamy"
+      ],
+      "prefBeverage": [
+        "Vintage",
+        "Chillable",
+        "Heatable",
+        "Sweet",
+        "Beer"
+      ],
+      "description": "Legends say they're the descendants of Sukuna-bikona, with bodies only the size of an inch. Having stayed in the castle all their lives, a lack of common sense is the norm among them. However, they possess a strong thirst for knowledge and are very eager to explore the world outside.",
+      "release": "DLC4"
+    },
+    "Delinquent Boy": {
+      "name": "Delinquent Boy",
+      "kind": "common",
+      "locations": [
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Japanese",
+        "Good w/ Alcohol",
+        "Filling",
+        "Homecooking",
+        "Strength-Boosting"
+      ],
+      "prefBeverage": [
+        "Shochu",
+        "Bitter",
+        "Stimulating",
+        "Heatable",
+        "High Alcohol",
+        "Beer"
+      ],
+      "description": "Boys from all around Gensokyo lured in by Seija. Most if not all of them are young men uncertain about their future, following Seija out of zeal for her \"grand design\", but now they seem even more uncertain...",
+      "release": "DLC4"
+    },
+    "Delinquent Girl": {
+      "name": "Delinquent Girl",
+      "kind": "common",
+      "locations": [
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Japanese",
+        "Homecooking",
+        "Premium",
+        "Hot",
+        "Photogenic"
+      ],
+      "prefBeverage": [
+        "Fruity",
+        "Modern",
+        "Soda",
+        "Mid Alcohol",
+        "Beer"
+      ],
+      "description": "Girls from all around Gensokyo lured in by Seija. Most if not all of them are young women uncertain about their future, following Seija out of zeal for her \"grand design\", but now they seem even more uncertain...",
+      "release": "DLC4"
+    },
+    "Toy Soldier": {
+      "name": "Toy Soldier",
+      "kind": "common",
+      "locations": [
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Western",
+        "Wonderful",
+        "Sea Delicacy",
+        "Refreshing",
+        "Signature"
+      ],
+      "prefBeverage": [
+        "Modern",
+        "Liquor",
+        "Neat",
+        "Western"
+      ],
+      "description": "Toys that have come alive because of the miracle mallet's magic. Due to an unknown person, the magic in their bodies that should've gone back to the mallet have been converted into their own magic, thus giving them true lives.",
+      "release": "DLC4"
+    },
+    "Convalla Fairy": {
+      "name": "Convalla Fairy",
+      "kind": "common",
+      "locations": [
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Poison",
+        "Raw",
+        "Dreamy",
+        "Good w/ Alcohol",
+        "Small Portion"
+      ],
+      "prefBeverage": [
+        "Dry",
+        "Soda",
+        "Mid Alcohol",
+        "Neat"
+      ],
+      "description": "Fairies living in lilies-of-the-valley. Spends every day attempting to answer the question of \"Who on earth is this 'Lily' Miss Medicine talks about?\" The bounty has already reached 99 \"world's roundest rocks\", but the mystery still remains unsolved.",
+      "release": "DLC4"
+    },
+    "Sunflower Fairy": {
+      "name": "Sunflower Fairy",
+      "kind": "common",
+      "locations": [
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Specialty",
+        "Wonderful",
+        "Sweet",
+        "Strength-Boosting",
+        "Fresh"
+      ],
+      "prefBeverage": [
+        "Sweet",
+        "Fruity",
+        "Soda",
+        "Liquor"
+      ],
+      "description": "Fairies living in sunflowers. Some say these fairies sneakily adjust a sunflower's position, hence why sunflowers always face towards the sun. This ultimate technique of theirs have already fooled countless humans, and is what they take pride in.",
+      "release": "DLC4"
+    },
+    "Rose Fairy": {
+      "name": "Rose Fairy",
+      "kind": "common",
+      "locations": [
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Photogenic",
+        "Small Portion",
+        "Premium",
+        "Signature",
+        "Western"
+      ],
+      "prefBeverage": [
+        "Modern",
+        "Cocktail",
+        "Low Alcohol",
+        "Sweet"
+      ],
+      "description": "Fairies living in roses. They heard from somewhere that the rose is a certain planet's one-of-a-kind, most cared-for flower, starting a craze of moving house among them. Not a single fairy has succeeded yet.",
+      "release": "DLC4"
+    },
+    "Kage-onna": {
+      "name": "Kage-onna",
+      "kind": "common",
+      "locations": [
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Peculiar",
+        "Refreshing",
+        "Japanese",
+        "Raw",
+        "Wonderful",
+        "Homecooking"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "Vintage",
+        "High Alcohol",
+        "Stimulating",
+        "Chillable"
+      ],
+      "description": "A spirit somewhere between a phantom and a vengeful spirit. Apparently they harbored hatred when they passed away, so they love playing pranks on humans. If you ever see the shadow of a person walking around the house at night, yet you can't find anyone, it's the doing of the kage-onna. They look a bit gloomy, but that's just an act.",
+      "release": "DLC4"
+    },
+    "Poker Soldier": {
+      "name": "Poker Soldier",
+      "kind": "common",
+      "locations": [
+        "Makai"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Homecooking",
+        "Greasy",
+        "Salty",
+        "Signature",
+        "Refreshing"
+      ],
+      "prefBeverage": [
+        "Stimulating",
+        "Heatable",
+        "Bitter",
+        "Mid Alcohol"
+      ],
+      "description": "A poker card figure formed from the Makai creator's magic. Honest to the point of being mute, they are very self-conscious at patrolling even when work is not assigned. They're also always expecting someone to fall out of the sky, seems to be related to some rabbit hole story?",
+      "release": "DLC5"
+    },
+    "Clown": {
+      "name": "Clown",
+      "kind": "common",
+      "locations": [
+        "Makai"
+      ],
+      "prefCuisine": [
+        "Premium",
+        "Peculiar",
+        "Fungus",
+        "Good w/ Alcohol",
+        "Raw",
+        "Photogenic"
+      ],
+      "prefBeverage": [
+        "Liquor",
+        "Dry",
+        "Chillable",
+        "Neat"
+      ],
+      "description": "A poker card figure formed from the Makai creator's magic, who takes up a position similar to that of a soldier commander. Not only do they lack the demeanor of an officer, they don't even have jobs to assign to the soldiers. Wandering around Makai all day, they looks more like a street performer than a soldier commander.",
+      "release": "DLC5"
+    },
+    "Mad Cap": {
+      "name": "Mad Cap",
+      "kind": "common",
+      "locations": [
+        "Makai"
+      ],
+      "prefCuisine": [
+        "Photogenic",
+        "Wonderful",
+        "Dreamy",
+        "Peculiar",
+        "Fungus",
+        "Western"
+      ],
+      "prefBeverage": [
+        "Western",
+        "Stimulating",
+        "High Alcohol",
+        "Modern"
+      ],
+      "description": "Craftsman who excels in making hats and tailoring. Words have it that because they need mercury to preserve non-woven cloth for making hats, they often go into spasm or sometimes even hallucinate from mercury poisoning; thus, they are called Mad Caps. But I understand, below the cover of madness is their passion and persistence to their own work.",
+      "release": "DLC5"
+    },
+    "Lunarian": {
+      "name": "Lunarian",
+      "kind": "common",
+      "locations": [
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Chinese",
+        "Mild",
+        "Legendary",
+        "Dreamy",
+        "Wonderful",
+        "Sea Delicacy"
+      ],
+      "prefBeverage": [
+        "Modern",
+        "Cocktail",
+        "Fruity",
+        "Soda",
+        "Sake"
+      ],
+      "description": "Humans living in the Lunar Capital. They gave up their lifespan, and dedicated themselves to remove impurity and get rid of death. But they aren't immortal, as they can still die from accidents or warfares, meaning they still have a tiny bit of impurity on them.",
+      "release": "DLC5"
+    },
+    "Medicine-Pounding Rabbit": {
+      "name": "Medicine-Pounding Rabbit",
+      "kind": "common",
+      "locations": [
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Refreshing",
+        "Mountain Delicacy",
+        "Japanese",
+        "Chinese",
+        "Sweet"
+      ],
+      "prefBeverage": [
+        "Stimulating",
+        "Sweet",
+        "Beer",
+        "Shochu",
+        "Mid Alcohol"
+      ],
+      "description": "Moon rabbits responsible for pounding medicine. It looks like they're pounding rice cake, but it was in fact medicine in the mortar. Their act of pounding medicine was not for making valuable medicine, but for redeeming someone's sins. Because they're constantly repeating vain-looking labor, they accumulated quite a lot of fatigue.",
+      "release": "DLC5"
+    },
+    "Lunar Emissary": {
+      "name": "Lunar Emissary",
+      "kind": "common",
+      "locations": [
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Legendary",
+        "Filling",
+        "Strength-Boosting",
+        "Specialty",
+        "Western",
+        "Signature"
+      ],
+      "prefBeverage": [
+        "No Alcohol",
+        "Modern",
+        "Bitter",
+        "Stimulating",
+        "Heatable"
+      ],
+      "description": "Moon rabbits responsible for guarding the Lunar Capital. Lunar Emissaries, compared to other moon rabbits' jobs, is relatively more disciplined. In order to ensure they can engage in war with Earthen humans in critical moments, they need to undergo strict training, which isn't easy.",
+      "release": "DLC5"
+    }
+  },
+  "rare": {
+    "Wriggle Nightbug": {
+      "name": "Wriggle Nightbug",
+      "kind": "rare",
+      "shortName": "Wriggle",
+      "budget": {
+        "min": 200,
+        "max": 400
+      },
+      "locations": [
+        "Youkai Trail",
+        "Forest of Magic",
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Meat",
+        "Raw",
+        "Peculiar",
+        "Sweet"
+      ],
+      "dislikeCuisine": [
+        "Refreshing",
+        "Mild",
+        "Vegetarian"
+      ],
+      "prefBeverage": [
+        "Low Alcohol",
+        "Chillable"
+      ],
+      "release": "BaseGame"
+    },
+    "Chen": {
+      "name": "Chen",
+      "kind": "rare",
+      "shortName": "Chen",
+      "budget": {
+        "min": 400,
+        "max": 600
+      },
+      "locations": [
+        "Youkai Trail"
+      ],
+      "prefCuisine": [
+        "Aquatic",
+        "Grilled",
+        "Greasy",
+        "Meat",
+        "Sweet",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Hot",
+        "Peculiar",
+        "Vegetarian",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Dry",
+        "Fruity"
+      ],
+      "release": "BaseGame"
+    },
+    "Rumia": {
+      "name": "Rumia",
+      "kind": "rare",
+      "shortName": "Rumia",
+      "budget": {
+        "min": 150,
+        "max": 350
+      },
+      "locations": [
+        "Youkai Trail",
+        "Forest of Magic"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Meat",
+        "Raw",
+        "Signature",
+        "Peculiar",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Expensive",
+        "Good w/ Alcohol",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "Soda"
+      ],
+      "release": "BaseGame"
+    },
+    "Hieda no Akyuu": {
+      "name": "Hieda no Akyuu",
+      "kind": "rare",
+      "shortName": "Akyuu",
+      "budget": {
+        "min": 500,
+        "max": 800
+      },
+      "locations": [
+        "Human Village",
+        "Myouren Temple"
+      ],
+      "prefCuisine": [
+        "Cultural Heritage",
+        "Japanese",
+        "Mild",
+        "Premium",
+        "Soup",
+        "Sweet",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Greasy",
+        "Hot",
+        "Salty",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "Sake"
+      ],
+      "release": "BaseGame"
+    },
+    "Keine Kamishirasawa": {
+      "name": "Keine Kamishirasawa",
+      "kind": "rare",
+      "shortName": "Keine",
+      "budget": {
+        "min": 400,
+        "max": 800
+      },
+      "locations": [
+        "Human Village",
+        "Forest of Magic",
+        "Myouren Temple"
+      ],
+      "prefCuisine": [
+        "Chinese",
+        "Cultural Heritage",
+        "Homecooking",
+        "Japanese",
+        "Mild",
+        "Vegetarian",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Greasy",
+        "Large Portion",
+        "Salty",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Liquor",
+        "Sake",
+        "Shochu"
+      ],
+      "release": "BaseGame"
+    },
+    "Kasen Ibaraki": {
+      "name": "Kasen Ibaraki",
+      "kind": "rare",
+      "shortName": "Kasen",
+      "budget": {
+        "min": 400,
+        "max": 600
+      },
+      "locations": [
+        "Human Village",
+        "Former Hell",
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Cultural Heritage",
+        "Good w/ Alcohol",
+        "Homecooking",
+        "Japanese"
+      ],
+      "dislikeCuisine": [
+        "Economical",
+        "Raw",
+        "Spicy"
+      ],
+      "prefBeverage": [
+        "Mid Alcohol",
+        "Neat",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Reimu Hakurei": {
+      "name": "Reimu Hakurei",
+      "kind": "rare",
+      "shortName": "Reimu",
+      "budget": {
+        "min": 150,
+        "max": 300
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Forest of Magic",
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Economical",
+        "Premium",
+        "Sweet",
+        "Wonderful",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Expensive",
+        "Good w/ Alcohol",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "Low Alcohol",
+        "No Alcohol"
+      ],
+      "release": "BaseGame"
+    },
+    "Suika Ibuki": {
+      "name": "Suika Ibuki",
+      "kind": "rare",
+      "shortName": "Suika",
+      "budget": {
+        "min": 600,
+        "max": 800
+      },
+      "locations": [
+        "Hakurei Shrine",
+        "Youkai Mountain",
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Good w/ Alcohol",
+        "Japanese",
+        "Meat",
+        "Small Portion",
+        "Strength-Boosting",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Greasy",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "High Alcohol",
+        "Neat"
+      ],
+      "release": "BaseGame"
+    },
+    "Tenshi Hinanawi": {
+      "name": "Tenshi Hinanawi",
+      "kind": "rare",
+      "shortName": "Tenshi",
+      "budget": {
+        "min": 2000,
+        "max": 3000
+      },
+      "locations": [
+        "Hakurei Shrine",
+        "Youkai Mountain",
+        "Former Hell",
+        "Divine Spirit Mausoleum",
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Expensive",
+        "Fruity",
+        "Legendary",
+        "Mild",
+        "Photogenic",
+        "Sweet",
+        "Vegetarian",
+        "Trend - Unpopular"
+      ],
+      "dislikeCuisine": [
+        "Greasy",
+        "Homecooking",
+        "Meat",
+        "Trend - Popular"
+      ],
+      "prefBeverage": [
+        "Cocktail",
+        "High Alcohol"
+      ],
+      "release": "BaseGame"
+    },
+    "Hong Meiling": {
+      "name": "Hong Meiling",
+      "kind": "rare",
+      "shortName": "Meiling",
+      "budget": {
+        "min": 200,
+        "max": 400
+      },
+      "locations": [
+        "Scarlet Devil Mansion"
+      ],
+      "prefCuisine": [
+        "Chinese",
+        "Filling",
+        "Meat",
+        "Strength-Boosting",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Fruity",
+        "Peculiar",
+        "Western",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "Stimulating",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Cirno": {
+      "name": "Cirno",
+      "kind": "rare",
+      "shortName": "Cirno",
+      "budget": {
+        "min": 100,
+        "max": 200
+      },
+      "locations": [
+        "Scarlet Devil Mansion",
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Refreshing",
+        "Photogenic",
+        "Peculiar",
+        "Sweet",
+        "Trend - Unpopular"
+      ],
+      "dislikeCuisine": [
+        "Cultural Heritage",
+        "Expensive",
+        "Good w/ Alcohol",
+        "Trend - Popular"
+      ],
+      "prefBeverage": [
+        "Fruity",
+        "Chillable",
+        "Sweet"
+      ],
+      "release": "BaseGame"
+    },
+    "Patchouli Knowledge": {
+      "name": "Patchouli Knowledge",
+      "kind": "rare",
+      "shortName": "Patchouli",
+      "budget": {
+        "min": 600,
+        "max": 1000
+      },
+      "locations": [
+        "Scarlet Devil Mansion",
+        "Forest of Magic",
+        "Palace of the Earth Spirits"
+      ],
+      "prefCuisine": [
+        "Dreamy",
+        "Photogenic",
+        "Premium",
+        "Sweet",
+        "Western"
+      ],
+      "dislikeCuisine": [
+        "Hot",
+        "Raw",
+        "Salty",
+        "Peculiar"
+      ],
+      "prefBeverage": [
+        "Cocktail",
+        "Liquor",
+        "Soda"
+      ],
+      "release": "BaseGame"
+    },
+    "Fujiwara no Mokou": {
+      "name": "Fujiwara no Mokou",
+      "kind": "rare",
+      "shortName": "Mokou",
+      "budget": {
+        "min": 300,
+        "max": 600
+      },
+      "locations": [
+        "Youkai Trail",
+        "Bamboo Forest of the Lost"
+      ],
+      "prefCuisine": [
+        "Aura-Bursting",
+        "Fruity",
+        "Hot",
+        "Spicy",
+        "Grilled"
+      ],
+      "dislikeCuisine": [
+        "Expensive",
+        "Premium",
+        "Wonderful"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "Dry",
+        "Shochu"
+      ],
+      "release": "BaseGame"
+    },
+    "Kaguya Houraisan": {
+      "name": "Kaguya Houraisan",
+      "kind": "rare",
+      "shortName": "Kaguya",
+      "budget": {
+        "min": 1000,
+        "max": 1500
+      },
+      "locations": [
+        "Bamboo Forest of the Lost",
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Cultural Heritage",
+        "Japanese",
+        "Legendary",
+        "Wonderful",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Large Portion",
+        "Signature",
+        "Peculiar",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Modern",
+        "Sake",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Tewi Inaba": {
+      "name": "Tewi Inaba",
+      "kind": "rare",
+      "shortName": "Tewi",
+      "budget": {
+        "min": 200,
+        "max": 400
+      },
+      "locations": [
+        "Bamboo Forest of the Lost"
+      ],
+      "prefCuisine": [
+        "Refreshing",
+        "Dreamy",
+        "Legendary",
+        "Small Portion",
+        "Sweet",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Greasy",
+        "Mountain Delicacy",
+        "Peculiar",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Fruity",
+        "No Alcohol",
+        "Sweet"
+      ],
+      "release": "BaseGame"
+    },
+    "Marisa Kirisame": {
+      "name": "Marisa Kirisame",
+      "kind": "rare",
+      "shortName": "Marisa",
+      "budget": {
+        "min": 3000,
+        "max": 5000
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Former Hell",
+        "Palace of the Earth Spirits",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum",
+        "Garden of the Sun",
+        "Shining Needle Castle",
+        "Makai",
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Fungus",
+        "Greasy",
+        "Hot",
+        "Japanese",
+        "Legendary",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Peculiar",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Chillable",
+        "Low Alcohol"
+      ],
+      "release": "BaseGame"
+    },
+    "Alice": {
+      "name": "Alice",
+      "kind": "rare",
+      "shortName": "Alice",
+      "budget": {
+        "min": 500,
+        "max": 800
+      },
+      "locations": [
+        "Forest of Magic",
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Cultural Heritage",
+        "Homecooking",
+        "Premium",
+        "Sweet",
+        "Western"
+      ],
+      "dislikeCuisine": [
+        "Filling",
+        "Greasy",
+        "Meat",
+        "Peculiar"
+      ],
+      "prefBeverage": [
+        "Low Alcohol",
+        "Modern",
+        "Western"
+      ],
+      "release": "BaseGame"
+    },
+    "Narumi Yatadera": {
+      "name": "Narumi Yatadera",
+      "kind": "rare",
+      "shortName": "Narumi",
+      "budget": {
+        "min": 300,
+        "max": 600
+      },
+      "locations": [
+        "Forest of Magic",
+        "Myouren Temple"
+      ],
+      "prefCuisine": [
+        "Cultural Heritage",
+        "Japanese",
+        "Mild",
+        "Mountain Delicacy",
+        "Specialty"
+      ],
+      "dislikeCuisine": [
+        "Filling",
+        "Greasy"
+      ],
+      "prefBeverage": [
+        "Chillable",
+        "Low Alcohol",
+        "Mid Alcohol",
+        "Neat",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Nitori Kawashiro": {
+      "name": "Nitori Kawashiro",
+      "kind": "rare",
+      "shortName": "Nitori",
+      "budget": {
+        "min": 400,
+        "max": 500
+      },
+      "locations": [
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Aquatic",
+        "Good w/ Alcohol",
+        "Premium",
+        "Salty",
+        "Signature",
+        "Peculiar"
+      ],
+      "dislikeCuisine": [
+        "Cultural Heritage",
+        "Mountain Delicacy",
+        "Vegetarian"
+      ],
+      "prefBeverage": [
+        "High Alcohol",
+        "Mid Alcohol",
+        "Neat",
+        "Sake"
+      ],
+      "release": "BaseGame"
+    },
+    "Momiji Inubashiri": {
+      "name": "Momiji Inubashiri",
+      "kind": "rare",
+      "shortName": "Momiji",
+      "budget": {
+        "min": 300,
+        "max": 400
+      },
+      "locations": [
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Good w/ Alcohol",
+        "Greasy",
+        "Large Portion",
+        "Meat",
+        "Mountain Delicacy"
+      ],
+      "dislikeCuisine": [
+        "Mild",
+        "Peculiar",
+        "Vegetarian"
+      ],
+      "prefBeverage": [
+        "High Alcohol",
+        "Mid Alcohol",
+        "Neat"
+      ],
+      "release": "BaseGame"
+    },
+    "Sanae Kochiya": {
+      "name": "Sanae Kochiya",
+      "kind": "rare",
+      "shortName": "Sanae",
+      "budget": {
+        "min": 400,
+        "max": 600
+      },
+      "locations": [
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Dreamy",
+        "Homecooking",
+        "Japanese",
+        "Photogenic",
+        "Sweet"
+      ],
+      "dislikeCuisine": [
+        "Greasy",
+        "Hot",
+        "Raw",
+        "Peculiar"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "Fruity",
+        "Low Alcohol",
+        "Modern",
+        "Neat",
+        "No Alcohol",
+        "Sake",
+        "Soda",
+        "Sweet"
+      ],
+      "release": "BaseGame"
+    },
+    "Yamame Kurodani": {
+      "name": "Yamame Kurodani",
+      "kind": "rare",
+      "shortName": "Yamame",
+      "budget": {
+        "min": 250,
+        "max": 400
+      },
+      "locations": [
+        "Youkai Trail",
+        "Scarlet Devil Mansion",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Former Hell"
+      ],
+      "prefCuisine": [
+        "Photogenic",
+        "Raw",
+        "Fresh",
+        "Peculiar",
+        "Sweet",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Greasy",
+        "Hot",
+        "Salty"
+      ],
+      "prefBeverage": [
+        "Beer",
+        "Low Alcohol",
+        "Mid Alcohol",
+        "Sweet"
+      ],
+      "release": "BaseGame"
+    },
+    "Parsee Mizuhashi": {
+      "name": "Parsee Mizuhashi",
+      "kind": "rare",
+      "shortName": "Parsee",
+      "budget": {
+        "min": 300,
+        "max": 400
+      },
+      "locations": [
+        "Former Hell"
+      ],
+      "prefCuisine": [
+        "Fruity",
+        "Meat",
+        "Salty",
+        "Fresh",
+        "Sour",
+        "Spicy",
+        "Trend - Unpopular"
+      ],
+      "dislikeCuisine": [
+        "Sweet",
+        "Trend - Popular"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "Dry",
+        "Heatable",
+        "Neat",
+        "No Alcohol"
+      ],
+      "release": "BaseGame"
+    },
+    "Yuugi Hoshiguma": {
+      "name": "Yuugi Hoshiguma",
+      "kind": "rare",
+      "shortName": "Yuugi",
+      "budget": {
+        "min": 600,
+        "max": 1000
+      },
+      "locations": [
+        "Hakurei Shrine",
+        "Youkai Mountain",
+        "Palace of the Earth Spirits",
+        "Former Hell"
+      ],
+      "prefCuisine": [
+        "Aura-Bursting",
+        "Good w/ Alcohol",
+        "Japanese",
+        "Large Portion",
+        "Legendary",
+        "Signature",
+        "Strength-Boosting",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Small Portion",
+        "Peculiar",
+        "Vegetarian"
+      ],
+      "prefBeverage": [
+        "Beer",
+        "High Alcohol",
+        "Sake",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Satori Komeiji": {
+      "name": "Satori Komeiji",
+      "kind": "rare",
+      "shortName": "Satori",
+      "budget": {
+        "min": 500,
+        "max": 600
+      },
+      "locations": [
+        "Human Village",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Palace of the Earth Spirits"
+      ],
+      "prefCuisine": [
+        "Dreamy",
+        "Homecooking",
+        "Small Portion",
+        "Specialty",
+        "Strength-Boosting",
+        "Sweet"
+      ],
+      "dislikeCuisine": [
+        "Hot",
+        "Large Portion",
+        "Meat",
+        "Mountain Delicacy",
+        "Peculiar"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "No Alcohol",
+        "Soda",
+        "Stimulating"
+      ],
+      "release": "BaseGame"
+    },
+    "Rin Kaenbyou": {
+      "name": "Rin Kaenbyou",
+      "kind": "rare",
+      "shortName": "Rin",
+      "budget": {
+        "min": 500,
+        "max": 700
+      },
+      "locations": [
+        "Human Village",
+        "Hakurei Shrine",
+        "Youkai Mountain",
+        "Palace of the Earth Spirits",
+        "Former Hell",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Aquatic",
+        "Dreamy",
+        "Fresh",
+        "Sea Delicacy",
+        "Peculiar",
+        "Sweet",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Hot",
+        "Raw"
+      ],
+      "prefBeverage": [
+        "Fruity",
+        "Low Alcohol",
+        "Sake"
+      ],
+      "release": "BaseGame"
+    },
+    "Utsuho Reiuji": {
+      "name": "Utsuho Reiuji",
+      "kind": "rare",
+      "shortName": "Utsuho",
+      "budget": {
+        "min": 500,
+        "max": 800
+      },
+      "locations": [
+        "Youkai Mountain",
+        "Palace of the Earth Spirits"
+      ],
+      "prefCuisine": [
+        "Greasy",
+        "Hot",
+        "Meat",
+        "Salty",
+        "Spicy",
+        "Strength-Boosting"
+      ],
+      "dislikeCuisine": [
+        "Fungus",
+        "Mild"
+      ],
+      "prefBeverage": [
+        "Cocktail",
+        "Heatable",
+        "Mid Alcohol"
+      ],
+      "release": "BaseGame"
+    },
+    "Kogasa Tatara": {
+      "name": "Kogasa Tatara",
+      "kind": "rare",
+      "shortName": "Kogasa",
+      "budget": {
+        "min": 150,
+        "max": 300
+      },
+      "locations": [
+        "Myouren Temple",
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Homecooking",
+        "Photogenic",
+        "Peculiar",
+        "Strength-Boosting",
+        "Sweet",
+        "Wonderful",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Hot",
+        "Spicy",
+        "Soup"
+      ],
+      "prefBeverage": [
+        "Chillable",
+        "Fruity",
+        "Mid Alcohol",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Minamitsu Murasa": {
+      "name": "Minamitsu Murasa",
+      "kind": "rare",
+      "shortName": "Minamitsu",
+      "budget": {
+        "min": 400,
+        "max": 600
+      },
+      "locations": [
+        "Myouren Temple"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Meat",
+        "Premium",
+        "Salty",
+        "Fresh",
+        "Specialty",
+        "Strength-Boosting"
+      ],
+      "dislikeCuisine": [
+        "Small Portion",
+        "Sour",
+        "Peculiar",
+        "Vegetarian"
+      ],
+      "prefBeverage": [
+        "Chillable",
+        "Dry",
+        "High Alcohol",
+        "Western"
+      ],
+      "release": "BaseGame"
+    },
+    "Nue Houjuu": {
+      "name": "Nue Houjuu",
+      "kind": "rare",
+      "shortName": "Nue",
+      "budget": {
+        "min": 300,
+        "max": 500
+      },
+      "locations": [
+        "Myouren Temple",
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Meat",
+        "Photogenic",
+        "Raw",
+        "Fresh",
+        "Signature",
+        "Specialty",
+        "Peculiar",
+        "Wonderful",
+        "Trend - Unpopular"
+      ],
+      "dislikeCuisine": [
+        "Sour",
+        "Western",
+        "Trend - Popular"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "Neat",
+        "Shochu",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Mononobe no Futo": {
+      "name": "Mononobe no Futo",
+      "kind": "rare",
+      "shortName": "Futo",
+      "budget": {
+        "min": 600,
+        "max": 900
+      },
+      "locations": [
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Aura-Bursting",
+        "Japanese",
+        "Legendary",
+        "Mild",
+        "Mountain Delicacy",
+        "Premium",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Raw",
+        "Western",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "Mid Alcohol",
+        "Neat",
+        "Soda"
+      ],
+      "release": "BaseGame"
+    },
+    "Seiga Kaku": {
+      "name": "Seiga Kaku",
+      "kind": "rare",
+      "shortName": "Seiga",
+      "budget": {
+        "min": 400,
+        "max": 900
+      },
+      "locations": [
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Chinese",
+        "Legendary",
+        "Small Portion",
+        "Specialty",
+        "Sweet",
+        "Vegetarian",
+        "Wonderful",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Filling",
+        "Greasy"
+      ],
+      "prefBeverage": [
+        "Fruity",
+        "Low Alcohol",
+        "Modern",
+        "Sake"
+      ],
+      "release": "BaseGame"
+    },
+    "Soga no Tojiko": {
+      "name": "Soga no Tojiko",
+      "kind": "rare",
+      "shortName": "Tojiko",
+      "budget": {
+        "min": 500,
+        "max": 600
+      },
+      "locations": [
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Grilled",
+        "Filling",
+        "Greasy",
+        "Homecooking",
+        "Japanese",
+        "Signature",
+        "Strength-Boosting"
+      ],
+      "dislikeCuisine": [
+        "Refreshing",
+        "Sweet"
+      ],
+      "prefBeverage": [
+        "Beer",
+        "Bitter",
+        "High Alcohol",
+        "Shochu"
+      ],
+      "release": "BaseGame"
+    },
+    "Aya Shameimaru": {
+      "name": "Aya Shameimaru",
+      "kind": "rare",
+      "shortName": "Aya",
+      "budget": {
+        "min": 500,
+        "max": 600
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Former Hell",
+        "Palace of the Earth Spirits",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum",
+        "Garden of the Sun",
+        "Shining Needle Castle",
+        "Makai",
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Meat",
+        "Homecooking",
+        "Good w/ Alcohol",
+        "Japanese",
+        "Signature",
+        "Photogenic",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Western",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "High Alcohol",
+        "Chillable",
+        "Shochu",
+        "Stimulating"
+      ],
+      "release": "BaseGame"
+    },
+    "Medicine Melancholy": {
+      "name": "Medicine Melancholy",
+      "kind": "rare",
+      "shortName": "Medicine",
+      "budget": {
+        "min": 200,
+        "max": 400
+      },
+      "locations": [
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Sweet",
+        "Signature",
+        "Photogenic",
+        "Refreshing",
+        "Fungus",
+        "Small Portion",
+        "Dreamy",
+        "Poison"
+      ],
+      "dislikeCuisine": [
+        "Cultural Heritage"
+      ],
+      "prefBeverage": [
+        "No Alcohol",
+        "Fruity",
+        "Sweet",
+        "Bitter"
+      ],
+      "release": "BaseGame"
+    },
+    "Yuuka Kazami": {
+      "name": "Yuuka Kazami",
+      "kind": "rare",
+      "shortName": "Yuuka",
+      "budget": {
+        "min": 1200,
+        "max": 1800
+      },
+      "locations": [
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Premium",
+        "Legendary",
+        "Mild",
+        "Western",
+        "Wonderful",
+        "Dreamy",
+        "Specialty",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Filling",
+        "Japanese",
+        "Salty",
+        "Hot"
+      ],
+      "prefBeverage": [
+        "Cocktail",
+        "Western",
+        "Liquor",
+        "Modern"
+      ],
+      "release": "BaseGame"
+    },
+    "Seija Kijin": {
+      "name": "Seija Kijin",
+      "kind": "rare",
+      "shortName": "Seija",
+      "budget": {
+        "min": 300,
+        "max": 600
+      },
+      "locations": [
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Greasy",
+        "Good w/ Alcohol",
+        "Hot",
+        "Strength-Boosting",
+        "Peculiar",
+        "Wonderful",
+        "Aura-Bursting",
+        "Trend - Unpopular"
+      ],
+      "dislikeCuisine": [
+        "Premium",
+        "Trend - Popular"
+      ],
+      "prefBeverage": [
+        "Mid Alcohol",
+        "Shochu",
+        "Neat",
+        "Dry"
+      ],
+      "release": "BaseGame"
+    },
+    "Shinmyoumaru Sukuna": {
+      "name": "Shinmyoumaru Sukuna",
+      "kind": "rare",
+      "shortName": "Shinmyoumaru",
+      "budget": {
+        "min": 600,
+        "max": 1200
+      },
+      "locations": [
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Legendary",
+        "Japanese",
+        "Sweet",
+        "Photogenic",
+        "Cultural Heritage",
+        "Small Portion",
+        "Aura-Bursting",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Large Portion",
+        "Western"
+      ],
+      "prefBeverage": [
+        "Low Alcohol",
+        "Heatable",
+        "Soda",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Kagerou Imaizumi": {
+      "name": "Kagerou Imaizumi",
+      "kind": "rare",
+      "shortName": "Kagerou",
+      "budget": {
+        "min": 300,
+        "max": 600
+      },
+      "locations": [
+        "Bamboo Forest of the Lost",
+        "Shining Needle Castle"
+      ],
+      "prefCuisine": [
+        "Meat",
+        "Homecooking",
+        "Mountain Delicacy",
+        "Japanese",
+        "Photogenic",
+        "Refreshing",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Hot"
+      ],
+      "prefBeverage": [
+        "Mid Alcohol",
+        "Chillable",
+        "Sake",
+        "Neat"
+      ],
+      "release": "BaseGame"
+    },
+    "Ellen": {
+      "name": "Ellen",
+      "kind": "rare",
+      "shortName": "Ellen",
+      "budget": {
+        "min": 300,
+        "max": 500
+      },
+      "locations": [
+        "Makai"
+      ],
+      "prefCuisine": [
+        "Western",
+        "Sweet",
+        "Dreamy",
+        "Homecooking",
+        "Filling",
+        "Refreshing",
+        "Trend-Popular"
+      ],
+      "dislikeCuisine": [
+        "Greasy",
+        "Aquatic",
+        "Raw"
+      ],
+      "prefBeverage": [
+        "Beer",
+        "Sweet",
+        "Heatable",
+        "Vintage",
+        "Low Alcohol"
+      ],
+      "release": "BaseGame"
+    },
+    "Mima": {
+      "name": "Mima",
+      "kind": "rare",
+      "shortName": "Mima",
+      "budget": {
+        "min": 2000,
+        "max": 3000
+      },
+      "locations": [
+        "Makai"
+      ],
+      "prefCuisine": [
+        "Peculiar",
+        "Strength-Boosting",
+        "Fresh",
+        "Mountain Delicacy",
+        "Aquatic",
+        "Fungus",
+        "Raw"
+      ],
+      "dislikeCuisine": [
+        "Premium",
+        "Mild"
+      ],
+      "prefBeverage": [
+        "Chillable",
+        "High Alcohol",
+        "Shochu",
+        "Western",
+        "Dry"
+      ],
+      "release": "BaseGame"
+    },
+    "Louise": {
+      "name": "Louise",
+      "kind": "rare",
+      "shortName": "Louise",
+      "budget": {
+        "min": 800,
+        "max": 1000
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum",
+        "Garden of the Sun",
+        "Shining Needle Castle",
+        "Makai"
+      ],
+      "prefCuisine": [
+        "Sweet",
+        "Photogenic",
+        "Small Portion",
+        "Specialty",
+        "Western",
+        "Aquatic",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Filling",
+        "Greasy"
+      ],
+      "prefBeverage": [
+        "Cocktail",
+        "Chillable",
+        "Modern",
+        "Mid Alcohol",
+        "Beer"
+      ],
+      "release": "BaseGame"
+    },
+    "Reisen": {
+      "name": "Reisen",
+      "kind": "rare",
+      "shortName": "Reisen",
+      "budget": {
+        "min": 200,
+        "max": 350
+      },
+      "locations": [
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Small Portion",
+        "Sea Delicacy",
+        "Sweet",
+        "Specialty",
+        "Homecooking",
+        "Chinese",
+        "Mountain Delicacy"
+      ],
+      "dislikeCuisine": [
+        "Expensive",
+        "Wonderful"
+      ],
+      "prefBeverage": [
+        "Shochu",
+        "High Alcohol",
+        "Heatable",
+        "Beer",
+        "Bitter"
+      ],
+      "release": "BaseGame"
+    },
+    "Watatsuki no Toyohime": {
+      "name": "Watatsuki no Toyohime",
+      "kind": "rare",
+      "shortName": "Toyohime",
+      "budget": {
+        "min": 1200,
+        "max": 1500
+      },
+      "locations": [
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Fruity",
+        "Japanese",
+        "Sweet",
+        "Vegetarian",
+        "Premium",
+        "Refreshing",
+        "Cultural Heritage",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Mountain Delicacy",
+        "Salty",
+        "Strength-Boosting"
+      ],
+      "prefBeverage": [
+        "Chillable",
+        "High Alcohol",
+        "Sake",
+        "Vintage",
+        "Fruity"
+      ],
+      "release": "BaseGame"
+    },
+    "Watatsuki no Yorihime": {
+      "name": "Watatsuki no Yorihime",
+      "kind": "rare",
+      "shortName": "Yorihime",
+      "budget": {
+        "min": 1000,
+        "max": 1200
+      },
+      "locations": [
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Legendary",
+        "Premium",
+        "Chinese",
+        "Cultural Heritage",
+        "Hot",
+        "Mild",
+        "Small Portion",
+        "Strength-Boosting"
+      ],
+      "dislikeCuisine": [
+        "Fungus",
+        "Mountain Delicacy"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "Neat",
+        "Stimulating",
+        "Dry",
+        "Shochu"
+      ],
+      "release": "BaseGame"
+    }
+  },
+  "special": {
+    "Rinnosuke Morichika": {
+      "name": "Rinnosuke Morichika",
+      "kind": "special",
+      "shortName": "Rinnosuke",
+      "budget": {
+        "min": 250,
+        "max": 400
+      },
+      "locations": [
+        "Human Village",
+        "Forest of Magic",
+        "Garden of the Sun"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Homecooking",
+        "Fresh",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Good w/ Alcohol",
+        "Greasy",
+        "Peculiar",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Beer",
+        "Shochu"
+      ],
+      "release": "BaseGame"
+    },
+    "Remilia Scarlet": {
+      "name": "Remilia Scarlet",
+      "kind": "special",
+      "shortName": "Remilia",
+      "budget": {
+        "min": 4950,
+        "max": 5000
+      },
+      "locations": [
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion"
+      ],
+      "prefCuisine": [
+        "Premium",
+        "Legendary",
+        "Western",
+        "Sweet",
+        "Raw",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Economical",
+        "Salty",
+        "Spicy",
+        "Sour"
+      ],
+      "prefBeverage": [
+        "High Alcohol",
+        "Western",
+        "Fruity",
+        "Sweet",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Youmu Konpaku": {
+      "name": "Youmu Konpaku",
+      "kind": "special",
+      "shortName": "Youmu",
+      "budget": {
+        "min": 300,
+        "max": 400
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Bamboo Forest of the Lost"
+      ],
+      "prefCuisine": [
+        "Strength-Boosting",
+        "Fresh",
+        "Homecooking",
+        "Mild"
+      ],
+      "dislikeCuisine": [
+        "Salty",
+        "Greasy",
+        "Peculiar"
+      ],
+      "prefBeverage": [
+        "Fruity",
+        "No Alcohol",
+        "Heatable"
+      ],
+      "release": "BaseGame"
+    },
+    "Yuyuko Saigyouji": {
+      "name": "Yuyuko Saigyouji",
+      "kind": "special",
+      "shortName": "Yuyuko",
+      "budget": {
+        "min": 1500,
+        "max": 2000
+      },
+      "locations": [
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Aquatic",
+        "Chinese",
+        "Filling",
+        "Japanese",
+        "Large Portion",
+        "Legendary",
+        "Meat",
+        "Premium"
+      ],
+      "dislikeCuisine": [
+        "Mild",
+        "Small Portion",
+        "Vegetarian"
+      ],
+      "prefBeverage": [
+        "Chillable",
+        "Cocktail",
+        "High Alcohol"
+      ],
+      "release": "BaseGame"
+    },
+    "Meng Chengguo": {
+      "name": "Meng Chengguo",
+      "kind": "special",
+      "shortName": "Chengguo",
+      "budget": {
+        "min": 1200,
+        "max": 1600
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum",
+        "Garden of the Sun",
+        "Shining Needle Castle",
+        "Makai",
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Aquatic",
+        "Dreamy",
+        "Meat",
+        "Sweet",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Hot",
+        "Peculiar",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Dry",
+        "Fruity",
+        "Chillable",
+        "Sweet"
+      ],
+      "release": "BaseGame"
+    },
+    "Three Fairies": {
+      "name": "Three Fairies",
+      "kind": "special",
+      "shortName": "Three Fairies",
+      "budget": {
+        "min": 300,
+        "max": 400
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Refreshing",
+        "Dreamy",
+        "Fungus",
+        "Homecooking",
+        "Small Portion",
+        "Sweet",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Hot",
+        "Raw",
+        "Peculiar",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "Fruity",
+        "No Alcohol",
+        "Sweet"
+      ],
+      "release": "BaseGame"
+    },
+    "Rin Satsuki": {
+      "name": "Rin Satsuki",
+      "kind": "special",
+      "shortName": "Rin",
+      "budget": {
+        "min": 400,
+        "max": 600
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost"
+      ],
+      "prefCuisine": [
+        "Aquatic",
+        "Chinese",
+        "Homecooking",
+        "Spicy",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Greasy"
+      ],
+      "prefBeverage": [
+        "No Alcohol",
+        "Soda",
+        "Sweet"
+      ],
+      "release": "BaseGame"
+    },
+    "Shio Tachisora": {
+      "name": "Shio Tachisora",
+      "kind": "special",
+      "shortName": "Shio",
+      "budget": {
+        "min": 500,
+        "max": 800
+      },
+      "locations": [
+        "Youkai Trail",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Youkai Mountain"
+      ],
+      "prefCuisine": [
+        "Expensive",
+        "Good w/ Alcohol",
+        "Japanese",
+        "Meat",
+        "Mountain Delicacy",
+        "Strength-Boosting"
+      ],
+      "dislikeCuisine": [
+        "Mild",
+        "Trend - Popular",
+        "Vegetarian"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "High Alcohol",
+        "Chillable"
+      ],
+      "release": "BaseGame"
+    },
+    "Jien Yuu": {
+      "name": "Jien Yuu",
+      "kind": "special",
+      "shortName": "Jien Yuu",
+      "budget": {
+        "min": 1300,
+        "max": 1800
+      },
+      "locations": [
+        "Human Village",
+        "Hakurei Shrine"
+      ],
+      "prefCuisine": [
+        "Chinese",
+        "Cultural Heritage",
+        "Good w/ Alcohol",
+        "Legendary",
+        "Specialty",
+        "Western"
+      ],
+      "dislikeCuisine": [
+        "Aquatic",
+        "Greasy"
+      ],
+      "prefBeverage": [
+        "Cocktail",
+        "Chillable",
+        "Mid Alcohol",
+        "Western"
+      ],
+      "release": "BaseGame"
+    },
+    "Hata no Kokoro": {
+      "name": "Hata no Kokoro",
+      "kind": "special",
+      "shortName": "Kokoro",
+      "budget": {
+        "min": 514,
+        "max": 805
+      },
+      "locations": [
+        "Human Village",
+        "Hakurei Shrine",
+        "Youkai Mountain",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Legendary",
+        "Japanese",
+        "Signature",
+        "Photogenic",
+        "Refreshing",
+        "Dreamy",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Greasy",
+        "Salty",
+        "Hot",
+        "Trend - Unpopular"
+      ],
+      "prefBeverage": [
+        "Mid Alcohol",
+        "Shochu",
+        "Sweet",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Yuuma Toutetsu": {
+      "name": "Yuuma Toutetsu",
+      "kind": "special",
+      "shortName": "Yuuma",
+      "budget": {
+        "min": 9999,
+        "max": 9999
+      },
+      "locations": [
+        "Youkai Trail",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Former Hell",
+        "Palace of the Earth Spirits",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum",
+        "Garden of the Sun",
+        "Shining Needle Castle",
+        "Makai",
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Filling",
+        "Large Portion",
+        "Legendary",
+        "Meat",
+        "Premium",
+        "Raw",
+        "Fresh",
+        "Strength-Boosting",
+        "Wonderful"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "Dry",
+        "High Alcohol",
+        "Neat",
+        "Shochu"
+      ],
+      "release": "BaseGame"
+    },
+    "Koishi Komeiji": {
+      "name": "Koishi Komeiji",
+      "kind": "special",
+      "shortName": "Koishi",
+      "budget": {
+        "min": 800,
+        "max": 1200
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Former Hell",
+        "Palace of the Earth Spirits",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum",
+        "Garden of the Sun",
+        "Shining Needle Castle",
+        "Makai",
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Dreamy",
+        "Raw",
+        "Salty",
+        "Peculiar",
+        "Sweet",
+        "Trend - Unpopular",
+        "Wonderful"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "Bitter",
+        "High Alcohol",
+        "Shochu",
+        "Soda"
+      ],
+      "release": "BaseGame"
+    },
+    "Okina Matara": {
+      "name": "Okina Matara",
+      "kind": "special",
+      "shortName": "Okina",
+      "budget": {
+        "min": 0,
+        "max": 9007199254740991
+      },
+      "locations": [],
+      "prefCuisine": [
+        "?????"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "?????"
+      ],
+      "release": "BaseGame"
+    },
+    "Mamizou Futatsuiwa": {
+      "name": "Mamizou Futatsuiwa",
+      "kind": "special",
+      "shortName": "Mamizou",
+      "budget": {
+        "min": 1000,
+        "max": 1200
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum"
+      ],
+      "prefCuisine": [
+        "Aquatic",
+        "Fruity",
+        "Good w/ Alcohol",
+        "Homecooking",
+        "Japanese",
+        "Legendary",
+        "Meat",
+        "Trend - Popular"
+      ],
+      "dislikeCuisine": [
+        "Hot",
+        "Spicy"
+      ],
+      "prefBeverage": [
+        "Heatable",
+        "High Alcohol",
+        "Shochu",
+        "Vintage"
+      ],
+      "release": "BaseGame"
+    },
+    "Flandre Scarlet": {
+      "name": "Flandre Scarlet",
+      "kind": "special",
+      "shortName": "Flandre",
+      "budget": {
+        "min": 0,
+        "max": 9007199254740991
+      },
+      "locations": [],
+      "prefCuisine": [
+        "?????"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "?????"
+      ],
+      "release": "BaseGame"
+    },
+    "Wakasagihime": {
+      "name": "Wakasagihime",
+      "kind": "special",
+      "shortName": "Wakasagi",
+      "budget": {
+        "min": 0,
+        "max": 9007199254740991
+      },
+      "locations": [],
+      "prefCuisine": [
+        "?????"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "?????"
+      ],
+      "release": "BaseGame"
+    },
+    "Eirin Yagokoro": {
+      "name": "Eirin Yagokoro",
+      "kind": "special",
+      "shortName": "Eirin",
+      "budget": {
+        "min": 0,
+        "max": 9007199254740991
+      },
+      "locations": [],
+      "prefCuisine": [
+        "?????"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "?????"
+      ],
+      "release": "BaseGame"
+    },
+    "Sagume Kishin": {
+      "name": "Sagume Kishin",
+      "kind": "special",
+      "shortName": "Sagume",
+      "budget": {
+        "min": 0,
+        "max": 9007199254740991
+      },
+      "locations": [],
+      "prefCuisine": [
+        "?????"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "?????"
+      ],
+      "release": "BaseGame"
+    },
+    "Yukari Yakumo": {
+      "name": "Yukari Yakumo",
+      "kind": "special",
+      "shortName": "Yukari",
+      "budget": {
+        "min": 4000,
+        "max": 6000
+      },
+      "locations": [
+        "Youkai Trail",
+        "Human Village",
+        "Hakurei Shrine",
+        "Scarlet Devil Mansion",
+        "Bamboo Forest of the Lost",
+        "Forest of Magic",
+        "Youkai Mountain",
+        "Former Hell",
+        "Palace of the Earth Spirits",
+        "Myouren Temple",
+        "Divine Spirit Mausoleum",
+        "Garden of the Sun",
+        "Shining Needle Castle",
+        "Makai",
+        "Lunar Capital"
+      ],
+      "prefCuisine": [
+        "Homecooking",
+        "Photogenic",
+        "Refreshing",
+        "Soup",
+        "Premium",
+        "Legendary",
+        "Peculiar"
+      ],
+      "dislikeCuisine": [
+        "Fungus, Filling"
+      ],
+      "prefBeverage": [
+        "Vintage",
+        "Mid Alcohol",
+        "High Alcohol"
+      ],
+      "release": "BaseGame"
+    },
+    "Shiki Eiki": {
+      "name": "Shiki Eiki",
+      "kind": "special",
+      "shortName": "Shiki",
+      "budget": {
+        "min": 0,
+        "max": 9007199254740991
+      },
+      "locations": [],
+      "prefCuisine": [
+        "?????"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "?????"
+      ],
+      "release": "BaseGame"
+    },
+    "Mizuchi Miyadeguchi": {
+      "name": "Mizuchi Miyadeguchi",
+      "kind": "special",
+      "shortName": "Mizuchi",
+      "budget": {
+        "min": 0,
+        "max": 9007199254740991
+      },
+      "locations": [],
+      "prefCuisine": [
+        "?????"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "?????"
+      ],
+      "release": "BaseGame"
+    },
+    "Shinki": {
+      "name": "Shinki",
+      "kind": "special",
+      "shortName": "Shinki",
+      "budget": {
+        "min": 0,
+        "max": 9007199254740991
+      },
+      "locations": [],
+      "prefCuisine": [
+        "?????"
+      ],
+      "dislikeCuisine": [
+        "None"
+      ],
+      "prefBeverage": [
+        "?????"
+      ],
+      "release": "BaseGame"
+    }
+  }
+}

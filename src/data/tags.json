@@ -1,0 +1,301 @@
+{
+  "cuisine": [
+    {
+      "name": "Dark Matter",
+      "id": -4
+    },
+    {
+      "name": "Expensive",
+      "id": -3
+    },
+    {
+      "name": "Economical",
+      "id": -2
+    },
+    {
+      "name": "Large Portion",
+      "id": -1
+    },
+    {
+      "name": "Meat",
+      "id": 0
+    },
+    {
+      "name": "Aquatic",
+      "id": 1
+    },
+    {
+      "name": "Vegetarian",
+      "id": 2
+    },
+    {
+      "name": "Homecooking",
+      "id": 3
+    },
+    {
+      "name": "Premium",
+      "id": 4
+    },
+    {
+      "name": "Legendary",
+      "id": 5
+    },
+    {
+      "name": "Greasy",
+      "id": 6
+    },
+    {
+      "name": "Mild",
+      "id": 7
+    },
+    {
+      "name": "Good w/ Alcohol",
+      "id": 8
+    },
+    {
+      "name": "Filling",
+      "id": 9
+    },
+    {
+      "name": "Mountain Delicacy",
+      "id": 10
+    },
+    {
+      "name": "Sea Delicacy",
+      "id": 11
+    },
+    {
+      "name": "Japanese",
+      "id": 12
+    },
+    {
+      "name": "Western",
+      "id": 13
+    },
+    {
+      "name": "Chinese",
+      "id": 14
+    },
+    {
+      "name": "Salty",
+      "id": 15
+    },
+    {
+      "name": "Fresh",
+      "id": 16
+    },
+    {
+      "name": "Sweet",
+      "id": 17
+    },
+    {
+      "name": "Raw",
+      "id": 18
+    },
+    {
+      "name": "Signature",
+      "id": 19
+    },
+    {
+      "name": "Photogenic",
+      "id": 20
+    },
+    {
+      "name": "Refreshing",
+      "id": 21
+    },
+    {
+      "name": "Hot",
+      "id": 22
+    },
+    {
+      "name": "Strength-Boosting",
+      "id": 23
+    },
+    {
+      "name": "Peculiar",
+      "id": 24
+    },
+    {
+      "name": "Cultural Heritage",
+      "id": 25
+    },
+    {
+      "name": "Fungus",
+      "id": 26
+    },
+    {
+      "name": "Wonderful",
+      "id": 27
+    },
+    {
+      "name": "Small Portion",
+      "id": 28
+    },
+    {
+      "name": "Dreamy",
+      "id": 29
+    },
+    {
+      "name": "Specialty",
+      "id": 30
+    },
+    {
+      "name": "Fruity",
+      "id": 31
+    },
+    {
+      "name": "Soup",
+      "id": 32
+    },
+    {
+      "name": "Grilled",
+      "id": 33
+    },
+    {
+      "name": "Spicy",
+      "id": 34
+    },
+    {
+      "name": "Aura-Bursting",
+      "id": 35
+    },
+    {
+      "name": "Sour",
+      "id": 2000
+    },
+    {
+      "name": "Poison",
+      "id": 4001
+    },
+    {
+      "name": "Trend - Popular",
+      "id": -20
+    },
+    {
+      "name": "Trend - Unpopular",
+      "id": -21
+    },
+    {
+      "name": "Divine Punishment",
+      "id": 4002
+    }
+  ],
+  "beverage": [
+    {
+      "name": "No Alcohol",
+      "id": -1
+    },
+    {
+      "name": "Low Alcohol",
+      "id": 0
+    },
+    {
+      "name": "Mid Alcohol",
+      "id": 1
+    },
+    {
+      "name": "High Alcohol",
+      "id": 2
+    },
+    {
+      "name": "Chillable",
+      "id": 3
+    },
+    {
+      "name": "Heatable",
+      "id": 4
+    },
+    {
+      "name": "Shochu",
+      "id": 5
+    },
+    {
+      "name": "Sake",
+      "id": 6
+    },
+    {
+      "name": "Cocktail",
+      "id": 7
+    },
+    {
+      "name": "Western",
+      "id": 8
+    },
+    {
+      "name": "Liquor",
+      "id": 9
+    },
+    {
+      "name": "Beer",
+      "id": 10
+    },
+    {
+      "name": "Neat",
+      "id": 11
+    },
+    {
+      "name": "Fruity",
+      "id": 12
+    },
+    {
+      "name": "Sweet",
+      "id": 13
+    },
+    {
+      "name": "Dry",
+      "id": 14
+    },
+    {
+      "name": "Bitter",
+      "id": 15
+    },
+    {
+      "name": "Soda",
+      "id": 16
+    },
+    {
+      "name": "Vintage",
+      "id": 17
+    },
+    {
+      "name": "Modern",
+      "id": 18
+    },
+    {
+      "name": "Stimulating",
+      "id": 19
+    }
+  ],
+  "priority": [
+    [
+      "Meat",
+      "Vegetarian"
+    ],
+    [
+      "Large Portion",
+      "Small Portion"
+    ],
+    [
+      "Filling",
+      "Good w/ Alcohol"
+    ],
+    [
+      "Greasy",
+      "Mild"
+    ],
+    [
+      "Hot",
+      "Refreshing"
+    ]
+  ],
+  "trend": {
+    "popular": "Trend - Popular",
+    "unpopular": "Trend - Unpopular"
+  },
+  "thresholds": {
+    "expensiveAbove": 60,
+    "economicalBelow": 20,
+    "maxIngredients": 5
+  }
+}

@@ -1,0 +1,620 @@
+{
+  "Green Tea": {
+    "name": "Green Tea",
+    "level": 1,
+    "cost": 1,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol"
+    ],
+    "release": "BaseGame"
+  },
+  "Fruity Highball": {
+    "name": "Fruity Highball",
+    "level": 1,
+    "cost": 12,
+    "alcohol": "Low Alcohol",
+    "props": [
+      "Low Alcohol",
+      "Bitter",
+      "Chillable",
+      "Cocktail",
+      "Fruity",
+      "Sweet",
+      "Western"
+    ],
+    "release": "BaseGame"
+  },
+  "Fruity Sour": {
+    "name": "Fruity Sour",
+    "level": 1,
+    "cost": 12,
+    "alcohol": "Low Alcohol",
+    "props": [
+      "Low Alcohol",
+      "Bitter",
+      "Chillable",
+      "Cocktail",
+      "Fruity",
+      "Shochu",
+      "Sweet"
+    ],
+    "release": "BaseGame"
+  },
+  "Mio": {
+    "name": "Mio",
+    "level": 1,
+    "cost": 18,
+    "alcohol": "Low Alcohol",
+    "props": [
+      "Low Alcohol",
+      "Bitter",
+      "Chillable",
+      "Cocktail",
+      "Dry",
+      "Sake",
+      "Sweet",
+      "Soda"
+    ],
+    "release": "BaseGame"
+  },
+  "ZUN Beer": {
+    "name": "ZUN Beer",
+    "level": 1,
+    "cost": 18,
+    "alcohol": "Low Alcohol",
+    "props": [
+      "Low Alcohol",
+      "Beer",
+      "Bitter",
+      "Chillable"
+    ],
+    "release": "BaseGame"
+  },
+  "Sangetsusei": {
+    "name": "Sangetsusei",
+    "level": 2,
+    "cost": 34,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Chillable",
+      "Heatable",
+      "Neat",
+      "Sake"
+    ],
+    "release": "BaseGame"
+  },
+  "Umeshu": {
+    "name": "Umeshu",
+    "level": 2,
+    "cost": 32,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Chillable",
+      "Fruity",
+      "Heatable",
+      "Liquor"
+    ],
+    "release": "BaseGame"
+  },
+  "Tengu Tango": {
+    "name": "Tengu Tango",
+    "level": 2,
+    "cost": 70,
+    "alcohol": "High Alcohol",
+    "props": [
+      "High Alcohol",
+      "Chillable",
+      "Heatable",
+      "Neat",
+      "Sake"
+    ],
+    "release": "BaseGame"
+  },
+  "Bloody Remy": {
+    "name": "Bloody Remy",
+    "level": 2,
+    "cost": 45,
+    "alcohol": "Low Alcohol",
+    "props": [
+      "Low Alcohol",
+      "Chillable",
+      "Cocktail",
+      "Western"
+    ],
+    "release": "BaseGame"
+  },
+  "Divine Wheat": {
+    "name": "Divine Wheat",
+    "level": 2,
+    "cost": 45,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Chillable",
+      "Heatable",
+      "Neat",
+      "Shochu"
+    ],
+    "release": "BaseGame"
+  },
+  "Dassai": {
+    "name": "Dassai",
+    "level": 3,
+    "cost": 130,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Chillable",
+      "Heatable",
+      "Neat",
+      "Sake"
+    ],
+    "release": "BaseGame"
+  },
+  "Akatsuki": {
+    "name": "Akatsuki",
+    "level": 4,
+    "cost": 400,
+    "alcohol": "High Alcohol",
+    "props": [
+      "High Alcohol",
+      "Chillable",
+      "Neat",
+      "Western"
+    ],
+    "release": "BaseGame"
+  },
+  "Sparrow Sake": {
+    "name": "Sparrow Sake",
+    "level": 2,
+    "cost": 50,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Chillable",
+      "Dry",
+      "Heatable",
+      "Sake"
+    ],
+    "release": "BaseGame"
+  },
+  "Scarlet Tea": {
+    "name": "Scarlet Tea",
+    "level": 2,
+    "cost": 25,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Fruity",
+      "Heatable",
+      "Stimulating"
+    ],
+    "release": "BaseGame"
+  },
+  "Affogato": {
+    "name": "Affogato",
+    "level": 2,
+    "cost": 35,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Chillable",
+      "Bitter",
+      "Stimulating",
+      "Sweet"
+    ],
+    "release": "BaseGame"
+  },
+  "Scarlet Mist": {
+    "name": "Scarlet Mist",
+    "level": 2,
+    "cost": 75,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Heatable",
+      "Western"
+    ],
+    "release": "BaseGame"
+  },
+  "Negroni": {
+    "name": "Negroni",
+    "level": 3,
+    "cost": 100,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Bitter",
+      "Chillable",
+      "Cocktail",
+      "Fruity",
+      "Western"
+    ],
+    "release": "BaseGame"
+  },
+  "Godfather": {
+    "name": "Godfather",
+    "level": 3,
+    "cost": 180,
+    "alcohol": "High Alcohol",
+    "props": [
+      "High Alcohol",
+      "Bitter",
+      "Chillable",
+      "Cocktail",
+      "Vintage",
+      "Western"
+    ],
+    "release": "BaseGame"
+  },
+  "Wind Priestess": {
+    "name": "Wind Priestess",
+    "level": 3,
+    "cost": 130,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Chillable",
+      "Cocktail",
+      "Modern",
+      "Sweet"
+    ],
+    "release": "BaseGame"
+  },
+  "Cassia Wine": {
+    "name": "Cassia Wine",
+    "level": 2,
+    "cost": 60,
+    "alcohol": "Low Alcohol",
+    "props": [
+      "Low Alcohol",
+      "Chillable",
+      "Heatable",
+      "Sweet",
+      "Vintage"
+    ],
+    "release": "BaseGame"
+  },
+  "Full Moon's Eve": {
+    "name": "Full Moon's Eve",
+    "level": 4,
+    "cost": 440,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Chillable",
+      "Heatable",
+      "Sake",
+      "Sweet",
+      "Vintage"
+    ],
+    "release": "BaseGame"
+  },
+  "Fire Rat's Robe": {
+    "name": "Fire Rat's Robe",
+    "level": 4,
+    "cost": 420,
+    "alcohol": "High Alcohol",
+    "props": [
+      "High Alcohol",
+      "Dry",
+      "Heatable",
+      "Shochu"
+    ],
+    "release": "BaseGame"
+  },
+  "Jade Dew Tea": {
+    "name": "Jade Dew Tea",
+    "level": 2,
+    "cost": 50,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Heatable",
+      "Vintage"
+    ],
+    "release": "BaseGame"
+  },
+  "Moon Rocket": {
+    "name": "Moon Rocket",
+    "level": 2,
+    "cost": 45,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Chillable",
+      "Modern",
+      "Soda"
+    ],
+    "release": "BaseGame"
+  },
+  "Milk": {
+    "name": "Milk",
+    "level": 2,
+    "cost": 16,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Neat"
+    ],
+    "release": "BaseGame"
+  },
+  "Grapefruit Juice": {
+    "name": "Grapefruit Juice",
+    "level": 2,
+    "cost": 24,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Fruity"
+    ],
+    "release": "BaseGame"
+  },
+  "Ramune": {
+    "name": "Ramune",
+    "level": 2,
+    "cost": 30,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Modern",
+      "Soda"
+    ],
+    "release": "BaseGame"
+  },
+  "Iceberg Kedama Lemonade": {
+    "name": "Iceberg Kedama Lemonade",
+    "level": 2,
+    "cost": 45,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Chillable",
+      "Fruity",
+      "Neat",
+      "Soda",
+      "Stimulating",
+      "Sweet"
+    ],
+    "release": "BaseGame"
+  },
+  "GIANT Popsicle!": {
+    "name": "GIANT Popsicle!",
+    "level": 2,
+    "cost": 35,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Modern",
+      "Stimulating",
+      "Sweet"
+    ],
+    "release": "BaseGame"
+  },
+  "Daiginjo": {
+    "name": "Daiginjo",
+    "level": 3,
+    "cost": 210,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Chillable",
+      "Fruity",
+      "Neat",
+      "Sake",
+      "Sweet",
+      "Vintage"
+    ],
+    "release": "DLC1"
+  },
+  "Coffee": {
+    "name": "Coffee",
+    "level": 2,
+    "cost": 62,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Bitter",
+      "Chillable",
+      "Heatable",
+      "Modern",
+      "Stimulating"
+    ],
+    "release": "DLC1"
+  },
+  "Fairy Dew": {
+    "name": "Fairy Dew",
+    "level": 2,
+    "cost": 80,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Chillable",
+      "Sweet"
+    ],
+    "release": "DLC1"
+  },
+  "Ice Cream Smoothie": {
+    "name": "Ice Cream Smoothie",
+    "level": 1,
+    "cost": 42,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Chillable",
+      "Sweet",
+      "Vintage"
+    ],
+    "release": "DLC1"
+  },
+  "Ordinary Fitness Tea": {
+    "name": "Ordinary Fitness Tea",
+    "level": 2,
+    "cost": 32,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Bitter",
+      "Liquor",
+      "Soda"
+    ],
+    "release": "DLC1"
+  },
+  "Oni Killer": {
+    "name": "Oni Killer",
+    "level": 4,
+    "cost": 320,
+    "alcohol": "High Alcohol",
+    "props": [
+      "High Alcohol",
+      "Chillable",
+      "Dry",
+      "Shochu",
+      "Vintage"
+    ],
+    "release": "DLC2"
+  },
+  "Ribovitan": {
+    "name": "Ribovitan",
+    "level": 2,
+    "cost": 45,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Neat",
+      "Stimulating",
+      "Sweet"
+    ],
+    "release": "DLC2"
+  },
+  "Komeiji Ice Cream": {
+    "name": "Komeiji Ice Cream",
+    "level": 2,
+    "cost": 35,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Fruity",
+      "Modern",
+      "Sweet"
+    ],
+    "release": "DLC2"
+  },
+  "Mango Pomelo Sago": {
+    "name": "Mango Pomelo Sago",
+    "level": 2,
+    "cost": 50,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Chillable",
+      "Fruity"
+    ],
+    "release": "DLC3"
+  },
+  "Qilin": {
+    "name": "Qilin",
+    "level": 3,
+    "cost": 180,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Beer",
+      "Neat"
+    ],
+    "release": "DLC3"
+  },
+  "This Side Up": {
+    "name": "This Side Up",
+    "level": 3,
+    "cost": 150,
+    "alcohol": "High Alcohol",
+    "props": [
+      "High Alcohol",
+      "Shochu"
+    ],
+    "release": "DLC4"
+  },
+  "Drunken Bard": {
+    "name": "Drunken Bard",
+    "level": 3,
+    "cost": 100,
+    "alcohol": "Low Alcohol",
+    "props": [
+      "Low Alcohol",
+      "Neat",
+      "Fruity",
+      "Vintage",
+      "Sweet"
+    ],
+    "release": "DLC4"
+  },
+  "Daughter of the Sea": {
+    "name": "Daughter of the Sea",
+    "level": 3,
+    "cost": 80,
+    "alcohol": "Low Alcohol",
+    "props": [
+      "Low Alcohol",
+      "Soda",
+      "Dry",
+      "Vintage"
+    ],
+    "release": "DLC5"
+  },
+  "Makai Coffee": {
+    "name": "Makai Coffee",
+    "level": 4,
+    "cost": 210,
+    "alcohol": "High Alcohol",
+    "props": [
+      "High Alcohol",
+      "Stimulating",
+      "Heatable",
+      "Western"
+    ],
+    "release": "DLC5"
+  },
+  "Mojito Sphere": {
+    "name": "Mojito Sphere",
+    "level": 4,
+    "cost": 300,
+    "alcohol": "Low Alcohol",
+    "props": [
+      "Low Alcohol",
+      "Soda",
+      "Modern",
+      "Cocktail"
+    ],
+    "release": "DLC5"
+  },
+  "Space Beer": {
+    "name": "Space Beer",
+    "level": 3,
+    "cost": 42,
+    "alcohol": "Mid Alcohol",
+    "props": [
+      "Mid Alcohol",
+      "Modern",
+      "Fruity",
+      "Beer"
+    ],
+    "release": "DLC5"
+  },
+  "Satellite Ice Coffee": {
+    "name": "Satellite Ice Coffee",
+    "level": 3,
+    "cost": 96,
+    "alcohol": "No Alcohol",
+    "props": [
+      "No Alcohol",
+      "Modern",
+      "Stimulating",
+      "Bitter"
+    ],
+    "release": "DLC5"
+  }
+}

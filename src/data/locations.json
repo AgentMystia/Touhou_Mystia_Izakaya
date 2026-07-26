@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Bamboo Forest of the Lost",
+    "release": "BaseGame",
+    "rares": [
+      "Fujiwara no Mokou",
+      "Kaguya Houraisan",
+      "Tewi Inaba"
+    ]
+  },
+  {
+    "name": "Hakugyokurou",
+    "release": "BaseGame",
+    "rares": []
+  },
+  {
+    "name": "Hakurei Shrine",
+    "release": "BaseGame",
+    "rares": [
+      "Hakurei Reimu",
+      "Ibuki Suika",
+      "Hinanawi Tenshi"
+    ]
+  },
+  {
+    "name": "Human Village",
+    "release": "BaseGame",
+    "rares": [
+      "Hieda no Akyuu",
+      "Keine Kamishirasawa",
+      "Kasen Ibaraki"
+    ]
+  },
+  {
+    "name": "Scarlet Devil Mansion",
+    "release": "BaseGame",
+    "rares": [
+      "Hong Meiling",
+      "Cirno",
+      "Patchouli Knowledge"
+    ]
+  },
+  {
+    "name": "Youkai Trail",
+    "release": "BaseGame",
+    "rares": [
+      "Wriggle Nightbug",
+      "Chen",
+      "Rumia"
+    ]
+  },
+  {
+    "name": "Forest of Magic",
+    "release": "DLC1",
+    "rares": [
+      "Marisa Kirisame",
+      "Alice",
+      "Narumi Yatadera"
+    ]
+  },
+  {
+    "name": "Youkai Mountain",
+    "release": "DLC1",
+    "rares": [
+      "Nitori Kawashiro",
+      "Momiji Inubashiri",
+      "Sanae Kochiya"
+    ]
+  },
+  {
+    "name": "Former Hell",
+    "release": "DLC2",
+    "rares": [
+      "Yamame Kurodani",
+      "Parsee Mizuhashi",
+      "Yuugi Hoshiguma"
+    ]
+  },
+  {
+    "name": "Palace of the Earth Spirits",
+    "release": "DLC2",
+    "rares": [
+      "Satori Komeiji",
+      "Rin Kaenbyou",
+      "Utsuho Reiuji"
+    ]
+  },
+  {
+    "name": "Divine Spirit Mausoleum",
+    "release": "DLC3",
+    "rares": [
+      "Mononobe no Futo",
+      "Seiga Kaku",
+      "Soga no Tojiko"
+    ]
+  },
+  {
+    "name": "Myouren Temple",
+    "release": "DLC3",
+    "rares": [
+      "Kogasa Tatara",
+      "Minamitsu Murasa",
+      "Nue Houjuu"
+    ]
+  },
+  {
+    "name": "Garden of the Sun",
+    "release": "DLC4",
+    "rares": [
+      "Aya Shameimaru",
+      "Medicine Melancholy",
+      "Yuuka Kazami"
+    ]
+  },
+  {
+    "name": "Shining Needle Castle",
+    "release": "DLC4",
+    "rares": [
+      "Seija Kijin",
+      "Shinmyoumaru Sukuna",
+      "Kagerou Imaizumi"
+    ]
+  },
+  {
+    "name": "Lunar Capital",
+    "release": "DLC5",
+    "rares": []
+  },
+  {
+    "name": "Makai",
+    "release": "DLC5",
+    "rares": []
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "touhou-mystias-izakaya",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A browser recreation of the izakaya-management sim Touhou Mystia's Izakaya (東方夜雀食堂).",
+  "scripts": {
+    "build:data": "node tools/build-data.mjs",
+    "dev": "vite",
+    "build": "npm run build:data && tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "node tools/e2e.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "playwright": "^1.49.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vitest": "^2.1.8"
+  }
+}

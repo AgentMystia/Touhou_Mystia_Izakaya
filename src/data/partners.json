@@ -1,0 +1,130 @@
+{
+  "Kyouko Kasodani": {
+    "name": "Kyouko Kasodani",
+    "shortName": "Kyouko",
+    "movementSpeed": "Medium",
+    "workSpeed": "Medium",
+    "revenueShare": 5,
+    "release": "BaseGame"
+  },
+  "Kosuzu Motoori": {
+    "name": "Kosuzu Motoori",
+    "shortName": "Kosuzu",
+    "movementSpeed": "Slow",
+    "workSpeed": "Fast",
+    "revenueShare": 5,
+    "release": "BaseGame"
+  },
+  "Aunn Komano": {
+    "name": "Aunn Komano",
+    "shortName": "Aunn",
+    "movementSpeed": "Fast",
+    "workSpeed": "Slow",
+    "revenueShare": 5,
+    "release": "BaseGame"
+  },
+  "Sakuya Izayoi": {
+    "name": "Sakuya Izayoi",
+    "shortName": "Sakuya",
+    "movementSpeed": "Teleport",
+    "workSpeed": "Fast",
+    "revenueShare": 10,
+    "release": "BaseGame"
+  },
+  "Reisen Udongein Inaba": {
+    "name": "Reisen Udongein Inaba",
+    "shortName": "Reisen",
+    "movementSpeed": "Fast",
+    "workSpeed": "Medium",
+    "revenueShare": 10,
+    "release": "BaseGame"
+  },
+  "Youmu Konpaku": {
+    "name": "Youmu Konpaku",
+    "shortName": "Youmu",
+    "movementSpeed": "Fast",
+    "workSpeed": "Fast",
+    "revenueShare": 10,
+    "release": "BaseGame"
+  },
+  "Hina Kagiyama": {
+    "name": "Hina Kagiyama",
+    "shortName": "Hina",
+    "movementSpeed": "Slow",
+    "workSpeed": "Medium",
+    "revenueShare": 0,
+    "release": "DLC1"
+  },
+  "Yumeko": {
+    "name": "Yumeko",
+    "shortName": "Yumeko",
+    "movementSpeed": "Medium",
+    "workSpeed": "Fast",
+    "revenueShare": 5,
+    "release": "DLC1"
+  },
+  "Komachi Onozuka": {
+    "name": "Komachi Onozuka",
+    "shortName": "Komachi",
+    "movementSpeed": "Slow",
+    "workSpeed": "Slow",
+    "revenueShare": 0,
+    "release": "DLC2"
+  },
+  "Kisume": {
+    "name": "Kisume",
+    "shortName": "Kisume",
+    "movementSpeed": "Medium",
+    "workSpeed": "Medium",
+    "revenueShare": 5,
+    "release": "DLC2"
+  },
+  "Yoshika Miyako": {
+    "name": "Yoshika Miyako",
+    "shortName": "Yoshika",
+    "movementSpeed": "Slow",
+    "workSpeed": "Slow",
+    "revenueShare": 0,
+    "release": "DLC3"
+  },
+  "Ichirin Kumoi": {
+    "name": "Ichirin Kumoi",
+    "shortName": "Ichirin",
+    "movementSpeed": "Medium",
+    "workSpeed": "Fast",
+    "revenueShare": 5,
+    "release": "DLC3"
+  },
+  "Eternity Larva": {
+    "name": "Eternity Larva",
+    "shortName": "Eternity",
+    "movementSpeed": "Fast",
+    "workSpeed": "Medium",
+    "revenueShare": 5,
+    "release": "DLC4"
+  },
+  "Sekibanki": {
+    "name": "Sekibanki",
+    "shortName": "Sekibanki",
+    "movementSpeed": "Medium (Increased while headless)",
+    "workSpeed": "Medium (Decreased while headless)",
+    "revenueShare": 7,
+    "release": "DLC4"
+  },
+  "Doremy Sweet": {
+    "name": "Doremy Sweet",
+    "shortName": "Doremy",
+    "movementSpeed": "Slow",
+    "workSpeed": "Slow",
+    "revenueShare": 10,
+    "release": "DLC5"
+  },
+  "Sara": {
+    "name": "Sara",
+    "shortName": "Sara",
+    "movementSpeed": "Fast",
+    "workSpeed": "Medium",
+    "revenueShare": 7,
+    "release": "DLC5"
+  }
+}

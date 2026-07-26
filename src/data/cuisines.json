@@ -1,0 +1,3663 @@
+{
+  "Dark Matter": {
+    "name": "Dark Matter",
+    "level": 1,
+    "cost": 1,
+    "props": [
+      "Dark Matter"
+    ],
+    "xprops": [],
+    "ingredients": [],
+    "kitchenware": "Any",
+    "cookTime": 0,
+    "release": "BaseGame"
+  },
+  "Seafood Miso Soup": {
+    "name": "Seafood Miso Soup",
+    "level": 1,
+    "cost": 8,
+    "props": [
+      "Economical",
+      "Homecooking",
+      "Soup",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Greasy"
+    ],
+    "ingredients": [
+      "Seaweed"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 3.6,
+    "release": "BaseGame"
+  },
+  "Grilled Lamprey": {
+    "name": "Grilled Lamprey",
+    "level": 2,
+    "cost": 22,
+    "props": [
+      "Aquatic",
+      "Grilled",
+      "Signature"
+    ],
+    "xprops": [
+      "Meat",
+      "Vegetarian"
+    ],
+    "ingredients": [
+      "Lamprey"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Fresh Tofu": {
+    "name": "Fresh Tofu",
+    "level": 2,
+    "cost": 21,
+    "props": [
+      "Good w/ Alcohol",
+      "Homecooking",
+      "Mild",
+      "Small Portion",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Radish",
+      "Tofu"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Rice Ball": {
+    "name": "Rice Ball",
+    "level": 1,
+    "cost": 6,
+    "props": [
+      "Economical",
+      "Filling",
+      "Homecooking",
+      "Japanese",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Seaweed"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Boiled Tofu": {
+    "name": "Boiled Tofu",
+    "level": 1,
+    "cost": 22,
+    "props": [
+      "Homecooking",
+      "Mild",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Tofu"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Secret Dried Fish Crisps": {
+    "name": "Secret Dried Fish Crisps",
+    "level": 2,
+    "cost": 30,
+    "props": [
+      "Aquatic",
+      "Salty",
+      "Fresh",
+      "Small Portion"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Trout"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Dew Runny Eggs": {
+    "name": "Dew Runny Eggs",
+    "level": 2,
+    "cost": 18,
+    "props": [
+      "Economical",
+      "Mild",
+      "Raw"
+    ],
+    "xprops": [
+      "Aquatic",
+      "Greasy",
+      "Meat"
+    ],
+    "ingredients": [
+      "Dew",
+      "Egg"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 1.8,
+    "release": "BaseGame"
+  },
+  "Stinky Tofu": {
+    "name": "Stinky Tofu",
+    "level": 1,
+    "cost": 24,
+    "props": [
+      "Chinese",
+      "Spicy",
+      "Peculiar",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Fruity",
+      "Sweet"
+    ],
+    "ingredients": [
+      "Tofu",
+      "Chili"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Roasted Mushroom": {
+    "name": "Roasted Mushroom",
+    "level": 1,
+    "cost": 18,
+    "props": [
+      "Grilled",
+      "Economical",
+      "Fungus",
+      "Hot",
+      "Salty",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Mushroom"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 3.6,
+    "release": "BaseGame"
+  },
+  "Pork Bowl": {
+    "name": "Pork Bowl",
+    "level": 2,
+    "cost": 20,
+    "props": [
+      "Filling",
+      "Homecooking",
+      "Meat"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Pork"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Fried Cicada Sloughs": {
+    "name": "Fried Cicada Sloughs",
+    "level": 1,
+    "cost": 19,
+    "props": [
+      "Economical",
+      "Greasy",
+      "Peculiar"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Cicada Slough"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Potato Croquettes": {
+    "name": "Potato Croquettes",
+    "level": 1,
+    "cost": 22,
+    "props": [
+      "Greasy",
+      "Homecooking",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Refreshing"
+    ],
+    "ingredients": [
+      "Potato"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "BaseGame"
+  },
+  "Cubic Kedama Ice Cream": {
+    "name": "Cubic Kedama Ice Cream",
+    "level": 3,
+    "cost": 75,
+    "props": [
+      "Refreshing",
+      "Dreamy",
+      "Expensive",
+      "Photogenic",
+      "Sweet",
+      "Western"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Dew",
+      "Tofu",
+      "Honey",
+      "Egg"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Cubic Kedama Volcanic Tofu": {
+    "name": "Cubic Kedama Volcanic Tofu",
+    "level": 3,
+    "cost": 85,
+    "props": [
+      "Chinese",
+      "Expensive",
+      "Photogenic",
+      "Fresh",
+      "Vegetarian",
+      "Wonderful"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Tofu",
+      "Chili",
+      "Beef",
+      "Onion"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Scarlet Devil Cake": {
+    "name": "Scarlet Devil Cake",
+    "level": 3,
+    "cost": 60,
+    "props": [
+      "Dreamy",
+      "Photogenic",
+      "Peculiar",
+      "Sweet",
+      "Western"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Dew",
+      "Pumpkin",
+      "Potato",
+      "Honey"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Unconscious Youkai Mousse": {
+    "name": "Unconscious Youkai Mousse",
+    "level": 3,
+    "cost": 60,
+    "props": [
+      "Dreamy",
+      "Photogenic",
+      "Premium",
+      "Sweet",
+      "Western"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Tofu",
+      "Butter",
+      "Honey",
+      "Onion"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Tonkotsu Ramen": {
+    "name": "Tonkotsu Ramen",
+    "level": 3,
+    "cost": 60,
+    "props": [
+      "Filling",
+      "Homecooking",
+      "Meat",
+      "Salty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Pork",
+      "Egg",
+      "Seaweed"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Pork & Trout Kebab": {
+    "name": "Pork & Trout Kebab",
+    "level": 2,
+    "cost": 26,
+    "props": [
+      "Aquatic",
+      "Grilled",
+      "Homecooking",
+      "Meat"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Trout",
+      "Pork"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Udumbara Cake": {
+    "name": "Udumbara Cake",
+    "level": 3,
+    "cost": 78,
+    "props": [
+      "Dreamy",
+      "Expensive",
+      "Legendary",
+      "Photogenic",
+      "Premium",
+      "Sweet"
+    ],
+    "xprops": [
+      "Aquatic",
+      "Meat"
+    ],
+    "ingredients": [
+      "Udumbara",
+      "Dew"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Deep Fried Tofu": {
+    "name": "Deep Fried Tofu",
+    "level": 1,
+    "cost": 16,
+    "props": [
+      "Economical",
+      "Greasy",
+      "Homecooking",
+      "Japanese",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Tofu"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Miso Tofu": {
+    "name": "Miso Tofu",
+    "level": 2,
+    "cost": 21,
+    "props": [
+      "Homecooking",
+      "Japanese",
+      "Mild",
+      "Soup",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Greasy"
+    ],
+    "ingredients": [
+      "Tofu"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Fried Lampreys": {
+    "name": "Fried Lampreys",
+    "level": 2,
+    "cost": 27,
+    "props": [
+      "Aquatic",
+      "Greasy",
+      "Signature"
+    ],
+    "xprops": [
+      "Refreshing"
+    ],
+    "ingredients": [
+      "Lamprey"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Tofu Stew": {
+    "name": "Tofu Stew",
+    "level": 1,
+    "cost": 19,
+    "props": [
+      "Economical",
+      "Hot",
+      "Japanese",
+      "Mild",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Tofu"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Power Soup": {
+    "name": "Power Soup",
+    "level": 3,
+    "cost": 34,
+    "props": [
+      "Hot",
+      "Meat",
+      "Mountain Delicacy",
+      "Soup",
+      "Strength-Boosting"
+    ],
+    "xprops": [
+      "Refreshing",
+      "Small Portion"
+    ],
+    "ingredients": [
+      "Seaweed",
+      "Boar Meat"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 7.2,
+    "release": "BaseGame"
+  },
+  "Scholar's Ginkgo": {
+    "name": "Scholar's Ginkgo",
+    "level": 3,
+    "cost": 60,
+    "props": [
+      "Chinese",
+      "Cultural Heritage",
+      "Sweet",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Salty"
+    ],
+    "ingredients": [
+      "Ginkgo Nut",
+      "Honey"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Beef Bowl": {
+    "name": "Beef Bowl",
+    "level": 2,
+    "cost": 20,
+    "props": [
+      "Filling",
+      "Homecooking",
+      "Meat"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Beef"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Vegetable Salad": {
+    "name": "Vegetable Salad",
+    "level": 3,
+    "cost": 56,
+    "props": [
+      "Refreshing",
+      "Mild",
+      "Raw",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Aquatic",
+      "Hot",
+      "Meat"
+    ],
+    "ingredients": [
+      "Potato",
+      "Onion",
+      "Pumpkin"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Pork Rice Ball": {
+    "name": "Pork Rice Ball",
+    "level": 2,
+    "cost": 14,
+    "props": [
+      "Economical",
+      "Filling",
+      "Homecooking",
+      "Japanese",
+      "Meat"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Pork"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3.6,
+    "release": "BaseGame"
+  },
+  "Imitation Bear Paw": {
+    "name": "Imitation Bear Paw",
+    "level": 3,
+    "cost": 70,
+    "props": [
+      "Aquatic",
+      "Expensive",
+      "Meat",
+      "Mountain Delicacy",
+      "Premium",
+      "Fresh",
+      "Strength-Boosting",
+      "Wonderful"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Iberico Pork",
+      "Bamboo Shoot",
+      "Pufferfish"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 7.2,
+    "release": "BaseGame"
+  },
+  "Shirayuki": {
+    "name": "Shirayuki",
+    "level": 4,
+    "cost": 98,
+    "props": [
+      "Aquatic",
+      "Cultural Heritage",
+      "Expensive",
+      "Japanese",
+      "Meat",
+      "Premium"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Pufferfish",
+      "Lamprey",
+      "Seaweed"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 7.2,
+    "release": "BaseGame"
+  },
+  "Pink Rice Ball": {
+    "name": "Pink Rice Ball",
+    "level": 3,
+    "cost": 30,
+    "props": [
+      "Aquatic",
+      "Filling",
+      "Homecooking",
+      "Hot",
+      "Japanese",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Onion",
+      "Trout"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Carved Rose Salad": {
+    "name": "Carved Rose Salad",
+    "level": 1,
+    "cost": 20,
+    "props": [
+      "Refreshing",
+      "Mild",
+      "Photogenic",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Hot",
+      "Meat"
+    ],
+    "ingredients": [
+      "Radish"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Hodgepodge": {
+    "name": "Hodgepodge",
+    "level": 2,
+    "cost": 40,
+    "props": [
+      "Homecooking",
+      "Hot",
+      "Meat",
+      "Fresh"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Seaweed",
+      "Trout",
+      "Tofu"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Fried Pork Cutlet": {
+    "name": "Fried Pork Cutlet",
+    "level": 2,
+    "cost": 25,
+    "props": [
+      "Filling",
+      "Greasy",
+      "Homecooking",
+      "Meat"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Pork"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Pork Stir Fry": {
+    "name": "Pork Stir Fry",
+    "level": 1,
+    "cost": 15,
+    "props": [
+      "Economical",
+      "Chinese",
+      "Good w/ Alcohol",
+      "Greasy",
+      "Homecooking",
+      "Meat"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Pork"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Daimyo's Feast": {
+    "name": "Daimyo's Feast",
+    "level": 3,
+    "cost": 105,
+    "props": [
+      "Aquatic",
+      "Expensive",
+      "Filling",
+      "Meat",
+      "Mountain Delicacy",
+      "Premium"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Iberico Pork",
+      "Wagyu Beef",
+      "Pufferfish"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 6,
+    "release": "BaseGame"
+  },
+  "Energy Skewer": {
+    "name": "Energy Skewer",
+    "level": 3,
+    "cost": 50,
+    "props": [
+      "Grilled",
+      "Filling",
+      "Meat"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Beef",
+      "Onion",
+      "Pumpkin"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 7.2,
+    "release": "BaseGame"
+  },
+  "Peach Tapioca": {
+    "name": "Peach Tapioca",
+    "level": 2,
+    "cost": 55,
+    "props": [
+      "Refreshing",
+      "Fruity",
+      "Photogenic",
+      "Soup",
+      "Sweet",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Peach",
+      "Ice Cube",
+      "Dew"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Falling Blossoms": {
+    "name": "Falling Blossoms",
+    "level": 4,
+    "cost": 50,
+    "props": [
+      "Aquatic",
+      "Japanese",
+      "Photogenic",
+      "Premium",
+      "Raw",
+      "Sea Delicacy",
+      "Small Portion"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Premium Tuna"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 7.2,
+    "release": "BaseGame"
+  },
+  "Niten Ichiryu": {
+    "name": "Niten Ichiryu",
+    "level": 4,
+    "cost": 90,
+    "props": [
+      "Aura-Bursting",
+      "Grilled",
+      "Cultural Heritage",
+      "Expensive",
+      "Meat",
+      "Mountain Delicacy",
+      "Premium"
+    ],
+    "xprops": [
+      "Homecooking"
+    ],
+    "ingredients": [
+      "Iberico Pork",
+      "Boar Meat"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 10.8,
+    "release": "BaseGame"
+  },
+  "Peach & Shrimp Salad": {
+    "name": "Peach & Shrimp Salad",
+    "level": 2,
+    "cost": 25,
+    "props": [
+      "Aquatic",
+      "Fruity",
+      "Mild",
+      "Photogenic",
+      "Sweet",
+      "Vegetarian",
+      "Wonderful"
+    ],
+    "xprops": [
+      "Meat",
+      "Salty"
+    ],
+    "ingredients": [
+      "Peach",
+      "Ice Cube",
+      "Shrimp"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 6,
+    "release": "BaseGame"
+  },
+  "Tangyuan": {
+    "name": "Tangyuan",
+    "level": 2,
+    "cost": 35,
+    "props": [
+      "Chinese",
+      "Cultural Heritage",
+      "Homecooking",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Sticky Rice"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Dumplings": {
+    "name": "Dumplings",
+    "level": 2,
+    "cost": 35,
+    "props": [
+      "Chinese",
+      "Cultural Heritage",
+      "Homecooking",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Flour"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Scone": {
+    "name": "Scone",
+    "level": 1,
+    "cost": 8,
+    "props": [
+      "Economical",
+      "Filling",
+      "Western"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Butter",
+      "Flour"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Salmon Steak": {
+    "name": "Salmon Steak",
+    "level": 3,
+    "cost": 58,
+    "props": [
+      "Meat",
+      "Fresh",
+      "Western"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Salmon",
+      "Bamboo Shoot"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 6,
+    "release": "BaseGame"
+  },
+  "Pancakes with Syrup": {
+    "name": "Pancakes with Syrup",
+    "level": 2,
+    "cost": 22,
+    "props": [
+      "Filling",
+      "Sweet",
+      "Western"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Honey",
+      "Flour",
+      "Egg"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 5.4,
+    "release": "BaseGame"
+  },
+  "Hunter's Casserole": {
+    "name": "Hunter's Casserole",
+    "level": 4,
+    "cost": 66,
+    "props": [
+      "Expensive",
+      "Filling",
+      "Greasy",
+      "Hot",
+      "Meat",
+      "Mountain Delicacy"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Potato",
+      "Pumpkin",
+      "Iberico Pork"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Kabayaki Lampreys": {
+    "name": "Kabayaki Lampreys",
+    "level": 3,
+    "cost": 42,
+    "props": [
+      "Aquatic",
+      "Greasy",
+      "Fresh",
+      "Signature",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Onion",
+      "Lamprey"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Classic Steak": {
+    "name": "Classic Steak",
+    "level": 2,
+    "cost": 60,
+    "props": [
+      "Filling",
+      "Greasy",
+      "Meat",
+      "Western"
+    ],
+    "xprops": [
+      "Refreshing",
+      "Sweet"
+    ],
+    "ingredients": [
+      "Wagyu Beef",
+      "Butter"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Real・Seafood Miso Soup": {
+    "name": "Real・Seafood Miso Soup",
+    "level": 2,
+    "cost": 55,
+    "props": [
+      "Aquatic",
+      "Homecooking",
+      "Mild",
+      "Soup"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Salmon",
+      "Trout"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Eggs Benedict": {
+    "name": "Eggs Benedict",
+    "level": 2,
+    "cost": 35,
+    "props": [
+      "Filling",
+      "Raw",
+      "Small Portion",
+      "Western"
+    ],
+    "xprops": [
+      "Fruity",
+      "Sweet"
+    ],
+    "ingredients": [
+      "Egg",
+      "Bamboo Shoot",
+      "Butter",
+      "Flour"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Golden Ribs Soup": {
+    "name": "Golden Ribs Soup",
+    "level": 2,
+    "cost": 65,
+    "props": [
+      "Chinese",
+      "Expensive",
+      "Hot",
+      "Meat",
+      "Soup"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Ginkgo Nut",
+      "Radish",
+      "Pork"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 3.6,
+    "release": "BaseGame"
+  },
+  "Cantonese Char Siu": {
+    "name": "Cantonese Char Siu",
+    "level": 3,
+    "cost": 70,
+    "props": [
+      "Chinese",
+      "Expensive",
+      "Greasy",
+      "Meat",
+      "Sweet",
+      "Wonderful"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Pork",
+      "Honey"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Sashimi Platter": {
+    "name": "Sashimi Platter",
+    "level": 3,
+    "cost": 88,
+    "props": [
+      "Aquatic",
+      "Expensive",
+      "Japanese",
+      "Photogenic",
+      "Premium",
+      "Raw"
+    ],
+    "xprops": [
+      "Hot"
+    ],
+    "ingredients": [
+      "Salmon",
+      "Tuna"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Italian Risotto": {
+    "name": "Italian Risotto",
+    "level": 2,
+    "cost": 70,
+    "props": [
+      "Expensive",
+      "Filling",
+      "Fungus",
+      "Fresh",
+      "Western"
+    ],
+    "xprops": [
+      "Sweet"
+    ],
+    "ingredients": [
+      "Onion",
+      "Mushroom",
+      "Bamboo Shoot",
+      "Butter"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 3.6,
+    "release": "BaseGame"
+  },
+  "Rainbow Pan-fried Pork Buns": {
+    "name": "Rainbow Pan-fried Pork Buns",
+    "level": 4,
+    "cost": 128,
+    "props": [
+      "Chinese",
+      "Dreamy",
+      "Expensive",
+      "Fungus",
+      "Legendary",
+      "Meat",
+      "Premium"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Mushroom",
+      "Iberico Pork"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Creamy Vegetable Chowder": {
+    "name": "Creamy Vegetable Chowder",
+    "level": 2,
+    "cost": 20,
+    "props": [
+      "Fungus",
+      "Soup",
+      "Vegetarian",
+      "Western"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Mushroom",
+      "Onion",
+      "Butter"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 5.4,
+    "release": "BaseGame"
+  },
+  "Pork & Bamboo Shoots Stir Fry": {
+    "name": "Pork & Bamboo Shoots Stir Fry",
+    "level": 2,
+    "cost": 25,
+    "props": [
+      "Good w/ Alcohol",
+      "Homecooking",
+      "Meat"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Bamboo Shoot",
+      "Pork"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 6,
+    "release": "BaseGame"
+  },
+  "Mochi": {
+    "name": "Mochi",
+    "level": 2,
+    "cost": 30,
+    "props": [
+      "Japanese",
+      "Small Portion",
+      "Sweet"
+    ],
+    "xprops": [
+      "Aquatic",
+      "Meat",
+      "Salty",
+      "Fresh"
+    ],
+    "ingredients": [
+      "Sticky Rice"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Beef Wellington": {
+    "name": "Beef Wellington",
+    "level": 4,
+    "cost": 150,
+    "props": [
+      "Expensive",
+      "Legendary",
+      "Meat",
+      "Mountain Delicacy",
+      "Premium",
+      "Western"
+    ],
+    "xprops": [
+      "Refreshing",
+      "Sweet"
+    ],
+    "ingredients": [
+      "Wagyu Beef",
+      "Flour",
+      "Egg",
+      "Butter",
+      "Truffle"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 8.4,
+    "release": "BaseGame"
+  },
+  "Ino-Shika-Chou": {
+    "name": "Ino-Shika-Chou",
+    "level": 3,
+    "cost": 78,
+    "props": [
+      "Cultural Heritage",
+      "Expensive",
+      "Meat",
+      "Photogenic",
+      "Premium"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Boar Meat",
+      "Venison",
+      "Lunar Herb"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Flowing Somen": {
+    "name": "Flowing Somen",
+    "level": 3,
+    "cost": 40,
+    "props": [
+      "Refreshing",
+      "Mild",
+      "Vegetarian",
+      "Wonderful"
+    ],
+    "xprops": [
+      "Greasy"
+    ],
+    "ingredients": [
+      "Flour",
+      "Bamboo"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.2,
+    "release": "BaseGame"
+  },
+  "Peach Yatsuhashi": {
+    "name": "Peach Yatsuhashi",
+    "level": 2,
+    "cost": 55,
+    "props": [
+      "Fruity",
+      "Japanese",
+      "Sweet"
+    ],
+    "xprops": [
+      "Aquatic",
+      "Meat",
+      "Salty",
+      "Fresh"
+    ],
+    "ingredients": [
+      "Sticky Rice",
+      "Peach"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3,
+    "release": "BaseGame"
+  },
+  "Kaguya-hime": {
+    "name": "Kaguya-hime",
+    "level": 4,
+    "cost": 65,
+    "props": [
+      "Cultural Heritage",
+      "Expensive",
+      "Japanese",
+      "Legendary",
+      "Meat",
+      "Photogenic",
+      "Premium",
+      "Specialty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Bamboo",
+      "Bamboo Shoot",
+      "Truffle",
+      "Ginkgo Nut",
+      "Iberico Pork"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 7.2,
+    "release": "BaseGame"
+  },
+  "Immortal Turkey": {
+    "name": "Immortal Turkey",
+    "level": 4,
+    "cost": 65,
+    "props": [
+      "Aura-Bursting",
+      "Grilled",
+      "Expensive",
+      "Legendary",
+      "Photogenic",
+      "Premium",
+      "Western"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Flour",
+      "Honey",
+      "Potato",
+      "Onion",
+      "Radish"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 7.2,
+    "release": "BaseGame"
+  },
+  "Steamed Egg & Bamboo Shoots": {
+    "name": "Steamed Egg & Bamboo Shoots",
+    "level": 2,
+    "cost": 40,
+    "props": [
+      "Fungus",
+      "Homecooking",
+      "Mild"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Bamboo",
+      "Egg",
+      "Seaweed",
+      "Mushroom"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 3.6,
+    "release": "BaseGame"
+  },
+  "Mapo Tofu": {
+    "name": "Mapo Tofu",
+    "level": 2,
+    "cost": 32,
+    "props": [
+      "Chinese",
+      "Hot",
+      "Spicy",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Refreshing",
+      "Fruity",
+      "Sweet"
+    ],
+    "ingredients": [
+      "Tofu",
+      "Pork",
+      "Chili"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "BaseGame"
+  },
+  "Lunar Dango": {
+    "name": "Lunar Dango",
+    "level": 3,
+    "cost": 80,
+    "props": [
+      "Expensive",
+      "Japanese",
+      "Specialty",
+      "Sweet",
+      "Wonderful"
+    ],
+    "xprops": [
+      "Aquatic",
+      "Meat",
+      "Salty",
+      "Fresh"
+    ],
+    "ingredients": [
+      "Lunar Herb",
+      "Sticky Rice"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Lunar Lover Biscuits": {
+    "name": "Lunar Lover Biscuits",
+    "level": 3,
+    "cost": 66,
+    "props": [
+      "Expensive",
+      "Photogenic",
+      "Small Portion",
+      "Specialty",
+      "Sweet"
+    ],
+    "xprops": [
+      "Aquatic",
+      "Meat",
+      "Vegetarian"
+    ],
+    "ingredients": [
+      "Butter",
+      "Flour",
+      "Egg",
+      "Lunar Herb"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 6,
+    "release": "BaseGame"
+  },
+  "Sichuan Boiled Fish": {
+    "name": "Sichuan Boiled Fish",
+    "level": 3,
+    "cost": 68,
+    "props": [
+      "Aquatic",
+      "Aura-Bursting",
+      "Chinese",
+      "Expensive",
+      "Hot",
+      "Spicy"
+    ],
+    "xprops": [
+      "Refreshing",
+      "Fruity",
+      "Meat",
+      "Sweet"
+    ],
+    "ingredients": [
+      "Trout",
+      "Chili"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Hourai Branch": {
+    "name": "Hourai Branch",
+    "level": 5,
+    "cost": 125,
+    "props": [
+      "Grilled",
+      "Cultural Heritage",
+      "Expensive",
+      "Legendary",
+      "Meat",
+      "Premium"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Bamboo",
+      "Pork",
+      "Salmon",
+      "Wagyu Beef",
+      "Venison"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 7.8,
+    "release": "BaseGame"
+  },
+  "Fuji's Lava": {
+    "name": "Fuji's Lava",
+    "level": 3,
+    "cost": 125,
+    "props": [
+      "Aquatic",
+      "Expensive",
+      "Filling",
+      "Fungus",
+      "Hot",
+      "Meat",
+      "Premium",
+      "Strength-Boosting"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Beef",
+      "Wagyu Beef",
+      "Pufferfish",
+      "Truffle"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.8,
+    "release": "BaseGame"
+  },
+  "Pork & Mushroom Stir Fry": {
+    "name": "Pork & Mushroom Stir Fry",
+    "level": 1,
+    "cost": 20,
+    "props": [
+      "Fungus",
+      "Greasy",
+      "Homecooking",
+      "Meat"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Mushroom",
+      "Pork"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "DLC1"
+  },
+  "Secret Savory Mushroom Hotpot": {
+    "name": "Secret Savory Mushroom Hotpot",
+    "level": 3,
+    "cost": 62,
+    "props": [
+      "Expensive",
+      "Fungus",
+      "Japanese",
+      "Fresh",
+      "Specialty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Truffle",
+      "Mushroom",
+      "Dew"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 5.4,
+    "release": "DLC1"
+  },
+  "Deep Fried Shrimp Tempura": {
+    "name": "Deep Fried Shrimp Tempura",
+    "level": 1,
+    "cost": 22,
+    "props": [
+      "Good w/ Alcohol",
+      "Greasy"
+    ],
+    "xprops": [
+      "Mild"
+    ],
+    "ingredients": [
+      "Shrimp",
+      "Flour"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "DLC1"
+  },
+  "Cream of Mushroom Soup": {
+    "name": "Cream of Mushroom Soup",
+    "level": 1,
+    "cost": 28,
+    "props": [
+      "Fungus",
+      "Homecooking",
+      "Photogenic"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Mushroom",
+      "Potato",
+      "Cream"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.8,
+    "release": "DLC1"
+  },
+  "Pickles": {
+    "name": "Pickles",
+    "level": 1,
+    "cost": 16,
+    "props": [
+      "Economical",
+      "Good w/ Alcohol",
+      "Salty",
+      "Small Portion",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Cucumber",
+      "Black Salt"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3.6,
+    "release": "DLC1"
+  },
+  "Nigiri Sushi": {
+    "name": "Nigiri Sushi",
+    "level": 1,
+    "cost": 28,
+    "props": [
+      "Aquatic",
+      "Cultural Heritage",
+      "Japanese",
+      "Mild",
+      "Raw",
+      "Fresh"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Salmon",
+      "Tuna"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3.6,
+    "release": "DLC1"
+  },
+  "Mushroom Maiden's Tip Tap Pot": {
+    "name": "Mushroom Maiden's Tip Tap Pot",
+    "level": 4,
+    "cost": 112,
+    "props": [
+      "Aquatic",
+      "Expensive",
+      "Fungus",
+      "Greasy",
+      "Hot",
+      "Photogenic",
+      "Salty",
+      "Fresh",
+      "Spicy"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Mushroom",
+      "Shrimp",
+      "Octopus",
+      "Chili"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 8.4,
+    "release": "DLC1"
+  },
+  "Okonomiyaki": {
+    "name": "Okonomiyaki",
+    "level": 2,
+    "cost": 24,
+    "props": [
+      "Japanese",
+      "Photogenic",
+      "Signature",
+      "Small Portion"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Flour",
+      "Egg",
+      "Radish"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "DLC1"
+  },
+  "Shrimp-Stuffed Pumpkin": {
+    "name": "Shrimp-Stuffed Pumpkin",
+    "level": 2,
+    "cost": 55,
+    "props": [
+      "Aquatic",
+      "Filling",
+      "Mild",
+      "Photogenic",
+      "Fresh",
+      "Specialty",
+      "Sweet"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Pumpkin",
+      "Shrimp",
+      "Tofu"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 5.4,
+    "release": "DLC1"
+  },
+  "Ordinary \"Eat Me\" Cupcake": {
+    "name": "Ordinary \"Eat Me\" Cupcake",
+    "level": 2,
+    "cost": 56,
+    "props": [
+      "Cultural Heritage",
+      "Fruity",
+      "Photogenic",
+      "Premium",
+      "Sweet"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Egg",
+      "Grapes",
+      "Cream"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.8,
+    "release": "DLC1"
+  },
+  "Golden Crispy Fish Cakes": {
+    "name": "Golden Crispy Fish Cakes",
+    "level": 2,
+    "cost": 40,
+    "props": [
+      "Aquatic",
+      "Good w/ Alcohol",
+      "Greasy",
+      "Strength-Boosting"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Trout",
+      "Flour",
+      "Honey"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 5.4,
+    "release": "DLC1"
+  },
+  "Creamy Crab": {
+    "name": "Creamy Crab",
+    "level": 3,
+    "cost": 88,
+    "props": [
+      "Expensive",
+      "Good w/ Alcohol",
+      "Premium",
+      "Photogenic",
+      "Fresh",
+      "Sea Delicacy",
+      "Signature"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Cream",
+      "Crab"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 7.2,
+    "release": "DLC1"
+  },
+  "Takoyaki": {
+    "name": "Takoyaki",
+    "level": 2,
+    "cost": 36,
+    "props": [
+      "Aquatic",
+      "Filling",
+      "Photogenic",
+      "Small Portion",
+      "Signature"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Flour",
+      "Seaweed",
+      "Octopus"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.8,
+    "release": "DLC1"
+  },
+  "Imitation Shirikodama": {
+    "name": "Imitation Shirikodama",
+    "level": 4,
+    "cost": 120,
+    "props": [
+      "Dreamy",
+      "Expensive",
+      "Good w/ Alcohol",
+      "Hot",
+      "Legendary",
+      "Small Portion",
+      "Peculiar"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Venison",
+      "Truffle",
+      "Cicada Slough"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 7.2,
+    "release": "DLC1"
+  },
+  "All-Meat Feast": {
+    "name": "All-Meat Feast",
+    "level": 4,
+    "cost": 115,
+    "props": [
+      "Expensive",
+      "Good w/ Alcohol",
+      "Hot",
+      "Large Portion",
+      "Meat",
+      "Mountain Delicacy",
+      "Photogenic",
+      "Premium",
+      "Salty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Boar Meat",
+      "Venison",
+      "Iberico Pork",
+      "Wagyu Beef"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 8.4,
+    "release": "DLC1"
+  },
+  "Buddha Jumps Over The Wall": {
+    "name": "Buddha Jumps Over The Wall",
+    "level": 4,
+    "cost": 160,
+    "props": [
+      "Aquatic",
+      "Chinese",
+      "Cultural Heritage",
+      "Expensive",
+      "Fungus",
+      "Legendary",
+      "Meat",
+      "Mountain Delicacy",
+      "Photogenic",
+      "Premium",
+      "Specialty",
+      "Strength-Boosting"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Wagyu Beef",
+      "Premium Tuna",
+      "Iberico Pork",
+      "Pufferfish",
+      "Truffle"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 10.8,
+    "release": "DLC1"
+  },
+  "Sea Urchin Sashimi": {
+    "name": "Sea Urchin Sashimi",
+    "level": 4,
+    "cost": 108,
+    "props": [
+      "Expensive",
+      "Photogenic",
+      "Premium",
+      "Sea Delicacy",
+      "Small Portion",
+      "Specialty",
+      "Sweet",
+      "Wonderful"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Sea Urchin",
+      "Dew"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.8,
+    "release": "DLC1"
+  },
+  "Seven-Colored Yokan": {
+    "name": "Seven-Colored Yokan",
+    "level": 4,
+    "cost": 92,
+    "props": [
+      "Cultural Heritage",
+      "Dreamy",
+      "Expensive",
+      "Fruity",
+      "Photogenic",
+      "Premium",
+      "Sweet",
+      "Wonderful"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Seaweed",
+      "Grapes",
+      "Dew",
+      "Udumbara"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.8,
+    "release": "DLC1"
+  },
+  "Cheese Omelette": {
+    "name": "Cheese Omelette",
+    "level": 1,
+    "cost": 26,
+    "props": [
+      "Greasy",
+      "Raw",
+      "Salty",
+      "Fresh"
+    ],
+    "xprops": [
+      "Meat"
+    ],
+    "ingredients": [
+      "Egg",
+      "Cheese"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "DLC2"
+  },
+  "Lion's Head": {
+    "name": "Lion's Head",
+    "level": 1,
+    "cost": 28,
+    "props": [
+      "Good w/ Alcohol",
+      "Meat",
+      "Fresh",
+      "Signature",
+      "Specialty"
+    ],
+    "xprops": [
+      "Aquatic",
+      "Filling"
+    ],
+    "ingredients": [
+      "Beef"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.2,
+    "release": "DLC2"
+  },
+  "Neko-manma": {
+    "name": "Neko-manma",
+    "level": 1,
+    "cost": 26,
+    "props": [
+      "Aquatic",
+      "Fresh",
+      "Small Portion"
+    ],
+    "xprops": [
+      "Greasy"
+    ],
+    "ingredients": [
+      "Trout",
+      "Dew",
+      "Flour"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3,
+    "release": "DLC2"
+  },
+  "Sakura Pudding": {
+    "name": "Sakura Pudding",
+    "level": 2,
+    "cost": 32,
+    "props": [
+      "Refreshing",
+      "Fruity",
+      "Photogenic",
+      "Small Portion",
+      "Specialty",
+      "Sweet"
+    ],
+    "xprops": [
+      "Greasy",
+      "Salty"
+    ],
+    "ingredients": [
+      "Honey",
+      "Peach"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 3.6,
+    "release": "DLC2"
+  },
+  "Salmon Tempura": {
+    "name": "Salmon Tempura",
+    "level": 2,
+    "cost": 44,
+    "props": [
+      "Aquatic",
+      "Greasy",
+      "Premium",
+      "Fresh",
+      "Small Portion"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Salmon",
+      "Butter",
+      "Egg",
+      "Flour"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.8,
+    "release": "DLC2"
+  },
+  "Instant☆Death": {
+    "name": "Instant☆Death",
+    "level": 3,
+    "cost": 62,
+    "props": [
+      "Grilled",
+      "Expensive",
+      "Filling",
+      "Greasy",
+      "Meat",
+      "Mountain Delicacy",
+      "Strength-Boosting"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Boar Meat",
+      "Venison",
+      "Onion"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 5.4,
+    "release": "DLC2"
+  },
+  "Crispy Spirals": {
+    "name": "Crispy Spirals",
+    "level": 1,
+    "cost": 42,
+    "props": [
+      "Filling",
+      "Raw",
+      "Specialty",
+      "Peculiar"
+    ],
+    "xprops": [
+      "Greasy"
+    ],
+    "ingredients": [
+      "Flour",
+      "Honey",
+      "Cicada Slough"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3,
+    "release": "DLC2"
+  },
+  "Misery Cheese Sticks": {
+    "name": "Misery Cheese Sticks",
+    "level": 1,
+    "cost": 25,
+    "props": [
+      "Good w/ Alcohol",
+      "Salty",
+      "Fresh",
+      "Specialty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Cheese",
+      "Ginkgo Nut",
+      "Ginkgo Nut"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 3.6,
+    "release": "DLC2"
+  },
+  "Giant Tamagoyaki": {
+    "name": "Giant Tamagoyaki",
+    "level": 2,
+    "cost": 60,
+    "props": [
+      "Filling",
+      "Japanese",
+      "Premium",
+      "Strength-Boosting",
+      "Sweet"
+    ],
+    "xprops": [
+      "Good w/ Alcohol"
+    ],
+    "ingredients": [
+      "Flour",
+      "Flour",
+      "Egg",
+      "Egg"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 7.2,
+    "release": "DLC2"
+  },
+  "Ceiling-Longing Pie": {
+    "name": "Ceiling-Longing Pie",
+    "level": 2,
+    "cost": 66,
+    "props": [
+      "Expensive",
+      "Good w/ Alcohol",
+      "Photogenic",
+      "Sea Delicacy",
+      "Signature",
+      "Specialty",
+      "Peculiar"
+    ],
+    "xprops": [
+      "Meat"
+    ],
+    "ingredients": [
+      "Trout",
+      "Flour",
+      "Peach"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 5.4,
+    "release": "DLC2"
+  },
+  "Energy Pudding": {
+    "name": "Energy Pudding",
+    "level": 2,
+    "cost": 42,
+    "props": [
+      "Refreshing",
+      "Fruity",
+      "Small Portion",
+      "Sour",
+      "Strength-Boosting",
+      "Sweet"
+    ],
+    "xprops": [
+      "Greasy",
+      "Salty"
+    ],
+    "ingredients": [
+      "Grapes",
+      "Grapes",
+      "Lemon"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.8,
+    "release": "DLC2"
+  },
+  "Dragon Carp": {
+    "name": "Dragon Carp",
+    "level": 4,
+    "cost": 142,
+    "props": [
+      "Aquatic",
+      "Chinese",
+      "Cultural Heritage",
+      "Dreamy",
+      "Expensive",
+      "Fungus",
+      "Large Portion",
+      "Meat",
+      "Premium",
+      "Fresh",
+      "Sea Delicacy",
+      "Sweet"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Premium Tuna",
+      "Venison",
+      "Honey",
+      "Lunar Herb",
+      "Truffle"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 7.2,
+    "release": "DLC2"
+  },
+  "Oedo Boat Feast": {
+    "name": "Oedo Boat Feast",
+    "level": 4,
+    "cost": 206,
+    "props": [
+      "Aquatic",
+      "Cultural Heritage",
+      "Expensive",
+      "Good w/ Alcohol",
+      "Japanese",
+      "Legendary",
+      "Photogenic",
+      "Premium",
+      "Raw",
+      "Fresh",
+      "Sea Delicacy",
+      "Signature"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Salmon",
+      "Tuna",
+      "Premium Tuna",
+      "Trout",
+      "Ice Cube"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 14.4,
+    "release": "DLC2"
+  },
+  "Burn-out Pudding": {
+    "name": "Burn-out Pudding",
+    "level": 4,
+    "cost": 73,
+    "props": [
+      "Refreshing",
+      "Dreamy",
+      "Expensive",
+      "Fruity",
+      "Signature",
+      "Small Portion",
+      "Sour",
+      "Strength-Boosting",
+      "Sweet"
+    ],
+    "xprops": [
+      "Greasy",
+      "Salty"
+    ],
+    "ingredients": [
+      "Grapes",
+      "Honey",
+      "Lemon",
+      "Lemon"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.8,
+    "release": "DLC2"
+  },
+  "CAUTION!! Hellish Spice!": {
+    "name": "CAUTION!! Hellish Spice!",
+    "level": 4,
+    "cost": 108,
+    "props": [
+      "Expensive",
+      "Greasy",
+      "Hot",
+      "Meat",
+      "Photogenic",
+      "Salty",
+      "Spicy",
+      "Peculiar",
+      "Strength-Boosting"
+    ],
+    "xprops": [
+      "Mild",
+      "Vegetarian"
+    ],
+    "ingredients": [
+      "Chili",
+      "Chili",
+      "Chili",
+      "Cheese",
+      "Beef"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 7.2,
+    "release": "DLC2"
+  },
+  "Kabuto Steamed Cake": {
+    "name": "Kabuto Steamed Cake",
+    "level": 3,
+    "cost": 105,
+    "props": [
+      "Expensive",
+      "Filling",
+      "Photogenic",
+      "Premium",
+      "Raw",
+      "Fresh",
+      "Signature",
+      "Peculiar",
+      "Strength-Boosting",
+      "Specialty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Flour",
+      "Iberico Pork",
+      "Honey",
+      "Cicada Slough"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 7.2,
+    "release": "DLC2"
+  },
+  "Gloomy Fruit Pie": {
+    "name": "Gloomy Fruit Pie",
+    "level": 2,
+    "cost": 36,
+    "props": [
+      "Fruity",
+      "Salty",
+      "Fresh",
+      "Sour",
+      "Specialty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Lemon",
+      "Grapes",
+      "Cheese"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.8,
+    "release": "DLC2"
+  },
+  "Agony Oden": {
+    "name": "Agony Oden",
+    "level": 4,
+    "cost": 92,
+    "props": [
+      "Expensive",
+      "Filling",
+      "Hot",
+      "Large Portion",
+      "Meat",
+      "Premium",
+      "Fresh",
+      "Specialty",
+      "Spicy",
+      "Strength-Boosting"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Chili",
+      "Chili",
+      "Beef",
+      "Radish",
+      "Tofu"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 7.2,
+    "release": "DLC2"
+  },
+  "Baked Sweet Potato": {
+    "name": "Baked Sweet Potato",
+    "level": 1,
+    "cost": 25,
+    "props": [
+      "Economical",
+      "Filling",
+      "Homecooking",
+      "Sweet"
+    ],
+    "xprops": [
+      "Good w/ Alcohol"
+    ],
+    "ingredients": [
+      "Sweet Potato"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 3.6,
+    "release": "DLC3"
+  },
+  "Yashouma Dango": {
+    "name": "Yashouma Dango",
+    "level": 2,
+    "cost": 45,
+    "props": [
+      "Cultural Heritage",
+      "Filling",
+      "Photogenic",
+      "Peculiar"
+    ],
+    "xprops": [
+      "Meat"
+    ],
+    "ingredients": [
+      "Sticky Rice",
+      "Sticky Rice"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 5.4,
+    "release": "DLC3"
+  },
+  "Heart-Throbbing Surprise!": {
+    "name": "Heart-Throbbing Surprise!",
+    "level": 4,
+    "cost": 90,
+    "props": [
+      "Dreamy",
+      "Expensive",
+      "Photogenic",
+      "Specialty",
+      "Peculiar",
+      "Strength-Boosting",
+      "Wonderful"
+    ],
+    "xprops": [
+      "Homecooking"
+    ],
+    "ingredients": [
+      "Mushroom",
+      "Udumbara",
+      "Honey",
+      "Cream"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 7.2,
+    "release": "DLC3"
+  },
+  "Biscay Biscuits": {
+    "name": "Biscay Biscuits",
+    "level": 1,
+    "cost": 26,
+    "props": [
+      "Filling",
+      "Hot",
+      "Salty"
+    ],
+    "xprops": [
+      "Sour"
+    ],
+    "ingredients": [
+      "Flour",
+      "Cheese"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 3,
+    "release": "DLC3"
+  },
+  "Smoked Buccaneer": {
+    "name": "Smoked Buccaneer",
+    "level": 2,
+    "cost": 58,
+    "props": [
+      "Large Portion",
+      "Legendary",
+      "Meat",
+      "Specialty",
+      "Strength-Boosting"
+    ],
+    "xprops": [
+      "Sour"
+    ],
+    "ingredients": [
+      "Beef",
+      "Black Salt",
+      "Chili",
+      "Honey"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 5.4,
+    "release": "DLC3"
+  },
+  "Buddha's Delight": {
+    "name": "Buddha's Delight",
+    "level": 4,
+    "cost": 97,
+    "props": [
+      "Refreshing",
+      "Cultural Heritage",
+      "Dreamy",
+      "Expensive",
+      "Mild",
+      "Premium",
+      "Fresh",
+      "Specialty",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Meat",
+      "Spicy"
+    ],
+    "ingredients": [
+      "Udumbara",
+      "Bamboo Shoot",
+      "Truffle",
+      "Pine Nut",
+      "Lotus Seed"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 7.2,
+    "release": "DLC3"
+  },
+  "Unzan Cotton Candy": {
+    "name": "Unzan Cotton Candy",
+    "level": 1,
+    "cost": 20,
+    "props": [
+      "Fruity",
+      "Specialty",
+      "Sweet",
+      "Wonderful"
+    ],
+    "xprops": [
+      "Meat",
+      "Salty"
+    ],
+    "ingredients": [
+      "Honey",
+      "Peach"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.8,
+    "release": "DLC3"
+  },
+  "Pure White Lotus": {
+    "name": "Pure White Lotus",
+    "level": 2,
+    "cost": 56,
+    "props": [
+      "Mild",
+      "Photogenic",
+      "Small Portion",
+      "Specialty",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Spicy"
+    ],
+    "ingredients": [
+      "Ginkgo Nut",
+      "Lotus Seed",
+      "Flour",
+      "Butter"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 6,
+    "release": "DLC3"
+  },
+  "Star Lotus Ship": {
+    "name": "Star Lotus Ship",
+    "level": 4,
+    "cost": 132,
+    "props": [
+      "Refreshing",
+      "Dreamy",
+      "Expensive",
+      "Photogenic",
+      "Premium",
+      "Raw",
+      "Fresh",
+      "Signature",
+      "Specialty",
+      "Wonderful"
+    ],
+    "xprops": [
+      "Peculiar"
+    ],
+    "ingredients": [
+      "Pumpkin",
+      "Lotus Seed",
+      "Tuna",
+      "Bingdi Lotus",
+      "Lunar Herb"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 7.8,
+    "release": "DLC3"
+  },
+  "Pine Nut Cake": {
+    "name": "Pine Nut Cake",
+    "level": 2,
+    "cost": 46,
+    "props": [
+      "Mild",
+      "Specialty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Sticky Rice",
+      "Pine Nut"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.8,
+    "release": "DLC3"
+  },
+  "White Deer, Unyielding Pine": {
+    "name": "White Deer, Unyielding Pine",
+    "level": 3,
+    "cost": 72,
+    "props": [
+      "Cultural Heritage",
+      "Expensive",
+      "Meat",
+      "Mountain Delicacy",
+      "Premium",
+      "Specialty"
+    ],
+    "xprops": [
+      "Sour"
+    ],
+    "ingredients": [
+      "Venison",
+      "Ginkgo Nut",
+      "Pine Nut"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 7.2,
+    "release": "DLC3"
+  },
+  "Eight Trigram Fish Maws": {
+    "name": "Eight Trigram Fish Maws",
+    "level": 4,
+    "cost": 136,
+    "props": [
+      "Aquatic",
+      "Refreshing",
+      "Cultural Heritage",
+      "Expensive",
+      "Mild",
+      "Premium",
+      "Fresh"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Premium Tuna",
+      "Mushroom",
+      "Radish",
+      "Egg",
+      "Ginkgo Nut"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 8.4,
+    "release": "DLC3"
+  },
+  "Honeyed Chestnut": {
+    "name": "Honeyed Chestnut",
+    "level": 1,
+    "cost": 30,
+    "props": [
+      "Small Portion",
+      "Specialty",
+      "Sweet"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Honey",
+      "Chestnut"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3.6,
+    "release": "DLC3"
+  },
+  "Tianshi's Stewed Mushrooms": {
+    "name": "Tianshi's Stewed Mushrooms",
+    "level": 2,
+    "cost": 55,
+    "props": [
+      "Chinese",
+      "Fungus",
+      "Homecooking",
+      "Specialty",
+      "Vegetarian"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Chestnut",
+      "Mushroom",
+      "Truffle"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.8,
+    "release": "DLC3"
+  },
+  "Lotus Fish Lamps": {
+    "name": "Lotus Fish Lamps",
+    "level": 4,
+    "cost": 94,
+    "props": [
+      "Aquatic",
+      "Chinese",
+      "Cultural Heritage",
+      "Dreamy",
+      "Expensive",
+      "Legendary",
+      "Mild",
+      "Wonderful"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Premium Tuna",
+      "Bingdi Lotus",
+      "Lotus Seed",
+      "Dew"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 6.6,
+    "release": "DLC3"
+  },
+  "Candied Sweet Potato": {
+    "name": "Candied Sweet Potato",
+    "level": 1,
+    "cost": 30,
+    "props": [
+      "Filling",
+      "Homecooking",
+      "Sweet",
+      "Vegetarian"
+    ],
+    "xprops": [
+      "Raw"
+    ],
+    "ingredients": [
+      "Sweet Potato",
+      "Honey"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "DLC3"
+  },
+  "Golden Two-Shroom Wrap": {
+    "name": "Golden Two-Shroom Wrap",
+    "level": 3,
+    "cost": 63,
+    "props": [
+      "Expensive",
+      "Fungus",
+      "Good w/ Alcohol",
+      "Greasy",
+      "Homecooking",
+      "Hot",
+      "Meat",
+      "Signature"
+    ],
+    "xprops": [
+      "Refreshing"
+    ],
+    "ingredients": [
+      "Pork",
+      "Mushroom",
+      "Truffle"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 5.4,
+    "release": "DLC3"
+  },
+  "Tempura Platter": {
+    "name": "Tempura Platter",
+    "level": 3,
+    "cost": 72,
+    "props": [
+      "Expensive",
+      "Meat",
+      "Fungus",
+      "Good w/ Alcohol",
+      "Greasy",
+      "Homecooking",
+      "Japanese",
+      "Signature",
+      "Strength-Boosting"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Iberico Pork",
+      "Truffle",
+      "Lamprey",
+      "Lunar Herb"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.2,
+    "release": "DLC3"
+  },
+  "Tomato Fries": {
+    "name": "Tomato Fries",
+    "level": 1,
+    "cost": 26,
+    "props": [
+      "Peculiar",
+      "Wonderful",
+      "Small Portion"
+    ],
+    "xprops": [
+      "Aquatic"
+    ],
+    "ingredients": [
+      "Tomato",
+      "Potato"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "DLC4"
+  },
+  "Peach Braised Pork": {
+    "name": "Peach Braised Pork",
+    "level": 2,
+    "cost": 42,
+    "props": [
+      "Meat",
+      "Good w/ Alcohol",
+      "Wonderful",
+      "Fruity"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Honey",
+      "Peach",
+      "Pork"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.8,
+    "release": "DLC4"
+  },
+  "Against The World!": {
+    "name": "Against The World!",
+    "level": 4,
+    "cost": 124,
+    "props": [
+      "Expensive",
+      "Mountain Delicacy",
+      "Refreshing",
+      "Peculiar",
+      "Fungus",
+      "Wonderful",
+      "Dreamy",
+      "Aura-Bursting"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Bamboo",
+      "Flower",
+      "Plum",
+      "Iberico Pork",
+      "Truffle"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 7.2,
+    "release": "DLC4"
+  },
+  "Red Bean Daifuku": {
+    "name": "Red Bean Daifuku",
+    "level": 2,
+    "cost": 28,
+    "props": [
+      "Japanese",
+      "Sweet",
+      "Small Portion"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Red Bean",
+      "Sticky Rice"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.2,
+    "release": "DLC4"
+  },
+  "Dorayaki": {
+    "name": "Dorayaki",
+    "level": 2,
+    "cost": 40,
+    "props": [
+      "Vegetarian",
+      "Japanese",
+      "Sweet",
+      "Specialty"
+    ],
+    "xprops": [
+      "Meat"
+    ],
+    "ingredients": [
+      "Red Bean",
+      "Egg",
+      "Flour"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "DLC4"
+  },
+  "Palace of the Han": {
+    "name": "Palace of the Han",
+    "level": 4,
+    "cost": 115,
+    "props": [
+      "Expensive",
+      "Aquatic",
+      "Premium",
+      "Legendary",
+      "Chinese",
+      "Peculiar",
+      "Cultural Heritage",
+      "Soup"
+    ],
+    "xprops": [
+      "Greasy"
+    ],
+    "ingredients": [
+      "Lamprey",
+      "Tofu",
+      "Crab",
+      "Bamboo",
+      "Dew"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 7.2,
+    "release": "DLC4"
+  },
+  "Bamboo Meat Pot": {
+    "name": "Bamboo Meat Pot",
+    "level": 3,
+    "cost": 42,
+    "props": [
+      "Meat",
+      "Homecooking",
+      "Filling"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Bamboo",
+      "Bamboo Shoot",
+      "Beef"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.2,
+    "release": "DLC4"
+  },
+  "Rice Powder Meat": {
+    "name": "Rice Powder Meat",
+    "level": 3,
+    "cost": 72,
+    "props": [
+      "Expensive",
+      "Meat",
+      "Homecooking",
+      "Mountain Delicacy"
+    ],
+    "xprops": [
+      "Raw"
+    ],
+    "ingredients": [
+      "Bamboo",
+      "Dew",
+      "Iberico Pork"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 5.4,
+    "release": "DLC4"
+  },
+  "Bamboo Spring": {
+    "name": "Bamboo Spring",
+    "level": 4,
+    "cost": 99,
+    "props": [
+      "Expensive",
+      "Premium",
+      "Mountain Delicacy",
+      "Signature",
+      "Photogenic",
+      "Cultural Heritage"
+    ],
+    "xprops": [
+      "Peculiar",
+      "Fungus"
+    ],
+    "ingredients": [
+      "Cucumber",
+      "Egg",
+      "Radish",
+      "Venison",
+      "Lunar Herb"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 8.4,
+    "release": "DLC4"
+  },
+  "Plum Tea Rice": {
+    "name": "Plum Tea Rice",
+    "level": 1,
+    "cost": 32,
+    "props": [
+      "Homecooking",
+      "Japanese"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Plum",
+      "Seaweed"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 2.4,
+    "release": "DLC4"
+  },
+  "Urchin Steamed Egg": {
+    "name": "Urchin Steamed Egg",
+    "level": 3,
+    "cost": 112,
+    "props": [
+      "Expensive",
+      "Sea Delicacy",
+      "Fresh",
+      "Photogenic"
+    ],
+    "xprops": [
+      "Mountain Delicacy"
+    ],
+    "ingredients": [
+      "Sea Urchin",
+      "Egg"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.2,
+    "release": "DLC4"
+  },
+  "Scrumptious Storm": {
+    "name": "Scrumptious Storm",
+    "level": 5,
+    "cost": 185,
+    "props": [
+      "Expensive",
+      "Meat",
+      "Greasy",
+      "Filling",
+      "Raw",
+      "Signature",
+      "Photogenic",
+      "Strength-Boosting"
+    ],
+    "xprops": [
+      "Refreshing",
+      "Mild"
+    ],
+    "ingredients": [
+      "Onion",
+      "Boar Meat",
+      "Beef",
+      "Truffle",
+      "Tomato"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 10.8,
+    "release": "DLC4"
+  },
+  "Mushroom Herb Road": {
+    "name": "Mushroom Herb Road",
+    "level": 1,
+    "cost": 24,
+    "props": [
+      "Mild",
+      "Cultural Heritage",
+      "Fungus",
+      "Specialty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Red Toon",
+      "Mushroom"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 3.6,
+    "release": "DLC4"
+  },
+  "Nature's Beauty": {
+    "name": "Nature's Beauty",
+    "level": 3,
+    "cost": 78,
+    "props": [
+      "Expensive",
+      "Premium",
+      "Wonderful",
+      "Dreamy",
+      "Specialty"
+    ],
+    "xprops": [
+      "Hot",
+      "Greasy"
+    ],
+    "ingredients": [
+      "Flower",
+      "Lunar Herb",
+      "Cream"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 5.4,
+    "release": "DLC4"
+  },
+  "Faint Dream": {
+    "name": "Faint Dream",
+    "level": 4,
+    "cost": 133,
+    "props": [
+      "Expensive",
+      "Premium",
+      "Mild",
+      "Western",
+      "Sweet",
+      "Photogenic",
+      "Refreshing",
+      "Dreamy"
+    ],
+    "xprops": [
+      "Meat",
+      "Good w/ Alcohol",
+      "Aquatic"
+    ],
+    "ingredients": [
+      "Flower",
+      "Udumbara",
+      "Lunar Herb",
+      "Dew",
+      "Cream"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 7.2,
+    "release": "DLC4"
+  },
+  "Toon Pancake": {
+    "name": "Toon Pancake",
+    "level": 1,
+    "cost": 30,
+    "props": [
+      "Signature",
+      "Specialty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Red Toon",
+      "Egg"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3.6,
+    "release": "DLC4"
+  },
+  "Miasma Garden": {
+    "name": "Miasma Garden",
+    "level": 3,
+    "cost": 58,
+    "props": [
+      "Aquatic",
+      "Signature",
+      "Peculiar",
+      "Poison"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Pufferfish",
+      "Plum",
+      "Lamprey",
+      "Ginkgo Nut"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 4.8,
+    "release": "DLC4"
+  },
+  "Little Sweet \"Poison\"": {
+    "name": "Little Sweet \"Poison\"",
+    "level": 3,
+    "cost": 87,
+    "props": [
+      "Expensive",
+      "Premium",
+      "Sweet",
+      "Photogenic",
+      "Small Portion",
+      "Dreamy"
+    ],
+    "xprops": [
+      "Meat"
+    ],
+    "ingredients": [
+      "Udumbara",
+      "Cream",
+      "Grapes",
+      "Ginkgo Nut"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 6,
+    "release": "DLC4"
+  },
+  "Eel Bowl with Egg": {
+    "name": "Eel Bowl with Egg",
+    "level": 2,
+    "cost": 45,
+    "props": [
+      "Aquatic",
+      "Raw",
+      "Signature"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Lamprey",
+      "Egg"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 3,
+    "release": "DLC5"
+  },
+  "Drunk Shrimp in Bamboo": {
+    "name": "Drunk Shrimp in Bamboo",
+    "level": 3,
+    "cost": 60,
+    "props": [
+      "Aquatic",
+      "Fresh",
+      "Raw",
+      "Peculiar"
+    ],
+    "xprops": [
+      "Filling"
+    ],
+    "ingredients": [
+      "Bamboo",
+      "Shrimp",
+      "Broccoli"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 3,
+    "release": "DLC5"
+  },
+  "Two-flavor Beef Hotpot": {
+    "name": "Two-flavor Beef Hotpot",
+    "level": 4,
+    "cost": 188,
+    "props": [
+      "Expensive",
+      "Meat",
+      "Homecooking",
+      "Mountain Delicacy",
+      "Chinese",
+      "Hot",
+      "Strength-Boosting",
+      "Fungus",
+      "Spicy"
+    ],
+    "xprops": [
+      "Refreshing",
+      "Dreamy"
+    ],
+    "ingredients": [
+      "Chili",
+      "Radish",
+      "Truffle",
+      "Beef",
+      "Wagyu Beef"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 3,
+    "release": "DLC5"
+  },
+  "Kitten Canele": {
+    "name": "Kitten Canele",
+    "level": 2,
+    "cost": 45,
+    "props": [
+      "Filling",
+      "Sweet",
+      "Photogenic"
+    ],
+    "xprops": [
+      "Peculiar"
+    ],
+    "ingredients": [
+      "Cocoa Bean",
+      "Flour",
+      "Egg"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 4.2,
+    "release": "DLC5"
+  },
+  "Kitten Pizza": {
+    "name": "Kitten Pizza",
+    "level": 3,
+    "cost": 75,
+    "props": [
+      "Expensive",
+      "Filling",
+      "Western",
+      "Photogenic",
+      "Fungus"
+    ],
+    "xprops": [
+      "Refreshing"
+    ],
+    "ingredients": [
+      "Mushroom",
+      "Onion",
+      "Broccoli",
+      "Boar Meat"
+    ],
+    "kitchenware": "Grill",
+    "cookTime": 6,
+    "release": "DLC5"
+  },
+  "Kitten's Water Play": {
+    "name": "Kitten's Water Play",
+    "level": 4,
+    "cost": 120,
+    "props": [
+      "Expensive",
+      "Vegetarian",
+      "Sweet",
+      "Photogenic",
+      "Refreshing",
+      "Wonderful",
+      "Dreamy"
+    ],
+    "xprops": [
+      "Good w/ Alcohol",
+      "Hot"
+    ],
+    "ingredients": [
+      "Peach",
+      "Creeping Fig",
+      "Cream",
+      "Cocoa Bean",
+      "Flour"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 7.2,
+    "release": "DLC5"
+  },
+  "Long Hair Princess": {
+    "name": "Long Hair Princess",
+    "level": 2,
+    "cost": 36,
+    "props": [
+      "Aquatic",
+      "Filling",
+      "Photogenic"
+    ],
+    "xprops": [
+      "Peculiar"
+    ],
+    "ingredients": [
+      "Pumpkin",
+      "Shrimp"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 3,
+    "release": "DLC5"
+  },
+  "Urchin Raindrop Cake": {
+    "name": "Urchin Raindrop Cake",
+    "level": 4,
+    "cost": 128,
+    "props": [
+      "Expensive",
+      "Aquatic",
+      "Premium",
+      "Refreshing",
+      "Small Portion",
+      "Dreamy"
+    ],
+    "xprops": [
+      "Filling"
+    ],
+    "ingredients": [
+      "Sea Urchin",
+      "Tuna",
+      "Snow Fungus",
+      "Dew"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 7.2,
+    "release": "DLC5"
+  },
+  "Mad Hatter's Tea Party": {
+    "name": "Mad Hatter's Tea Party",
+    "level": 5,
+    "cost": 188,
+    "props": [
+      "Expensive",
+      "Western",
+      "Sweet",
+      "Photogenic",
+      "Fungus",
+      "Wonderful",
+      "Dreamy",
+      "Specialty"
+    ],
+    "xprops": [
+      "Greasy"
+    ],
+    "ingredients": [
+      "Cocoa Bean",
+      "Cream",
+      "Flour",
+      "Mushroom",
+      "Broccoli"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 9,
+    "release": "DLC5"
+  },
+  "Peach Flower Crystal Roll": {
+    "name": "Peach Flower Crystal Roll",
+    "level": 3,
+    "cost": 60,
+    "props": [
+      "Premium",
+      "Japanese",
+      "Sweet",
+      "Photogenic",
+      "Small Portion",
+      "Dreamy",
+      "Specialty"
+    ],
+    "xprops": [
+      "Meat",
+      "Peculiar",
+      "Filling",
+      "Fungus"
+    ],
+    "ingredients": [
+      "Peach",
+      "Red Bean",
+      "Creeping Fig"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 4.8,
+    "release": "DLC5"
+  },
+  "Moonlight over the Lotus Pond": {
+    "name": "Moonlight over the Lotus Pond",
+    "level": 4,
+    "cost": 128,
+    "props": [
+      "Expensive",
+      "Premium",
+      "Mild",
+      "Chinese",
+      "Sweet",
+      "Photogenic",
+      "Refreshing",
+      "Cultural Heritage"
+    ],
+    "xprops": [
+      "Meat",
+      "Peculiar",
+      "Good w/ Alcohol",
+      "Hot"
+    ],
+    "ingredients": [
+      "Grapes",
+      "Creeping Fig",
+      "Cream",
+      "Snow Fungus"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 7.2,
+    "release": "DLC5"
+  },
+  "Dragonsong Peach": {
+    "name": "Dragonsong Peach",
+    "level": 5,
+    "cost": 199,
+    "props": [
+      "Expensive",
+      "Premium",
+      "Legendary",
+      "Mild",
+      "Sweet",
+      "Refreshing",
+      "Wonderful",
+      "Specialty",
+      "Fruity"
+    ],
+    "xprops": [
+      "Fungus",
+      "Meat",
+      "Sea Delicacy",
+      "Peculiar",
+      "Raw"
+    ],
+    "ingredients": [
+      "Cocoa Bean",
+      "Peach",
+      "Peach",
+      "Peach",
+      "Peach"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 10.8,
+    "release": "DLC5"
+  },
+  "Molecular Egg": {
+    "name": "Molecular Egg",
+    "level": 3,
+    "cost": 80,
+    "props": [
+      "Expensive",
+      "Vegetarian",
+      "Premium",
+      "Mild",
+      "Sweet",
+      "Wonderful",
+      "Small Portion"
+    ],
+    "xprops": [
+      "Mountain Delicacy"
+    ],
+    "ingredients": [
+      "Cocoa Bean",
+      "Pumpkin",
+      "Cream"
+    ],
+    "kitchenware": "Cutting Board",
+    "cookTime": 4.2,
+    "release": "DLC5"
+  },
+  "Origin of Life": {
+    "name": "Origin of Life",
+    "level": 4,
+    "cost": 124,
+    "props": [
+      "Expensive",
+      "Premium",
+      "Legendary",
+      "Mild",
+      "Raw",
+      "Fungus",
+      "Wonderful",
+      "Soup"
+    ],
+    "xprops": [
+      "Mountain Delicacy"
+    ],
+    "ingredients": [
+      "Cocoa Bean",
+      "Snow Fungus",
+      "Pumpkin",
+      "Dew"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 7.8,
+    "release": "DLC5"
+  },
+  "Planet Mars": {
+    "name": "Planet Mars",
+    "level": 5,
+    "cost": 198,
+    "props": [
+      "Expensive",
+      "Aquatic",
+      "Premium",
+      "Legendary",
+      "Sea Delicacy",
+      "Photogenic",
+      "Cultural Heritage",
+      "Wonderful",
+      "Fruity"
+    ],
+    "xprops": [
+      "Mountain Delicacy"
+    ],
+    "ingredients": [
+      "Creeping Fig",
+      "Grapes",
+      "Crab",
+      "Dew"
+    ],
+    "kitchenware": "Steamer",
+    "cookTime": 14.4,
+    "release": "DLC5"
+  },
+  "Heart-warming Congee": {
+    "name": "Heart-warming Congee",
+    "level": 1,
+    "cost": 35,
+    "props": [
+      "Mild",
+      "Sweet",
+      "Specialty"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Snow Fungus",
+      "Lotus Seed"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 3,
+    "release": "DLC5"
+  },
+  "Hot Pepper Soup": {
+    "name": "Hot Pepper Soup",
+    "level": 2,
+    "cost": 60,
+    "props": [
+      "Homecooking",
+      "Chinese",
+      "Hot",
+      "Soup",
+      "Spicy",
+      "Aura-Bursting"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Chili",
+      "Beef",
+      "Tofu"
+    ],
+    "kitchenware": "Frying Pan",
+    "cookTime": 4.8,
+    "release": "DLC5"
+  },
+  "Supreme Seafood Noodles": {
+    "name": "Supreme Seafood Noodles",
+    "level": 4,
+    "cost": 135,
+    "props": [
+      "Expensive",
+      "Aquatic",
+      "Homecooking",
+      "Premium",
+      "Filling",
+      "Sea Delicacy",
+      "Fresh"
+    ],
+    "xprops": [],
+    "ingredients": [
+      "Premium Tuna",
+      "Seaweed",
+      "Octopus",
+      "Crab",
+      "Shrimp"
+    ],
+    "kitchenware": "Boiling Pot",
+    "cookTime": 6,
+    "release": "DLC5"
+  }
+}

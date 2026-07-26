@@ -1,0 +1,695 @@
+{
+  "Trout": {
+    "name": "Trout",
+    "level": 1,
+    "value": 8,
+    "props": [
+      "Aquatic",
+      "Fresh"
+    ],
+    "category": "Seafood",
+    "release": "BaseGame"
+  },
+  "Lamprey": {
+    "name": "Lamprey",
+    "level": 2,
+    "value": 14,
+    "props": [
+      "Aquatic",
+      "Fresh",
+      "Signature"
+    ],
+    "category": "Seafood",
+    "release": "BaseGame"
+  },
+  "Salmon": {
+    "name": "Salmon",
+    "level": 3,
+    "value": 24,
+    "props": [
+      "Aquatic",
+      "Premium",
+      "Fresh"
+    ],
+    "category": "Seafood",
+    "release": "BaseGame"
+  },
+  "Tuna": {
+    "name": "Tuna",
+    "level": 3,
+    "value": 30,
+    "props": [
+      "Aquatic",
+      "Premium",
+      "Fresh"
+    ],
+    "category": "Seafood",
+    "release": "BaseGame"
+  },
+  "Premium Tuna": {
+    "name": "Premium Tuna",
+    "level": 5,
+    "value": 34,
+    "props": [
+      "Aquatic",
+      "Legendary",
+      "Premium",
+      "Fresh",
+      "Sea Delicacy"
+    ],
+    "category": "Seafood",
+    "release": "BaseGame"
+  },
+  "Pufferfish": {
+    "name": "Pufferfish",
+    "level": 5,
+    "value": 42,
+    "props": [
+      "Aquatic",
+      "Fresh",
+      "Sea Delicacy"
+    ],
+    "category": "Seafood",
+    "release": "BaseGame"
+  },
+  "Shrimp": {
+    "name": "Shrimp",
+    "level": 2,
+    "value": 30,
+    "props": [
+      "Aquatic",
+      "Fresh"
+    ],
+    "category": "Seafood",
+    "release": "BaseGame"
+  },
+  "Tofu": {
+    "name": "Tofu",
+    "level": 1,
+    "value": 8,
+    "props": [
+      "Homecooking",
+      "Mild",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "BaseGame"
+  },
+  "Potato": {
+    "name": "Potato",
+    "level": 2,
+    "value": 10,
+    "props": [
+      "Homecooking",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "BaseGame"
+  },
+  "Onion": {
+    "name": "Onion",
+    "level": 2,
+    "value": 12,
+    "props": [
+      "Fresh",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "BaseGame"
+  },
+  "Pumpkin": {
+    "name": "Pumpkin",
+    "level": 2,
+    "value": 14,
+    "props": [
+      "Filling",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "BaseGame"
+  },
+  "Radish": {
+    "name": "Radish",
+    "level": 2,
+    "value": 16,
+    "props": [
+      "Good w/ Alcohol",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "BaseGame"
+  },
+  "Seaweed": {
+    "name": "Seaweed",
+    "level": 1,
+    "value": 3,
+    "props": [
+      "Fresh",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "BaseGame"
+  },
+  "Mushroom": {
+    "name": "Mushroom",
+    "level": 3,
+    "value": 18,
+    "props": [
+      "Fungus",
+      "Fresh",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "BaseGame"
+  },
+  "Truffle": {
+    "name": "Truffle",
+    "level": 5,
+    "value": 50,
+    "props": [
+      "Fungus",
+      "Legendary",
+      "Mountain Delicacy",
+      "Premium",
+      "Fresh",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "BaseGame"
+  },
+  "Bamboo Shoot": {
+    "name": "Bamboo Shoot",
+    "level": 3,
+    "value": 40,
+    "props": [
+      "Mild",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "BaseGame"
+  },
+  "Pork": {
+    "name": "Pork",
+    "level": 1,
+    "value": 10,
+    "props": [
+      "Meat"
+    ],
+    "category": "Meat",
+    "release": "BaseGame"
+  },
+  "Beef": {
+    "name": "Beef",
+    "level": 2,
+    "value": 15,
+    "props": [
+      "Meat"
+    ],
+    "category": "Meat",
+    "release": "BaseGame"
+  },
+  "Venison": {
+    "name": "Venison",
+    "level": 2,
+    "value": 20,
+    "props": [
+      "Meat"
+    ],
+    "category": "Meat",
+    "release": "BaseGame"
+  },
+  "Boar Meat": {
+    "name": "Boar Meat",
+    "level": 3,
+    "value": 25,
+    "props": [
+      "Meat"
+    ],
+    "category": "Meat",
+    "release": "BaseGame"
+  },
+  "Iberico Pork": {
+    "name": "Iberico Pork",
+    "level": 4,
+    "value": 35,
+    "props": [
+      "Legendary",
+      "Meat",
+      "Mountain Delicacy"
+    ],
+    "category": "Meat",
+    "release": "BaseGame"
+  },
+  "Wagyu Beef": {
+    "name": "Wagyu Beef",
+    "level": 5,
+    "value": 40,
+    "props": [
+      "Legendary",
+      "Meat",
+      "Premium"
+    ],
+    "category": "Meat",
+    "release": "BaseGame"
+  },
+  "Egg": {
+    "name": "Egg",
+    "level": 1,
+    "value": 4,
+    "props": [
+      "Raw"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Peach": {
+    "name": "Peach",
+    "level": 3,
+    "value": 10,
+    "props": [
+      "Fruity",
+      "Sweet"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Ginkgo Nut": {
+    "name": "Ginkgo Nut",
+    "level": 2,
+    "value": 7,
+    "props": [
+      "Photogenic"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Honey": {
+    "name": "Honey",
+    "level": 2,
+    "value": 15,
+    "props": [
+      "Sweet"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Cicada Slough": {
+    "name": "Cicada Slough",
+    "level": 1,
+    "value": 5,
+    "props": [
+      "Peculiar"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Udumbara": {
+    "name": "Udumbara",
+    "level": 5,
+    "value": 70,
+    "props": [
+      "Dreamy",
+      "Legendary",
+      "Premium",
+      "Wonderful"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Dew": {
+    "name": "Dew",
+    "level": 1,
+    "value": 10,
+    "props": [
+      "Mild"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Butter": {
+    "name": "Butter",
+    "level": 2,
+    "value": 8,
+    "props": [
+      "Greasy"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Flour": {
+    "name": "Flour",
+    "level": 2,
+    "value": 10,
+    "props": [
+      "Filling"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Bamboo": {
+    "name": "Bamboo",
+    "level": 3,
+    "value": 15,
+    "props": [
+      "Photogenic"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Sticky Rice": {
+    "name": "Sticky Rice",
+    "level": 3,
+    "value": 15,
+    "props": [],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Lunar Herb": {
+    "name": "Lunar Herb",
+    "level": 5,
+    "value": 70,
+    "props": [
+      "Cultural Heritage",
+      "Dreamy",
+      "Mild",
+      "Wonderful"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Ice Cube": {
+    "name": "Ice Cube",
+    "level": 1,
+    "value": 2,
+    "props": [
+      "Refreshing"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Chili": {
+    "name": "Chili",
+    "level": 1,
+    "value": 2,
+    "props": [
+      "Spicy"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Grapes": {
+    "name": "Grapes",
+    "level": 1,
+    "value": 5,
+    "props": [
+      "Fruity",
+      "Sweet"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Reisen": {
+    "name": "Reisen",
+    "level": 10,
+    "value": 530000,
+    "props": [
+      "Photogenic",
+      "Signature",
+      "Specialty",
+      "Wonderful"
+    ],
+    "category": "Other",
+    "release": "BaseGame"
+  },
+  "Octopus": {
+    "name": "Octopus",
+    "level": 2,
+    "value": 12,
+    "props": [
+      "Aquatic",
+      "Fresh",
+      "Sea Delicacy"
+    ],
+    "category": "Seafood",
+    "release": "DLC1"
+  },
+  "Sea Urchin": {
+    "name": "Sea Urchin",
+    "level": 3,
+    "value": 18,
+    "props": [
+      "Aquatic",
+      "Legendary",
+      "Premium",
+      "Fresh",
+      "Sea Delicacy"
+    ],
+    "category": "Seafood",
+    "release": "DLC1"
+  },
+  "Crab": {
+    "name": "Crab",
+    "level": 3,
+    "value": 10,
+    "props": [
+      "Aquatic",
+      "Premium",
+      "Fresh"
+    ],
+    "category": "Seafood",
+    "release": "DLC1"
+  },
+  "Cucumber": {
+    "name": "Cucumber",
+    "level": 1,
+    "value": 7,
+    "props": [
+      "Homecooking",
+      "Mild",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "DLC1"
+  },
+  "Black Salt": {
+    "name": "Black Salt",
+    "level": 1,
+    "value": 3,
+    "props": [
+      "Salty"
+    ],
+    "category": "Other",
+    "release": "DLC1"
+  },
+  "Cream": {
+    "name": "Cream",
+    "level": 1,
+    "value": 9,
+    "props": [
+      "Homecooking",
+      "Sweet",
+      "Western"
+    ],
+    "category": "Other",
+    "release": "DLC1"
+  },
+  "Cheese": {
+    "name": "Cheese",
+    "level": 2,
+    "value": 18,
+    "props": [
+      "Premium",
+      "Salty",
+      "Fresh"
+    ],
+    "category": "Other",
+    "release": "DLC2"
+  },
+  "Bingdi Lotus": {
+    "name": "Bingdi Lotus",
+    "level": 3,
+    "value": 36,
+    "props": [
+      "Cultural Heritage",
+      "Dreamy",
+      "Legendary",
+      "Mild",
+      "Premium"
+    ],
+    "category": "Other",
+    "release": "DLC2"
+  },
+  "Lemon": {
+    "name": "Lemon",
+    "level": 1,
+    "value": 8,
+    "props": [
+      "Fruity",
+      "Sour"
+    ],
+    "category": "Other",
+    "release": "DLC2"
+  },
+  "Chestnut": {
+    "name": "Chestnut",
+    "level": 2,
+    "value": 10,
+    "props": [
+      "Homecooking",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "DLC3"
+  },
+  "Lotus Seed": {
+    "name": "Lotus Seed",
+    "level": 3,
+    "value": 22,
+    "props": [
+      "Cultural Heritage",
+      "Mild",
+      "Signature"
+    ],
+    "category": "Other",
+    "release": "DLC3"
+  },
+  "Pine Nut": {
+    "name": "Pine Nut",
+    "level": 2,
+    "value": 15,
+    "props": [
+      "Mild",
+      "Premium",
+      "Signature"
+    ],
+    "category": "Other",
+    "release": "DLC3"
+  },
+  "Sweet Potato": {
+    "name": "Sweet Potato",
+    "level": 1,
+    "value": 8,
+    "props": [
+      "Filling"
+    ],
+    "category": "Other",
+    "release": "DLC3"
+  },
+  "Red Toon": {
+    "name": "Red Toon",
+    "level": 2,
+    "value": 20,
+    "props": [
+      "Poison",
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "DLC4"
+  },
+  "Tomato": {
+    "name": "Tomato",
+    "level": 1,
+    "value": 8,
+    "props": [
+      "Vegetarian"
+    ],
+    "category": "Vegetable",
+    "release": "DLC4"
+  },
+  "Plum": {
+    "name": "Plum",
+    "level": 1,
+    "value": 12,
+    "props": [
+      "Salty",
+      "Small Portion"
+    ],
+    "category": "Other",
+    "release": "DLC4"
+  },
+  "Red Bean": {
+    "name": "Red Bean",
+    "level": 2,
+    "value": 18,
+    "props": [
+      "Homecooking"
+    ],
+    "category": "Other",
+    "release": "DLC4"
+  },
+  "Flower": {
+    "name": "Flower",
+    "level": 3,
+    "value": 45,
+    "props": [
+      "Dreamy",
+      "Photogenic"
+    ],
+    "category": "Other",
+    "release": "DLC4"
+  },
+  "Broccoli": {
+    "name": "Broccoli",
+    "level": 2,
+    "value": 18,
+    "props": [
+      "Vegetarian",
+      "Homecooking"
+    ],
+    "category": "Vegetable",
+    "release": "DLC5"
+  },
+  "Cocoa Bean": {
+    "name": "Cocoa Bean",
+    "level": 3,
+    "value": 22,
+    "props": [
+      "Sweet",
+      "Wonderful"
+    ],
+    "category": "Other",
+    "release": "DLC5"
+  },
+  "Creeping Fig": {
+    "name": "Creeping Fig",
+    "level": 2,
+    "value": 21,
+    "props": [
+      "Refreshing",
+      "Dreamy"
+    ],
+    "category": "Other",
+    "release": "DLC5"
+  },
+  "Snow Fungus": {
+    "name": "Snow Fungus",
+    "level": 3,
+    "value": 14,
+    "props": [
+      "Fungus",
+      "Mild"
+    ],
+    "category": "Other",
+    "release": "DLC5"
+  },
+  "Strong Capsaicin": {
+    "name": "Strong Capsaicin",
+    "level": 5,
+    "value": 0,
+    "props": [
+      "Divine Punishment"
+    ],
+    "category": "Other",
+    "release": "DLC5"
+  },
+  "Jiguru Berry": {
+    "name": "Jiguru Berry",
+    "level": 5,
+    "value": 10,
+    "props": [
+      "Divine Punishment"
+    ],
+    "category": "Other",
+    "release": "DLC5"
+  }
+}
