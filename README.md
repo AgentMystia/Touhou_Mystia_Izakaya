@@ -5,8 +5,11 @@ A browser recreation of the izakaya-management sim *Touhou Mystia's Izakaya*
 what each guest wants, cook it on the right station, season it to hit the tags
 they like, pour a drink, and serve before their patience runs out.
 
-Runs entirely in the browser. No backend, no runtime dependencies, ~59 KB of
-gzipped JavaScript plus vendored fonts.
+**Play it: <https://agentmystia.github.io/Touhou_Mystia_Izakaya/>**
+
+Runs entirely in the browser. No backend, no runtime dependencies, ~60 KB of
+gzipped JavaScript plus vendored fonts and two small textures. Every push to
+the default branch redeploys the site from CI.
 
 ```bash
 npm install
@@ -102,3 +105,5 @@ synthesized rather than sampled.
   [THBWiki](https://thwiki.cc/) (CC BY-NC-SA).
 - Bundled fonts are Shippori Mincho and Zen Maru Gothic, SIL Open Font
   License 1.1 — see `public/fonts/LICENSE.md`.
+- Surface-grain textures are CC0 from [ambientCG](https://ambientcg.com/) —
+  see `public/textures/LICENSE.md`.

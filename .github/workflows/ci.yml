@@ -54,15 +54,15 @@ jobs:
   deploy:
     # Only the default branch publishes. Resolved dynamically because this
     # repository's default branch is not named main.
+    #
+    # Publishing works by pushing the build to a gh-pages branch: creating
+    # that branch auto-enables Pages, whereas the workflow-based deploy needs
+    # a site-creation API call GITHUB_TOKEN is not allowed to make.
     if: github.event_name == 'push' && github.ref_name == github.event.repository.default_branch
     needs: check
     runs-on: ubuntu-latest
     permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.pages.outputs.page_url }}
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -74,12 +74,16 @@ jobs:
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
         run: npx vite build
-      - uses: actions/configure-pages@v5
-        with:
-          # Creates the Pages site on first deploy; nobody has to touch settings.
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-      - id: pages
-        uses: actions/deploy-pages@v4
+      - name: Publish dist to gh-pages
+        run: |
+          cd dist
+          touch .nojekyll
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy ${GITHUB_SHA::7}"
+          git push --force \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            gh-pages
+      - run: echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"

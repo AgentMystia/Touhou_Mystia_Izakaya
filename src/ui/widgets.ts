@@ -7,6 +7,7 @@
 import { RATING_COLORS, TAG_COLORS, UI, alpha, shift } from '../art/palette';
 import { GOTHIC, SERIF, drawText, measureText } from '../gfx/text';
 import { fillRoundRect, roundRect, strokeRoundRect, withState } from '../gfx/vector';
+import { overlayTexture } from '../gfx/textures';
 import type { Point } from '../core/input';
 import type { Rating } from '../rules/rating';
 
@@ -31,6 +32,12 @@ export function panel(ctx: Ctx2D, r: Rect, opts: { alpha?: number; radius?: numb
     ctx.shadowBlur = 22;
     ctx.shadowOffsetY = 6;
     fillRoundRect(ctx, r.x, r.y, r.w, r.h, radius, alpha(UI.lacquer, opts.alpha ?? 0.92));
+  });
+  // Washi grain gives the lacquer some tooth.
+  withState(ctx, () => {
+    roundRect(ctx, r.x, r.y, r.w, r.h, radius);
+    ctx.clip();
+    overlayTexture(ctx, 'paper', r.x, r.y, r.w, r.h, 0.3, 'overlay', 0.6);
   });
   strokeRoundRect(ctx, r.x, r.y, r.w, r.h, radius, alpha(UI.gold, 0.42), 1.6);
 }
@@ -209,6 +216,11 @@ export function bubble(ctx: Ctx2D, r: Rect, tailX: number, tint: string = UI.pap
     ctx.lineTo(tailX + 12, r.y + r.h - 1);
     ctx.closePath();
     ctx.fill();
+    // Paper fibre, kept faint so the ink stays crisp.
+    ctx.shadowColor = 'transparent';
+    roundRect(ctx, r.x, r.y, r.w, r.h, 12);
+    ctx.clip();
+    overlayTexture(ctx, 'paper', r.x, r.y, r.w, r.h, 0.16, 'multiply', 0.45);
   });
 }
 

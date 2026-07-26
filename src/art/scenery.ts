@@ -29,6 +29,7 @@ import {
   withTransform,
 } from '../gfx/vector';
 import { hashSeed, mulberry32 } from '../core/rng';
+import { overlayTexture } from '../gfx/textures';
 
 type Ctx2D = CanvasRenderingContext2D;
 
@@ -589,6 +590,19 @@ function drawCounter(ctx: Ctx2D, layout: SceneLayout): void {
       { at: 1, color: '#2a1810' },
     ]);
     ctx.fillRect(outL, counterY, outR - outL, 46);
+  });
+
+  // Photographic grain across the slab, under the drawn strokes.
+  withState(ctx, () => {
+    polygon(ctx, [l - 30, counterY - topH, r + 30, counterY - topH, outR, counterY, outL, counterY]);
+    ctx.clip();
+    overlayTexture(ctx, 'wood', outL, counterY - topH, outR - outL, topH, 0.34, 'overlay', 0.4);
+  });
+  withState(ctx, () => {
+    ctx.beginPath();
+    ctx.rect(outL, counterY, outR - outL, 46);
+    ctx.clip();
+    overlayTexture(ctx, 'wood', outL, counterY, outR - outL, 46, 0.22, 'overlay', 0.4);
   });
 
   // Grain across the top surface.

@@ -8,6 +8,7 @@ import { Input } from './core/input';
 import { SceneManager, type SceneContext } from './core/scene';
 import { Renderer } from './gfx/renderer';
 import { loadFonts } from './gfx/text';
+import { loadTextures } from './gfx/textures';
 import { GalleryScene } from './scenes/gallery';
 import { ResultsScene } from './scenes/results';
 import { ServiceScene } from './scenes/service';
@@ -23,7 +24,7 @@ async function boot(): Promise<void> {
   const canvas = document.querySelector<HTMLCanvasElement>('#game');
   if (!canvas) throw new Error('#game canvas is missing');
 
-  await loadFonts();
+  await Promise.all([loadFonts(), loadTextures()]);
 
   const renderer = new Renderer(canvas, { deterministic: E2E });
   const input = new Input(canvas, renderer.toWorld);
