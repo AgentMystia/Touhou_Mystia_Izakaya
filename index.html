@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Touhou Mystia's Izakaya — 東方夜雀食堂</title>
+    <meta
+      name="description"
+      content="A browser recreation of the izakaya-management sim Touhou Mystia's Izakaya."
+    />
+    <!-- A paper lantern, inlined so no favicon request can ever 404. -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='13' y='2' width='6' height='3' rx='1' fill='%23241416'/%3E%3Cellipse cx='16' cy='16' rx='11' ry='12' fill='%23ee4526'/%3E%3Cellipse cx='13' cy='13' rx='4' ry='6' fill='%23ff8038' opacity='.7'/%3E%3Cpath d='M5 12h22M4 16h24M5 20h22' stroke='%23a82a20' stroke-width='1.2' fill='none'/%3E%3Crect x='13' y='27' width='6' height='3' rx='1' fill='%23241416'/%3E%3C/svg%3E"
+    />
+    <!-- Fonts are vendored (OFL, subsetted by tools/fetch-fonts.mjs) so the
+         game needs no network access and cannot stall on a CDN. -->
+    <link rel="stylesheet" href="/Touhou_Mystia_Izakaya/fonts/fonts.css" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #05040a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: var(--bg);
+        font-family: 'Zen Maru Gothic', 'Noto Sans JP', system-ui, sans-serif;
+        color: #f4e8d0;
+      }
+      #game {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        touch-action: none;
+        cursor: default;
+      }
+      #boot {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        gap: 1rem;
+        text-align: center;
+        background: var(--bg);
+        transition: opacity 0.5s ease;
+      }
+      #boot.gone {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #boot h1 {
+        font-family: 'Shippori Mincho', serif;
+        font-weight: 800;
+        font-size: clamp(1.6rem, 5vw, 2.6rem);
+        margin: 0;
+        letter-spacing: 0.16em;
+        color: #ffb45c;
+      }
+      #boot p {
+        margin: 0;
+        opacity: 0.65;
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+      }
+      .lantern {
+        width: 46px;
+        height: 66px;
+        margin: 0 auto;
+        border-radius: 46% / 38%;
+        background: radial-gradient(circle at 50% 42%, #ffd9a0, #ff6a4a 62%, #c8331f);
+        box-shadow: 0 0 44px 12px rgba(255, 140, 70, 0.36);
+        animation: sway 2.6s ease-in-out infinite;
+      }
+      @keyframes sway {
+        0%,
+        100% {
+          transform: rotate(-4deg) translateY(0);
+        }
+        50% {
+          transform: rotate(4deg) translateY(-4px);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .lantern {
+          animation: none;
+        }
+      }
+      noscript {
+        display: block;
+        padding: 2rem;
+        text-align: center;
+      }
+    </style>
+    <script type="module" crossorigin src="/Touhou_Mystia_Izakaya/assets/index-DpznIbha.js"></script>
+  </head>
+  <body>
+    <canvas id="game" aria-label="Touhou Mystia's Izakaya"></canvas>
+    <div id="boot">
+      <div class="lantern"></div>
+      <h1>東方夜雀食堂</h1>
+      <p>Lighting the lanterns…</p>
+    </div>
+    <noscript>This game needs JavaScript enabled.</noscript>
+  </body>
+</html>
