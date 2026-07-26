@@ -18,8 +18,13 @@ const BLOOM_DIVISOR = 8;
 export interface RendererOptions {
   width?: number;
   height?: number;
-  /** Disables grain and bloom, for deterministic screenshots. */
-  reducedEffects?: boolean;
+  /** Drops the bloom chain and grain on weak hardware. */
+  lowQuality?: boolean;
+  /**
+   * Stops the animated grain. Bloom is a pure function of the light buffer and
+   * stays on, so screenshots keep the lighting while remaining reproducible.
+   */
+  deterministic?: boolean;
 }
 
 type Ctx2D = CanvasRenderingContext2D;
@@ -59,7 +64,8 @@ export class Renderer {
   private offsetY = 0;
   private frame = 0;
 
-  reducedEffects: boolean;
+  lowQuality: boolean;
+  deterministic: boolean;
 
   constructor(
     readonly canvas: HTMLCanvasElement,
@@ -67,7 +73,8 @@ export class Renderer {
   ) {
     this.width = options.width ?? VIRTUAL_WIDTH;
     this.height = options.height ?? VIRTUAL_HEIGHT;
-    this.reducedEffects = options.reducedEffects ?? false;
+    this.lowQuality = options.lowQuality ?? false;
+    this.deterministic = options.deterministic ?? false;
 
     this.display = context2d(canvas, false);
 
@@ -126,7 +133,7 @@ export class Renderer {
 
   /** Runs the post chain and blits to the visible canvas. */
   present(): void {
-    if (!this.reducedEffects) this.compositeBloom();
+    if (!this.lowQuality) this.compositeBloom();
     this.grade();
 
     const d = this.display;
@@ -183,15 +190,18 @@ export class Renderer {
     ctx.globalCompositeOperation = 'lighter';
     ctx.imageSmoothingEnabled = true;
     // Two draws at different strengths give a tight core and a wide halo.
-    ctx.globalAlpha = 0.85;
+    // Kept well under 1 in total: the light buffer is added again below, and
+    // stacking all three at full strength blows every lamp out to white.
+    ctx.globalAlpha = 0.42;
     ctx.drawImage(bloomA, 0, 0, this.width, this.height);
-    ctx.globalAlpha = 0.45;
+    ctx.globalAlpha = 0.26;
     ctx.drawImage(bloomB, 0, 0, this.width, this.height);
     ctx.restore();
 
-    // The un-blurred light layer keeps highlight cores crisp.
+    // A little of the un-blurred light keeps highlight cores from going soft.
     ctx.save();
     ctx.globalCompositeOperation = 'lighter';
+    ctx.globalAlpha = 0.3;
     ctx.drawImage(this.lightCanvas, 0, 0);
     ctx.restore();
   }
@@ -216,7 +226,7 @@ export class Renderer {
     ctx.fillRect(0, 0, w, h);
     ctx.restore();
 
-    if (this.reducedEffects) return;
+    if (this.lowQuality || this.deterministic) return;
 
     // Grain: a sparse scatter of faint dots, re-seeded every few frames so it
     // shimmers without costing a full-resolution noise texture.
