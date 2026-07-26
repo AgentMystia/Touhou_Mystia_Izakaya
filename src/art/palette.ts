@@ -84,8 +84,8 @@ export const glow = (alpha: number): string => `rgba(255,255,255,${alpha})`;
 
 /** Mixes two hex colours. `t` of 0 returns `a`, 1 returns `b`. */
 export function mix(a: string, b: string, t: number): string {
-  const pa = parseHex(a);
-  const pb = parseHex(b);
+  const pa = parseColor(a);
+  const pb = parseColor(b);
   const c = (i: number) => Math.round((pa[i] as number) + ((pb[i] as number) - (pa[i] as number)) * t);
   return `rgb(${c(0)}, ${c(1)}, ${c(2)})`;
 }
@@ -96,13 +96,27 @@ export const shift = (hex: string, amount: number): string =>
 
 /** Hex colour with an alpha channel applied. */
 export function alpha(hex: string, a: number): string {
-  const [r, g, b] = parseHex(hex);
+  const [r, g, b] = parseColor(hex);
   return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
-function parseHex(hex: string): [number, number, number] {
-  let h = hex.replace('#', '');
+/**
+ * Parses any colour these helpers can produce, not just hex.
+ *
+ * `mix` and `shift` return `rgb(...)`, and they get chained constantly —
+ * `shift(shift(c, a), b)`, `inkOf(shift(c, a))`. Accepting only hex made every
+ * such chain silently parse to NaN and render pure black, which is how the
+ * character rig ended up with black forearms and black outlines.
+ */
+function parseColor(color: string): [number, number, number] {
+  const rgb = /rgba?\(\s*([\d.]+)[\s,]+([\d.]+)[\s,]+([\d.]+)/i.exec(color);
+  if (rgb) {
+    return [Number(rgb[1]) | 0, Number(rgb[2]) | 0, Number(rgb[3]) | 0];
+  }
+  let h = color.trim().replace('#', '');
   if (h.length === 3) h = h.split('').map((c) => c + c).join('');
+  if (h.length === 8) h = h.slice(0, 6);
   const n = Number.parseInt(h, 16);
+  if (!Number.isFinite(n)) return [0, 0, 0];
   return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
 }

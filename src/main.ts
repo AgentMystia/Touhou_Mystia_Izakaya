@@ -71,7 +71,7 @@ async function boot(): Promise<void> {
   const scene = params.get('scene');
   manager.boot(
     scene === 'gallery'
-      ? new GalleryScene('all')
+      ? new GalleryScene('all', params.get('big') === '1')
       : scene === 'service'
         ? new ServiceScene(new NightService(state), () => manager.replace(makeTitle()))
         : scene === 'results'

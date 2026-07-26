@@ -15,13 +15,16 @@ import type { Scene, SceneContext } from '../core/scene';
 
 const COLS = 13;
 const CELL_H = 158;
+/** `?big=1` shows a handful at portrait size, for judging the art up close. */
+const BIG_COLS = 5;
+const BIG_CELL_H = 460;
 
 export class GalleryScene implements Scene {
   readonly name = 'gallery';
   private elapsed = 0;
   private readonly specs: CharacterSpec[];
 
-  constructor(mode: 'handmade' | 'all' = 'all') {
+  constructor(mode: 'handmade' | 'all' = 'all', private readonly big = false) {
     if (mode === 'handmade') {
       this.specs = CAST;
     } else {
@@ -53,25 +56,36 @@ export class GalleryScene implements Scene {
       size: 20, font: GOTHIC, color: alpha(UI.paperDim, 0.7), baseline: 'middle',
     });
 
-    const cellW = width / COLS;
+    const cols = this.big ? BIG_COLS : COLS;
+    const cellH = this.big ? BIG_CELL_H : CELL_H;
+    const figure = this.big ? 380 : 104;
+    const cellW = width / cols;
     const top = 96;
 
-    this.specs.forEach((spec, i) => {
-      const col = i % COLS;
-      const row = Math.floor(i / COLS);
+    const shown = this.big ? this.specs.slice(0, BIG_COLS * 2) : this.specs;
+    shown.forEach((spec, i) => {
+      const col = i % cols;
+      const row = Math.floor(i / cols);
       const cx = cellW * (col + 0.5);
-      const cy = top + row * CELL_H + CELL_H - 34;
+      const cy = top + row * cellH + cellH - 46;
 
       withState(g, () => {
         g.fillStyle = i % 2 === 0 ? alpha('#ffffff', 0.02) : alpha('#000000', 0.12);
-        g.fillRect(cellW * col, top + row * CELL_H, cellW, CELL_H);
+        g.fillRect(cellW * col, top + row * cellH, cellW, cellH);
       });
 
-      drawCharacter(g, spec, cx, cy, { time: this.elapsed, height: 104, mood: 0.8 });
-      characterRim(light, spec, cx, cy, { time: this.elapsed, height: 104 });
+      // Half the row walks, so the walk cycle is visible in the same shot.
+      const walking = this.big && col % 2 === 1;
+      drawCharacter(g, spec, cx, cy, {
+        time: this.elapsed,
+        height: figure,
+        mood: 0.85,
+        ...(walking ? { walk: (this.elapsed * 1.6) % 1 } : {}),
+      });
+      characterRim(light, spec, cx, cy, { time: this.elapsed, height: figure });
 
-      drawText(g, customerName(spec.name), cx, cy + 18, {
-        size: 14, font: GOTHIC, weight: 500,
+      drawText(g, customerName(spec.name), cx, cy + (this.big ? 30 : 18), {
+        size: this.big ? 20 : 14, font: GOTHIC, weight: 500,
         color: alpha(UI.paper, 0.8), align: 'center', baseline: 'middle',
       });
     });
